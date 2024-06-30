@@ -1,5 +1,6 @@
 // contentlayer.config.js
 import { makeSource, defineDocumentType } from "@contentlayer/source-files";
+import GithubSlugger from "github-slugger";
 import readingTime from "reading-time";
 var Doc = defineDocumentType(() => ({
   name: "Doc",
@@ -48,6 +49,25 @@ var Doc = defineDocumentType(() => ({
     readingTime: {
       type: "json",
       resolve: (doc) => readingTime(doc.body.raw)
+    },
+    toc: {
+      type: "json",
+      resolve: async (doc) => {
+        const regulrExp = /\n(?<flag>#{1,6})\s+(?<content>.+)/g;
+        const slugger = new GithubSlugger();
+        const headings = Array.from(doc.body.raw.matchAll(regulrExp)).map(
+          ({ groups }) => {
+            const flag = groups?.flag;
+            const content = groups?.content;
+            return {
+              level: flag?.length == 1 ? "one" : flag?.length == 2 ? "two" : "three",
+              text: content,
+              slug: content ? slugger.slug(content) : void 0
+            };
+          }
+        );
+        return headings;
+      }
     }
   }
 }));
@@ -58,4 +78,4 @@ var contentlayer_config_default = makeSource({
 export {
   contentlayer_config_default as default
 };
-//# sourceMappingURL=compiled-contentlayer-config-KKSUSEGD.mjs.map
+//# sourceMappingURL=compiled-contentlayer-config-VLYSRX3C.mjs.map

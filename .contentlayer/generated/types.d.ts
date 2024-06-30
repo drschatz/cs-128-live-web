@@ -24,6 +24,7 @@ export type Doc = {
   body: MDX
   url: string
   readingTime: json
+  toc: json
 }  
 
 /** Nested types */

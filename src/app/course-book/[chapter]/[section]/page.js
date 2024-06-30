@@ -41,7 +41,7 @@ const DocPage = () => {
               Table Of Content
             </summary>
             <ul className="mt-4 font-in text-base">
-              {/* {blog.toc.map((heading) => {
+              {doc.toc.map((heading) => {
                 return (
                   <li key={`#${heading.slug}`} className="py-1">
                     <a
@@ -64,7 +64,7 @@ const DocPage = () => {
                     </a>
                   </li>
                 );
-              })} */}
+              })}
             </ul>
           </details>
         </div>
