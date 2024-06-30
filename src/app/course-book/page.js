@@ -29,10 +29,10 @@ const CourseBook = () => {
             ))}
           </ul>
         </div>
-        <div className="w-6/12 mt-8 p-4 ml-6">
+        <div className="w-7/12 mt-8 p-4 ">
           <div className="mb-8 ">
             <h1 className="text-3xl font-bold mb-4 text-accent">Course Book</h1>
-            <p className="leading-8 mb-4 text-lg text-black/80 font-medium">
+            <p className="leading-9 mb-4 text-lg text-black/80 font-medium">
               This is the introduction of the book. Tailwind CSS uses a lot of
               custom CSS at-rules like @tailwind, @apply, and @config, and in
               many editors this can trigger warnings or errors where these rules
@@ -91,7 +91,7 @@ const CourseBook = () => {
             </div>
           ))}
         </div>
-        <div className="w-2/12"></div>
+        <div className="w-1/12"></div>
       </div>
     </main>
   );
