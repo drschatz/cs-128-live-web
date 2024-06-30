@@ -17,7 +17,7 @@ const CourseBook = () => {
         <div className="absolute top-0 left-0 right-0 bottom-0 h-full bg-dark/60 dark:bg-dark/40" />
       </div>
       <div className="flex mb-8">
-        <div className="w-4/12 hidden sm:block  mt-8 ml-24 text-sm text-gray ">
+        <div className="w-4/12 hidden sm:block  mt-8 ml-24 text-base text-gray ">
           <h3 className="mb-2 sticky top-24 font-semibold">Book Nav</h3>
           <ul className="ml-4 sticky top-32">
             {bookToc.map((chap) => (
@@ -32,7 +32,7 @@ const CourseBook = () => {
         <div className="w-6/12 mt-8 p-4 ml-6">
           <div className="mb-8 ">
             <h1 className="text-3xl font-bold mb-4 text-accent">Course Book</h1>
-            <p className="leading-8 mb-4 text-lg text-black/80">
+            <p className="leading-8 mb-4 text-lg text-black/80 font-medium">
               This is the introduction of the book. Tailwind CSS uses a lot of
               custom CSS at-rules like @tailwind, @apply, and @config, and in
               many editors this can trigger warnings or errors where these rules
@@ -78,8 +78,11 @@ const CourseBook = () => {
               <h1 className="font-bold text-2xl mb-4">{`${chap.chapterIdx}. ${chap.chapterTitle}`}</h1>
               <ul className="ml-4">
                 {chap.sections.map((sec) => (
-                  <li key={sec.key} className="hover:text-accent mb-2">
-                    <a href={sec.slug} className="ml-2 text-lg text-black/80">
+                  <li key={sec.key} className=" mb-2">
+                    <a
+                      href={sec.slug}
+                      className="ml-2 text-lg text-black/80 hover:text-accent font-medium"
+                    >
                       {sec.key}. {sec.title}
                     </a>
                   </li>
