@@ -20,6 +20,9 @@ export type Doc = {
   isPublished: boolean
   author: string[]
   tags?: string[] | undefined
+  chapterTitle: string
+  chapterIdx: number
+  sectionIdx: number
   /** MDX file body */
   body: MDX
   url: string

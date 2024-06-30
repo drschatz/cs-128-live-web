@@ -39,6 +39,18 @@ var Doc = defineDocumentType(() => ({
       of: {
         type: "string"
       }
+    },
+    chapterTitle: {
+      type: "string",
+      required: true
+    },
+    chapterIdx: {
+      type: "number",
+      required: true
+    },
+    sectionIdx: {
+      type: "number",
+      required: true
     }
   },
   computedFields: {
@@ -78,4 +90,4 @@ var contentlayer_config_default = makeSource({
 export {
   contentlayer_config_default as default
 };
-//# sourceMappingURL=compiled-contentlayer-config-VLYSRX3C.mjs.map
+//# sourceMappingURL=compiled-contentlayer-config-A2FRZ4WX.mjs.map

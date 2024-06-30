@@ -41,6 +41,18 @@ const Doc = defineDocumentType(() => ({
         type: "string",
       },
     },
+    chapterTitle: {
+      type: "string",
+      required: true,
+    },
+    chapterIdx: {
+      type: "number",
+      required: true,
+    },
+    sectionIdx: {
+      type: "number",
+      required: true,
+    },
   },
   computedFields: {
     url: {
