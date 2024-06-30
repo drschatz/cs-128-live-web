@@ -79,7 +79,7 @@ const CourseBook = () => {
               <ul className="ml-4">
                 {chap.sections.map((sec) => (
                   <li key={sec.key} className="hover:text-accent mb-2">
-                    <a href={sec.slug} className="ml-2">
+                    <a href={sec.slug} className="ml-2 text-lg text-black/80">
                       {sec.key}. {sec.title}
                     </a>
                   </li>
