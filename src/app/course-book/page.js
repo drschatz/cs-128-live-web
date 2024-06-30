@@ -31,7 +31,7 @@ const CourseBook = () => {
         </div>
         <div className="w-6/12 mt-8 p-4 ml-6">
           <div className="mb-8 ">
-            <h1 className="text-3xl font-bold mb-4">Course Book</h1>
+            <h1 className="text-3xl font-bold mb-4 text-accent">Course Book</h1>
             <p className="leading-8 mb-4 text-lg text-black/80">
               This is the introduction of the book. Tailwind CSS uses a lot of
               custom CSS at-rules like @tailwind, @apply, and @config, and in
