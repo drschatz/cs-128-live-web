@@ -11,11 +11,11 @@ const Header = () => {
     <nav
       className={
         isOpen
-          ? "sticky mx-auto p-6 bg-white top-0"
-          : "sticky mx-auto p-6 bg-white shadow-md top-0"
+          ? "sticky mx-auto p-6 bg-white top-0 z-50"
+          : "sticky mx-auto p-6 bg-white shadow-md top-0 z-50"
       }
     >
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between ">
         <Logo />
         {/* nav links */}
         <div className="hidden md:flex items-center space-x-4">

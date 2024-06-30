@@ -21,7 +21,7 @@ const DocPage = () => {
 
   return (
     <article>
-      <div className="mb-8 text-center relative w-full h-[30vh] bg-dark">
+      <div className="mb-8 text-center relative w-full h-[30vh] bg-dark ">
         <div className="w-full z-10 flex flex-col items-center justify-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
           <h1 className="inline-block mt-6 font-semibold capitalize text-light text-2xl md:text-3xl lg:text-5xl !leading-normal relative w-5/6">
             {doc.title}
@@ -34,7 +34,7 @@ const DocPage = () => {
       <div className="grid grid-cols-12  gap-y-8 lg:gap-8 sxl:gap-16 mt-8 px-5 md:px-10">
         <div className="col-span-12  lg:col-span-4">
           <details
-            className="border-[1px] border-solid border-dark dark:border-light text-dark dark:text-light rounded-lg p-4 sticky top-6 max-h-[80vh] overflow-hidden overflow-y-auto"
+            className="border-[1px] border-solid border-dark dark:border-light text-dark dark:text-light rounded-lg p-4 sticky top-24 max-h-[80vh] overflow-hidden overflow-y-auto"
             open
           >
             <summary className="text-lg font-semibold capitalize cursor-pointer">
