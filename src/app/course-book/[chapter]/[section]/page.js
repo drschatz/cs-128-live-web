@@ -29,7 +29,7 @@ const DocPage = () => {
         </div>
         <div className="absolute top-0 left-0 right-0 bottom-0 h-full bg-dark/60 dark:bg-dark/40" />
       </div>
-      <DocDetails doc={doc} slug={slug} />
+      {/* <DocDetails doc={doc} slug={slug} /> */}
 
       <div className="grid grid-cols-12  gap-y-8 lg:gap-8 sxl:gap-16 mt-8 px-5 md:px-10">
         <div className="col-span-12  lg:col-span-4">
