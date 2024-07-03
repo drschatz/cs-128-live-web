@@ -1,0 +1,154 @@
+{
+  "days": [
+    {
+      "dayIndex": 1,
+      "date": "2024-08-26",
+      "day": "Monday",
+      "week": 1
+    },
+    {
+      "dayIndex": 2,
+      "date": "2024-08-27",
+      "day": "Tuesday",
+      "week": 1
+    },
+    {
+      "dayIndex": 3,
+      "date": "2024-08-28",
+      "day": "Wednesday",
+      "week": 1
+    },
+    {
+      "dayIndex": 4,
+      "date": "2024-08-29",
+      "day": "Thursday",
+      "week": 1
+    },
+    {
+      "dayIndex": 5,
+      "date": "2024-08-30",
+      "day": "Friday",
+      "week": 1
+    },
+    {
+      "dayIndex": 1,
+      "date": "2024-09-02",
+      "day": "Monday",
+      "week": 2
+    },
+    {
+      "dayIndex": 2,
+      "date": "2024-09-03",
+      "day": "Tuesday",
+      "week": 2
+    },
+    {
+      "dayIndex": 3,
+      "date": "2024-09-04",
+      "day": "Wednesday",
+      "week": 2
+    },
+    {
+      "dayIndex": 4,
+      "date": "2024-09-05",
+      "day": "Thursday",
+      "week": 2
+    },
+    {
+      "dayIndex": 5,
+      "date": "2024-09-06",
+      "day": "Friday",
+      "week": 2
+    },
+    {
+      "dayIndex": 1,
+      "date": "2024-09-09",
+      "day": "Monday",
+      "week": 3
+    },
+    {
+      "dayIndex": 2,
+      "date": "2024-09-10",
+      "day": "Tuesday",
+      "week": 3
+    },
+    {
+      "dayIndex": 3,
+      "date": "2024-09-11",
+      "day": "Wednesday",
+      "week": 3
+    },
+    {
+      "dayIndex": 4,
+      "date": "2024-09-12",
+      "day": "Thursday",
+      "week": 3
+    },
+    {
+      "dayIndex": 5,
+      "date": "2024-09-13",
+      "day": "Friday",
+      "week": 3
+    },
+    {
+      "dayIndex": 1,
+      "date": "2024-09-16",
+      "day": "Monday",
+      "week": 4
+    },
+    {
+      "dayIndex": 2,
+      "date": "2024-09-17",
+      "day": "Tuesday",
+      "week": 4
+    },
+    {
+      "dayIndex": 3,
+      "date": "2024-09-18",
+      "day": "Wednesday",
+      "week": 4
+    },
+    {
+      "dayIndex": 4,
+      "date": "2024-09-19",
+      "day": "Thursday",
+      "week": 4
+    },
+    {
+      "dayIndex": 5,
+      "date": "2024-09-20",
+      "day": "Friday",
+      "week": 4
+    },
+    {
+      "dayIndex": 1,
+      "date": "2024-09-23",
+      "day": "Monday",
+      "week": 5
+    },
+    {
+      "dayIndex": 2,
+      "date": "2024-09-24",
+      "day": "Tuesday",
+      "week": 5
+    },
+    {
+      "dayIndex": 3,
+      "date": "2024-09-25",
+      "day": "Wednesday",
+      "week": 5
+    },
+    {
+      "dayIndex": 4,
+      "date": "2024-09-26",
+      "day": "Thursday",
+      "week": 5
+    },
+    {
+      "dayIndex": 5,
+      "date": "2024-09-27",
+      "day": "Friday",
+      "week": 5
+    }
+  ]
+}

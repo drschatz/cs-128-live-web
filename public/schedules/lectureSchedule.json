@@ -1,0 +1,109 @@
+{
+  "lectures": [
+    {
+      "index": 1,
+      "lectureTopic": "CS128 Live - Lecture 1",
+      "lectureDate": "2023-10-02",
+      "weekday": "Monday",
+      "lectureLink": "https://example.com/lecture1"
+    },
+    {
+      "index": 2,
+      "lectureTopic": "CS128 Live - Lecture 2",
+      "lectureDate": "2023-10-04",
+      "weekday": "Wednesday",
+      "lectureLink": "https://example.com/lecture2"
+    },
+    {
+      "index": 3,
+      "lectureTopic": "CS128 Live - Lecture 3",
+      "lectureDate": "2023-10-06",
+      "weekday": "Friday",
+      "lectureLink": "https://example.com/lecture3"
+    },
+    {
+      "index": 4,
+      "lectureTopic": "CS128 Live - Lecture 4",
+      "lectureDate": "2023-10-09",
+      "weekday": "Monday",
+      "lectureLink": "https://example.com/lecture4"
+    },
+    {
+      "index": 5,
+      "lectureTopic": "CS128 Live - Lecture 5",
+      "lectureDate": "2023-10-11",
+      "weekday": "Wednesday",
+      "lectureLink": "https://example.com/lecture5"
+    },
+    {
+      "index": 6,
+      "lectureTopic": "CS128 Live - Lecture 6",
+      "lectureDate": "2023-10-13",
+      "weekday": "Friday",
+      "lectureLink": "https://example.com/lecture6"
+    },
+    {
+      "index": 7,
+      "lectureTopic": "CS128 Live - Lecture 7",
+      "lectureDate": "2023-10-16",
+      "weekday": "Monday",
+      "lectureLink": "https://example.com/lecture7"
+    },
+    {
+      "index": 8,
+      "lectureTopic": "CS128 Live - Lecture 8",
+      "lectureDate": "2023-10-18",
+      "weekday": "Wednesday",
+      "lectureLink": "https://example.com/lecture8"
+    },
+    {
+      "index": 9,
+      "lectureTopic": "CS128 Live - Lecture 9",
+      "lectureDate": "2023-10-20",
+      "weekday": "Friday",
+      "lectureLink": "https://example.com/lecture9"
+    },
+    {
+      "index": 10,
+      "lectureTopic": "CS128 Live - Lecture 10",
+      "lectureDate": "2023-10-23",
+      "weekday": "Monday",
+      "lectureLink": "https://example.com/lecture10"
+    },
+    {
+      "index": 11,
+      "lectureTopic": "CS128 Live - Lecture 11",
+      "lectureDate": "2023-10-25",
+      "weekday": "Wednesday",
+      "lectureLink": "https://example.com/lecture11"
+    },
+    {
+      "index": 12,
+      "lectureTopic": "CS128 Live - Lecture 12",
+      "lectureDate": "2023-10-27",
+      "weekday": "Friday",
+      "lectureLink": "https://example.com/lecture12"
+    },
+    {
+      "index": 13,
+      "lectureTopic": "CS128 Live - Lecture 13",
+      "lectureDate": "2023-10-30",
+      "weekday": "Monday",
+      "lectureLink": "https://example.com/lecture13"
+    },
+    {
+      "index": 14,
+      "lectureTopic": "CS128 Live - Lecture 14",
+      "lectureDate": "2023-11-01",
+      "weekday": "Wednesday",
+      "lectureLink": "https://example.com/lecture14"
+    },
+    {
+      "index": 15,
+      "lectureTopic": "CS128 Live - Lecture 15",
+      "lectureDate": "2023-11-03",
+      "weekday": "Friday",
+      "lectureLink": "https://example.com/lecture15"
+    }
+  ]
+}

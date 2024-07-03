@@ -8,7 +8,7 @@ const CourseBook = () => {
 
   return (
     <main>
-      <div className="mb-8 text-center relative w-full h-[30vh] bg-dark ">
+      <div className="mb-8 text-center relative w-full h-[24vh] bg-dark ">
         <div className="w-full z-10 flex flex-col items-center justify-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
           <h1 className="inline-block mt-6 font-semibold capitalize text-light text-2xl md:text-3xl lg:text-5xl !leading-normal relative w-5/6">
             CS128 Course Book

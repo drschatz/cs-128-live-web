@@ -1,0 +1,94 @@
+{
+  "homeworkAssignments": [
+    {
+      "index": 1,
+      "homeworkTopic": "Homework 1",
+      "homeworkDate": "2023-10-02",
+      "weekday": "Monday",
+      "dueDate": "2023-10-04",
+      "dueWeekday": "Wednesday",
+      "homeworkLink": "https://example.com/homework/1"
+    },
+    {
+      "index": 2,
+      "homeworkTopic": "Homework 2",
+      "homeworkDate": "2023-10-04",
+      "weekday": "Wednesday",
+      "dueDate": "2023-10-06",
+      "dueWeekday": "Friday",
+      "homeworkLink": "https://example.com/homework/2"
+    },
+    {
+      "index": 3,
+      "homeworkTopic": "Homework 3",
+      "homeworkDate": "2023-10-09",
+      "weekday": "Monday",
+      "dueDate": "2023-10-11",
+      "dueWeekday": "Wednesday",
+      "homeworkLink": "https://example.com/homework/3"
+    },
+    {
+      "index": 4,
+      "homeworkTopic": "Homework 4",
+      "homeworkDate": "2023-10-11",
+      "weekday": "Wednesday",
+      "dueDate": "2023-10-13",
+      "dueWeekday": "Friday",
+      "homeworkLink": "https://example.com/homework/4"
+    },
+    {
+      "index": 5,
+      "homeworkTopic": "Homework 5",
+      "homeworkDate": "2023-10-16",
+      "weekday": "Monday",
+      "dueDate": "2023-10-18",
+      "dueWeekday": "Wednesday",
+      "homeworkLink": "https://example.com/homework/5"
+    },
+    {
+      "index": 6,
+      "homeworkTopic": "Homework 6",
+      "homeworkDate": "2023-10-18",
+      "weekday": "Wednesday",
+      "dueDate": "2023-10-20",
+      "dueWeekday": "Friday",
+      "homeworkLink": "https://example.com/homework/6"
+    },
+    {
+      "index": 7,
+      "homeworkTopic": "Homework 7",
+      "homeworkDate": "2023-10-23",
+      "weekday": "Monday",
+      "dueDate": "2023-10-25",
+      "dueWeekday": "Wednesday",
+      "homeworkLink": "https://example.com/homework/7"
+    },
+    {
+      "index": 8,
+      "homeworkTopic": "Homework 8",
+      "homeworkDate": "2023-10-25",
+      "weekday": "Wednesday",
+      "dueDate": "2023-10-27",
+      "dueWeekday": "Friday",
+      "homeworkLink": "https://example.com/homework/8"
+    },
+    {
+      "index": 9,
+      "homeworkTopic": "Homework 9",
+      "homeworkDate": "2023-10-30",
+      "weekday": "Monday",
+      "dueDate": "2023-11-02",
+      "dueWeekday": "Wednesday",
+      "homeworkLink": "https://example.com/homework/9"
+    },
+    {
+      "index": 10,
+      "homeworkTopic": "Homework 10",
+      "homeworkDate": "2023-11-01",
+      "weekday": "Wednesday",
+      "dueDate": "2023-11-03",
+      "dueWeekday": "Friday",
+      "homeworkLink": "https://example.com/homework/10"
+    }
+  ]
+}

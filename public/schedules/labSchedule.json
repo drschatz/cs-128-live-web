@@ -1,0 +1,49 @@
+{
+  "labs": [
+    {
+      "index": 1,
+      "labTopic": "Lab 1: Introduction to Python",
+      "labDate": "2023-10-06",
+      "weekday": "Friday",
+      "dueDate": "2023-10-10",
+      "dueWeekday": "Tuesday",
+      "labLink": "https://example.com/lab/1"
+    },
+    {
+      "index": 2,
+      "labTopic": "Lab 2: Data Structures",
+      "labDate": "2023-10-13",
+      "weekday": "Friday",
+      "dueDate": "2023-10-17",
+      "dueWeekday": "Tuesday",
+      "labLink": "https://example.com/lab/2"
+    },
+    {
+      "index": 3,
+      "labTopic": "Lab 3: Algorithms",
+      "labDate": "2023-10-20",
+      "weekday": "Friday",
+      "dueDate": "2023-10-24",
+      "dueWeekday": "Tuesday",
+      "labLink": "https://example.com/lab/3"
+    },
+    {
+      "index": 4,
+      "labTopic": "Lab 4: Databases",
+      "labDate": "2023-10-27",
+      "weekday": "Friday",
+      "dueDate": "2023-10-31",
+      "dueWeekday": "Tuesday",
+      "labLink": "https://example.com/lab/4"
+    },
+    {
+      "index": 5,
+      "labTopic": "Lab 5: Web Development",
+      "labDate": "2023-11-03",
+      "weekday": "Friday",
+      "dueDate": "2023-11-07",
+      "dueWeekday": "Tuesday",
+      "labLink": "https://example.com/lab/5"
+    }
+  ]
+}
