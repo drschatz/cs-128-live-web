@@ -91,15 +91,34 @@ const LecturesPage = () => {
               {calendar.days.map((day, key) => (
                 <tbody key={key}>
                   <tr className="h-[70px]">
-                    <td
-                      className={`${
-                        day.dayIndex % 5 === 0
-                          ? "border border-x-gray/50  border-b-2"
-                          : "border border-x-gray/50 border-b-gray/50"
-                      }`}
-                    >
-                      {day.day}, {day.date}
-                    </td>
+                    {day.dayIndex % 5 === 1 ? (
+                      <>
+                        <td
+                          className={`${
+                            day.dayIndex % 5 === 0
+                              ? "border border-x-gray/50  border-b-2"
+                              : "border border-x-gray/50 border-b-gray/50"
+                          }`}
+                        >
+                          <span className="z-20 float-left -translate-x-1/2 -translate-y-9 top-10 border border-blue-500 rounded-xl px-3 py-1 bg-blue-500 font-medium text-white">
+                            Week {day.week}
+                          </span>
+                          <span className="float-left -translate-x-1/2 mt-2">
+                            {day.day}, {day.date}
+                          </span>
+                        </td>
+                      </>
+                    ) : (
+                      <td
+                        className={`${
+                          day.dayIndex % 5 === 0
+                            ? "border border-x-gray/50  border-b-2"
+                            : "border border-x-gray/50 border-b-gray/50"
+                        }`}
+                      >
+                        {day.day}, {day.date}
+                      </td>
+                    )}
                     <td
                       className={`${
                         day.dayIndex % 5 === 0
@@ -135,7 +154,7 @@ const LecturesPage = () => {
           </div>
         </div>
 
-        {/* Ongoing */}
+        {/* Ongoings */}
         <div className="flex w-3/12 mb-8 flex-col ">
           <p className="font-bold mb-5 text-2xl">Ongoing</p>
           <ul>
@@ -159,8 +178,7 @@ const LecturesPage = () => {
 
 export default LecturesPage;
 
-{
-  /* <tbody>
+/* <tbody>
                 <tr className="h-[70px]">
                   <td className="border border-x-gray/50 border-b-gray/50">
                     Mon May 6
@@ -207,4 +225,3 @@ export default LecturesPage;
                   </td>
                 </tr>
               </tbody> */
-}
