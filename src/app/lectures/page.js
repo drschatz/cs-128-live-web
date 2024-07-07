@@ -38,7 +38,7 @@ const ProgressBar = ({ progress }) => {
 const LecturesPage = () => {
   const calendar = require("@/public/schedules/calendar.json");
 
-  console.log(calendar.weeks);
+  console.log(calendar);
 
   return (
     <div>
@@ -88,65 +88,117 @@ const LecturesPage = () => {
                 </tr>
               </thead>
 
-              {calendar.days.map((day, key) => (
-                <tbody key={key}>
+              {calendar.map((day, idx) => (
+                <tbody key={idx}>
                   <tr className="h-[70px]">
-                    {day.dayIndex % 5 === 1 ? (
+                    {day.day_idx % 5 === 1 ? (
                       <>
                         <td
                           className={`${
-                            day.dayIndex % 5 === 0
+                            day.day_idx % 5 === 0
                               ? "border border-x-gray/50  border-b-2"
                               : "border border-x-gray/50 border-b-gray/50"
                           }`}
                         >
                           <span className="z-20 float-left -translate-x-1/2 -translate-y-9 top-10 border border-blue-500 rounded-xl px-3 py-1 bg-blue-500 font-medium text-white">
-                            Week {day.week}
+                            Week {day.week_idx}
                           </span>
                           <span className="float-left -translate-x-1/2 mt-2">
-                            {day.day}, {day.date}
+                            {day.week_day}, {day.date}
                           </span>
                         </td>
                       </>
                     ) : (
                       <td
                         className={`${
-                          day.dayIndex % 5 === 0
+                          day.day_idx % 5 === 0
                             ? "border border-x-gray/50  border-b-2"
                             : "border border-x-gray/50 border-b-gray/50"
                         }`}
                       >
-                        {day.day}, {day.date}
+                        <p className="ml-3">
+                          {day.week_day}, {day.date}
+                        </p>
                       </td>
                     )}
                     <td
                       className={`${
-                        day.dayIndex % 5 === 0
+                        day.day_idx % 5 === 0
+                          ? "border border-x-gray/50  border-b-2"
+                          : "border border-x-gray/50 border-b-gray/50"
+                      }`}
+                    >
+                      <Link href={day.lec_link} className="hover:text-accent">
+                        <p className="ml-3">{day.lec_topic}</p>
+                      </Link>
+                    </td>
+                    <td
+                      className={`${
+                        day.day_idx % 5 === 0
+                          ? "border border-x-gray/50  border-b-2"
+                          : "border border-x-gray/50 border-b-gray/50"
+                      }`}
+                    >
+                      {day.hw_topic && (
+                        <Link href={day.hw_link}>
+                          <p
+                            className={`p-4 mb-2 ml-3 ${
+                              variantStyles["HW"] || "bg-gray-200"
+                            }`}
+                          >
+                            {day.hw_topic}
+                          </p>
+                        </Link>
+                      )}
+                      {day.lab_topic && (
+                        <Link href={day.lab_link}>
+                          <p
+                            className={`p-4 mb-2 ml-3 ${
+                              variantStyles["Lab"] || "bg-gray-200"
+                            }`}
+                          >
+                            {day.lab_topic}
+                          </p>
+                        </Link>
+                      )}
+                    </td>
+                    <td
+                      className={`${
+                        day.day_idx % 5 === 0
                           ? "border border-x-gray/50  border-b-2"
                           : "border border-x-gray/50 border-b-gray/50"
                       }`}
                     ></td>
                     <td
                       className={`${
-                        day.dayIndex % 5 === 0
+                        day.day_idx % 5 === 0
                           ? "border border-x-gray/50  border-b-2 "
                           : "border border-x-gray/50 border-b-gray/50"
                       }`}
-                    ></td>
-                    <td
-                      className={`${
-                        day.dayIndex % 5 === 0
-                          ? "border border-x-gray/50  border-b-2  "
-                          : "border border-x-gray/50 border-b-gray/50"
-                      }`}
-                    ></td>
-                    <td
-                      className={`${
-                        day.dayIndex % 5 === 0
-                          ? "border border-x-gray/50  border-b-2 "
-                          : "border border-x-gray/50 border-b-gray/50"
-                      }`}
-                    ></td>
+                    >
+                      {day.hw_due_topic && (
+                        <Link href={day.hw_due_link}>
+                          <p
+                            className={`p-4 mb-2 ml-3 ${
+                              variantStyles["HW"] || "bg-gray-200"
+                            }`}
+                          >
+                            {day.hw_due_topic}
+                          </p>
+                        </Link>
+                      )}
+                      {day.lab_due_topic && (
+                        <Link href={day.lab_due_link}>
+                          <p
+                            className={`p-4 mb-2 ml-3 ${
+                              variantStyles["Lab"] || "bg-gray-200"
+                            }`}
+                          >
+                            {day.lab_due_topic}
+                          </p>
+                        </Link>
+                      )}
+                    </td>
                   </tr>
                 </tbody>
               ))}

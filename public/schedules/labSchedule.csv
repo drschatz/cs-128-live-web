@@ -1,0 +1,6 @@
+﻿"idx","topic","date","weekday","dueDate","dueWeekday","link"
+"1","Lab 1: Introduction to Python","2024-08-30","Fri","2024-09-03","Tue","https://example.com/lab/1"
+"2","Lab 2: Data Structures","2024-09-06","Fri","2024-09-10","Tue","https://example.com/lab/2"
+"3","Lab 3: Algorithms","2024-09-13","Fri","2024-09-17","Tue","https://example.com/lab/3"
+"4","Lab 4: Databases","2024-09-20","Fri","2024-09-24","Tue","https://example.com/lab/4"
+"5","Lab 5: Web Development","2024-09-27","Fri","2024-10-1","Tue","https://example.com/lab/5"
