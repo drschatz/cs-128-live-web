@@ -71,6 +71,56 @@ const page = () => {
             <h1 className="text-3xl font-bold mb-4 text-accent" id="contact">
               Meet Staffs
             </h1>
+            <div className="grid grid-cols-3 gap-4">
+              <div className="flex flex-col col-span-1  justify-center bg-white p-4 rounded-lg shadow-md w-60">
+                <div>
+                  <Image
+                    src={squ}
+                    alt="Profile Image"
+                    className="w-60 h-60 rounded-md mb-2"
+                    width={60}
+                    height={60}
+                  />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold ">Squirrel Snow</h3>
+                  <h4 className="text-gray/70 text-md">She/Her</h4>
+                </div>
+                {/* <div className="flex items-center justify-center"></div> */}
+              </div>
+              <div className="flex flex-col col-span-1  justify-center bg-white p-4 rounded-lg shadow-md w-60">
+                <div>
+                  <Image
+                    src={squ}
+                    alt="Profile Image"
+                    className="w-60 h-60 rounded-md mb-2"
+                    width={60}
+                    height={60}
+                  />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold ">Squirrel Snow</h3>
+                  <h4 className="text-gray/70 text-md">She/Her</h4>
+                </div>
+                {/* <div className="flex items-center justify-center"></div> */}
+              </div>
+              <div className="flex flex-col col-span-1  justify-center bg-white p-4 rounded-lg shadow-md w-60">
+                <div>
+                  <Image
+                    src={squ}
+                    alt="Profile Image"
+                    className="w-60 h-60 rounded-md mb-2"
+                    width={60}
+                    height={60}
+                  />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold ">Squirrel Snow</h3>
+                  <h4 className="text-gray/70 text-md">She/Her</h4>
+                </div>
+                {/* <div className="flex items-center justify-center"></div> */}
+              </div>
+            </div>
           </div>
         </div>
       </div>
