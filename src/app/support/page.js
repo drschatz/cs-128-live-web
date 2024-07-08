@@ -3,7 +3,7 @@ import React from "react";
 
 import squ from "public/profile_img/squ.jpg";
 
-const page = () => {
+const SupportPage = () => {
   return (
     <main>
       <div className="mb-8 text-center relative w-full h-[24vh] bg-amber-400 ">
@@ -128,4 +128,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default SupportPage;

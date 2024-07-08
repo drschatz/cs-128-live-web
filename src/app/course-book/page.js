@@ -3,12 +3,12 @@ import React from "react";
 // import { allDocs } from "@/.contentlayer/generated";
 import { bookToc } from "@/src/constant/bookToc";
 
-const CourseBook = () => {
+const CourseBookPage = () => {
   console.log("Hello");
 
   return (
     <main>
-      <div className="mb-8 text-center relative w-full h-[24vh] bg-blue-400 ">
+      <div className="mb-8 text-center relative w-full h-[24vh] bg-slate-400 ">
         <div className="w-full z-10 flex flex-col items-center justify-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
           <h1 className="inline-block mt-6 font-semibold capitalize text-light text-2xl md:text-3xl lg:text-5xl !leading-normal relative w-5/6">
             Course Book
@@ -97,4 +97,4 @@ const CourseBook = () => {
   );
 };
 
-export default CourseBook;
+export default CourseBookPage;
