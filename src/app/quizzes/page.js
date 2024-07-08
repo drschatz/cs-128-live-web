@@ -16,7 +16,7 @@ const QuizzesPage = () => {
       <div className="container flex">
         <div className="w-9/12">
           <div className="w-full max-w-[900px] gap-2 mb-8">
-            <p className="font-bold text-2xl mb-5">Quizzes</p>
+            <h2 className="font-bold text-2xl mb-5">Quizzes</h2>
             <Link href="/">
               <div className="w-full h-[140px] border border-gray/50 rounded-lg overflow-hidden shadow-sm hover:shadow-lg mb-6">
                 <div className="p-4 mx-5">
@@ -63,8 +63,21 @@ const QuizzesPage = () => {
             </Link>
           </div>
         </div>
-        <div className="flex w-3/12 mb-8 flex-col">
-          <p className="font-bold mv-5 text-2xl">About</p>
+        <div className="flex w-3/12 mb-8 flex-col mr-4">
+          <h2 className="font-bold mb-5 text-2xl">About</h2>
+          <p className="mb-3">
+            Quizzes are a great way to test your knowledge and understanding of
+            the concepts taught in the course. They are designed to be
+            challenging and engaging.
+          </p>
+          <div className="mb-4">
+            <h3 className="font-semibold mb-2 text-xl">DRES</h3>
+            <p>
+              The Department of Research and Education Services (DRES) is
+              responsible for the development and delivery of all courses and
+              quizzes.
+            </p>
+          </div>
         </div>
       </div>
     </main>
