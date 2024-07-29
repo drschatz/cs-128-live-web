@@ -85,6 +85,21 @@ const SupportPage = () => {
                 <div>
                   <h3 className="text-lg font-semibold ">Squirrel Snow</h3>
                   <h4 className="text-gray/70 text-md">She/Her</h4>
+                  <hr className="border-gray/70 my-2" />
+                </div>
+                <div className="flex items-center justify-around space-x-2">
+                  <span role="img" aria-label="hobby1" className="text-2xl">
+                    🎨
+                  </span>{" "}
+                  {/* Example emoji for hobby */}
+                  <span role="img" aria-label="hobby2" className="text-2xl">
+                    📚
+                  </span>{" "}
+                  {/* Example emoji for hobby */}
+                  <span role="img" aria-label="hobby3" className="text-2xl">
+                    🏃‍♀️
+                  </span>{" "}
+                  {/* Example emoji for hobby */}
                 </div>
                 {/* <div className="flex items-center justify-center"></div> */}
               </div>
@@ -101,6 +116,21 @@ const SupportPage = () => {
                 <div>
                   <h3 className="text-lg font-semibold ">Squirrel Snow</h3>
                   <h4 className="text-gray/70 text-md">She/Her</h4>
+                  <hr className="border-gray/70 my-2" />
+                </div>
+                <div className="flex items-center justify-around space-x-2">
+                  <span role="img" aria-label="hobby1" className="text-2xl">
+                    🎨
+                  </span>{" "}
+                  {/* Example emoji for hobby */}
+                  <span role="img" aria-label="hobby2" className="text-2xl">
+                    📚
+                  </span>{" "}
+                  {/* Example emoji for hobby */}
+                  <span role="img" aria-label="hobby3" className="text-2xl">
+                    🏃‍♀️
+                  </span>{" "}
+                  {/* Example emoji for hobby */}
                 </div>
                 {/* <div className="flex items-center justify-center"></div> */}
               </div>
@@ -117,6 +147,21 @@ const SupportPage = () => {
                 <div>
                   <h3 className="text-lg font-semibold ">Squirrel Snow</h3>
                   <h4 className="text-gray/70 text-md">She/Her</h4>
+                  <hr className="border-gray/70 my-2" />
+                </div>
+                <div className="flex items-center justify-around space-x-2">
+                  <span role="img" aria-label="hobby1" className="text-2xl">
+                    🎨
+                  </span>{" "}
+                  {/* Example emoji for hobby */}
+                  <span role="img" aria-label="hobby2" className="text-2xl">
+                    📚
+                  </span>{" "}
+                  {/* Example emoji for hobby */}
+                  <span role="img" aria-label="hobby3" className="text-2xl">
+                    🏃‍♀️
+                  </span>{" "}
+                  {/* Example emoji for hobby */}
                 </div>
                 {/* <div className="flex items-center justify-center"></div> */}
               </div>
