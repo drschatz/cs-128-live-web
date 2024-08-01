@@ -15,7 +15,7 @@ const SupportPage = () => {
         <div className="absolute top-0 left-0 right-0 bottom-0 h-full bg-amber/60 dark:bg-amber/40" />
       </div>
       <div className="flex mb-8">
-        <div className="w-4/12 hidden sm:block  mt-8 ml-24 text-base text-gray ">
+        <div className="w-4/12 hidden sm:block mt-8 ml-24 text-base text-gray ">
           <h3 className="mb-2 sticky top-24 font-semibold">Support Nav</h3>
           <ul className="ml-4 sticky top-32">
             <li className="hover:text-accent mb-2">
@@ -30,7 +30,7 @@ const SupportPage = () => {
             </li>
           </ul>
         </div>
-        <div className="w-7/12 mt-8 p-4 ">
+        <div className="w-7/12 mt-8 p-4">
           <div className="mb-8 ">
             <h1 className="text-3xl font-bold mb-4 text-accent" id="faq">
               How to get support?
