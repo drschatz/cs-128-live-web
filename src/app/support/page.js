@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 
 import squ from "public/profile_img/squ.jpg";
+import StaffCard from "./StaffCard";
 
 const SupportPage = () => {
   return (
@@ -72,99 +73,9 @@ const SupportPage = () => {
               Meet Staffs
             </h1>
             <div className="grid grid-cols-3 gap-4">
-              <div className="flex flex-col col-span-1  justify-center bg-white p-4 rounded-lg shadow-md w-60">
-                <div>
-                  <Image
-                    src={squ}
-                    alt="Profile Image"
-                    className="w-60 h-60 rounded-md mb-2"
-                    width={60}
-                    height={60}
-                  />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold ">Squirrel Snow</h3>
-                  <h4 className="text-gray/70 text-md">She/Her</h4>
-                  <hr className="border-gray/70 my-2" />
-                </div>
-                <div className="flex items-center justify-around space-x-2">
-                  <span role="img" aria-label="hobby1" className="text-2xl">
-                    🎨
-                  </span>{" "}
-                  {/* Example emoji for hobby */}
-                  <span role="img" aria-label="hobby2" className="text-2xl">
-                    📚
-                  </span>{" "}
-                  {/* Example emoji for hobby */}
-                  <span role="img" aria-label="hobby3" className="text-2xl">
-                    🏃‍♀️
-                  </span>{" "}
-                  {/* Example emoji for hobby */}
-                </div>
-                {/* <div className="flex items-center justify-center"></div> */}
-              </div>
-              <div className="flex flex-col col-span-1  justify-center bg-white p-4 rounded-lg shadow-md w-60">
-                <div>
-                  <Image
-                    src={squ}
-                    alt="Profile Image"
-                    className="w-60 h-60 rounded-md mb-2"
-                    width={60}
-                    height={60}
-                  />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold ">Squirrel Snow</h3>
-                  <h4 className="text-gray/70 text-md">She/Her</h4>
-                  <hr className="border-gray/70 my-2" />
-                </div>
-                <div className="flex items-center justify-around space-x-2">
-                  <span role="img" aria-label="hobby1" className="text-2xl">
-                    🎨
-                  </span>{" "}
-                  {/* Example emoji for hobby */}
-                  <span role="img" aria-label="hobby2" className="text-2xl">
-                    📚
-                  </span>{" "}
-                  {/* Example emoji for hobby */}
-                  <span role="img" aria-label="hobby3" className="text-2xl">
-                    🏃‍♀️
-                  </span>{" "}
-                  {/* Example emoji for hobby */}
-                </div>
-                {/* <div className="flex items-center justify-center"></div> */}
-              </div>
-              <div className="flex flex-col col-span-1  justify-center bg-white p-4 rounded-lg shadow-md w-60">
-                <div>
-                  <Image
-                    src={squ}
-                    alt="Profile Image"
-                    className="w-60 h-60 rounded-md mb-2"
-                    width={60}
-                    height={60}
-                  />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold ">Squirrel Snow</h3>
-                  <h4 className="text-gray/70 text-md">She/Her</h4>
-                  <hr className="border-gray/70 my-2" />
-                </div>
-                <div className="flex items-center justify-around space-x-2">
-                  <span role="img" aria-label="hobby1" className="text-2xl">
-                    🎨
-                  </span>{" "}
-                  {/* Example emoji for hobby */}
-                  <span role="img" aria-label="hobby2" className="text-2xl">
-                    📚
-                  </span>{" "}
-                  {/* Example emoji for hobby */}
-                  <span role="img" aria-label="hobby3" className="text-2xl">
-                    🏃‍♀️
-                  </span>{" "}
-                  {/* Example emoji for hobby */}
-                </div>
-                {/* <div className="flex items-center justify-center"></div> */}
-              </div>
+              <StaffCard />
+              <StaffCard />
+              <StaffCard />
             </div>
           </div>
         </div>

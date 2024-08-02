@@ -17,20 +17,16 @@ export default function Home() {
           <div className="flex flex-col col-span-2 justify-center p-4">
             <h3 className="text-xl font-semibold text-center">MP</h3>
             <hr className="border-gray/70 my-2" />
-            <h4 className="text-lg text-center mb-2">First MP Name</h4>
-            <p className="text-gray/80 text-md text-center">
-              Due Sep 15th, 23:59 CST
-            </p>
+            <h4 className="text-lg text-center mb-2">Come back later!</h4>
+            <p className="text-gray/80 text-md text-center">In the future</p>
           </div>
         </div>
         <div className="border-4 border-yellow-500 rounded-lg shadow-md w-80 h-40  ml-12">
           <div className="flex flex-col col-span-2 justify-center p-4">
             <h3 className="text-xl font-semibold text-center">Lab</h3>
             <hr className="border-gray/70 my-2" />
-            <h4 className="text-lg text-center mb-2">First Lab Name</h4>
-            <p className="text-gray/80 text-md text-center">
-              Due Sep 15th, 23:59 CST
-            </p>
+            <h4 className="text-lg text-center mb-2">Come back later!</h4>
+            <p className="text-gray/80 text-md text-center">In the future</p>
           </div>
         </div>
       </div>
