@@ -19,18 +19,18 @@ const Header = () => {
         <Logo />
         {/* nav links */}
         <div className="hidden md:flex items-center space-x-4">
-          <Link href="/lectures" className="hover:text-accent">
+          {/* <Link href="/lectures" className="hover:text-accent">
             {" "}
             Lectures{" "}
-          </Link>
+          </Link> */}
           {/* <Link href="/assignments" className="hover:text-accent">
             {" "}
             Assignments{" "}
           </Link> */}
-          <Link href="/quizzes" className="hover:text-accent">
+          {/* <Link href="/quizzes" className="hover:text-accent">
             {" "}
             Quizzes{" "}
-          </Link>
+          </Link> */}
           <Link href="/syllabus" className="hover:text-accent">
             {" "}
             Syllabus{" "}
@@ -39,10 +39,10 @@ const Header = () => {
             {" "}
             Course Book{" "}
           </Link> */}
-          <Link href="/support" className="hover:text-accent">
+          {/* <Link href="/support" className="hover:text-accent">
             {" "}
             Support{" "}
-          </Link>
+          </Link> */}
         </div>
 
         {/* Hamburger Icon */}
