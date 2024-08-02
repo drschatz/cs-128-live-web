@@ -1,9 +1,34 @@
 import React from "react";
 
-// import { allDocs } from "@/.contentlayer/generated";
-import { bookToc } from "@/src/constant/bookToc";
+import Markdown from "markdown-to-jsx";
+import getPostMetadata from "@/lib/getPostMetadata";
+import fs from "fs";
+import matter from "gray-matter";
+
+function getPostContent(slug) {
+  const folder = "syllabus/";
+  const file = folder + `${slug}.md`;
+  const content = fs.readFileSync(file, "utf8");
+
+  const matterResult = matter(content);
+  return matterResult;
+}
+
+export const generateStaticParams = async () => {
+  const posts = getPostMetadata("syllabus");
+  return posts.map((post) => ({ slug: post.slug }));
+};
+
+export async function generateMetadata({ params, searchParams }) {
+  const id = params?.slug ? " ⋅ " + params?.slug : "";
+  return {
+    title: `${id.replaceAll("_", " ")}`,
+  };
+}
 
 const CourseBook = () => {
+  const slug = "syllabus";
+  const post = getPostContent(slug);
   console.log("Hello");
 
   return (
@@ -20,13 +45,111 @@ const CourseBook = () => {
         <div className="w-4/12 hidden sm:block  mt-8 ml-24 text-base text-gray ">
           <h3 className="mb-2 sticky top-24 font-semibold">Syllabus Nav</h3>
           <ul className="ml-4 sticky top-32">
-            {bookToc.map((chap) => (
-              <li key={chap.chapterIdx} className="hover:text-accent">
-                <a href={`#${chap.chapterIdx}`} className="ml-2 ">
-                  <strong>{`${chap.chapterIdx}. ${chap.chapterTitle}`}</strong>
+            <li className="hover:text-accent mb-2">
+              <a href="#contact-information" className="ml-2">
+                <strong>Contact Information</strong>
+              </a>
+            </li>
+            <li className="hover:text-accent mb-2">
+              <a href="#learning-objectives" className="ml-2">
+                <strong>Learning Objectives</strong>
+              </a>
+            </li>
+            <li className="hover:text-accent mb-2">
+              <a href="#components" className="ml-2">
+                <strong>Components</strong>
+              </a>
+            </li>
+            {/* <ul className="ml-8">
+              <li className="hover:text-accent mb-2">
+                <a href="#lecture" className="ml-2">
+                  <strong>Lecture</strong>
                 </a>
               </li>
-            ))}
+              <li className="hover:text-accent mb-2">
+                <a href="#lab" className="ml-2">
+                  <strong>Lab</strong>
+                </a>
+              </li>
+              <li className="hover:text-accent mb-2">
+                <a href="#homework" className="ml-2">
+                  <strong>Homework</strong>
+                </a>
+              </li>
+              <li className="hover:text-accent mb-2">
+                <a href="#mps" className="ml-2">
+                  <strong>MPs</strong>
+                </a>
+              </li>
+              <li className="hover:text-accent mb-2">
+                <a href="#homework" className="ml-2">
+                  <strong>Homework</strong>
+                </a>
+              </li>
+              <li className="hover:text-accent mb-2">
+                <a href="#exams" className="ml-2">
+                  <strong>Exams</strong>
+                </a>
+              </li>
+            </ul> */}
+            <ul className="ml-4">
+              <li className="hover:text-accent mb-2">
+                <a href="#grades" className="ml-2">
+                  <strong>Grades</strong>
+                </a>
+              </li>
+              <li className="hover:text-accent mb-2">
+                <a href="#how-to-get-points" className="ml-2">
+                  <strong>How To Get Points</strong>
+                </a>
+              </li>
+              <li className="hover:text-accent mb-2">
+                <a href="#extension-policies" className="ml-2">
+                  <strong>Extension Policies</strong>
+                </a>
+              </li>
+              <li className="hover:text-accent mb-2">
+                <a href="#how-to-get-help" className="ml-2">
+                  <strong>How to Get Help</strong>
+                </a>
+              </li>
+              <li className="hover:text-accent mb-2">
+                <a
+                  href="#proffice-hours-professor-office-hours"
+                  className="ml-2"
+                >
+                  <strong>Proffice Hours (Professor Office Hours)</strong>
+                </a>
+              </li>
+              <li className="hover:text-accent mb-2">
+                <a
+                  href="#collaborationacademic-integrity-policy"
+                  className="ml-2"
+                >
+                  <strong>Collaboration/Academic Integrity Policy</strong>
+                </a>
+              </li>
+              <li className="hover:text-accent mb-2">
+                <a
+                  href="#commitment-to-diversity-equity-and-inclusion"
+                  className="ml-2"
+                >
+                  <strong>
+                    Commitment to Diversity, Equity, and Inclusion
+                  </strong>
+                </a>
+              </li>
+              <li className="hover:text-accent mb-2">
+                <a href="#students-with-disabilities" className="ml-2">
+                  <strong>Students with Disabilities</strong>
+                </a>
+              </li>
+              <li className="hover:text-accent mb-2">
+                <a href="#statement-on-mental-health" className="ml-2">
+                  <strong>Statement on Mental Health</strong>
+                </a>
+              </li>
+            </ul>
           </ul>
         </div>
         <div className="w-7/12 mt-8 p-4 ">
@@ -34,64 +157,146 @@ const CourseBook = () => {
             <h1 className="text-3xl font-bold mb-4 text-accent">
               Course Syllabus
             </h1>
-            <p className="leading-9 mb-4 text-lg text-black/80 font-medium">
-              This is the introduction of the Syllabus. Tailwind CSS uses a lot
-              of custom CSS at-rules like @tailwind, @apply, and @config, and in
-              many editors this can trigger warnings or errors where these rules
-              aren’t recognized. The solution to this is almost always to
-              install a plugin for your editor/IDE for PostCSS language support
-              instead of regular CSS. If you are using VS Code, our official
-              Tailwind CSS IntelliSense plugin includes a dedicated Tailwind CSS
-              language mode that has support for all of the custom at-rules and
-              functions Tailwind uses. In some cases, you may need to disable
-              native CSS linting/validations if your editor is very strict about
-              the syntax it expects in your CSS files.
-              <br />
-              <br />
-              This is the introduction of the Syllabus. Tailwind CSS uses a lot
-              of custom CSS at-rules like @tailwind, @apply, and @config, and in
-              many editors this can trigger warnings or errors where these rules
-              aren’t recognized. The solution to this is almost always to
-              install a plugin for your editor/IDE for PostCSS language support
-              instead of regular CSS. If you are using VS Code, our official
-              Tailwind CSS IntelliSense plugin includes a dedicated Tailwind CSS
-              language mode that has support for all of the custom at-rules and
-              functions Tailwind uses. In some cases, you may need to disable
-              native CSS linting/validations if your editor is very strict about
-              the syntax it expects in your CSS files.
-              <br />
-              <br />
-              This is the introduction of the Syllabus. Tailwind CSS uses a lot
-              of custom CSS at-rules like @tailwind, @apply, and @config, and in
-              many editors this can trigger warnings or errors where these rules
-              aren’t recognized. The solution to this is almost always to
-              install a plugin for your editor/IDE for PostCSS language support
-              instead of regular CSS. If you are using VS Code, our official
-              Tailwind CSS IntelliSense plugin includes a dedicated Tailwind CSS
-              language mode that has support for all of the custom at-rules and
-              functions Tailwind uses. In some cases, you may need to disable
-              native CSS linting/validations if your editor is very strict about
-              the syntax it expects in your CSS files.
-            </p>
+            <Markdown
+              options={{
+                overrides: {
+                  h1: {
+                    component: "h1",
+                    props: {
+                      className: "text-2xl font-semibold mt-8 mb-2",
+                    },
+                  },
+                  h2: {
+                    component: "h2",
+                    props: {
+                      className: "text-xl font-semibold mt-6 mb-2",
+                    },
+                  },
+                  h3: {
+                    component: "h3",
+                    props: {
+                      className: "text-lg font-semibold mt-4 mb-2",
+                    },
+                  },
+                  h4: {
+                    component: "h4",
+                    props: {
+                      className: "text-base font-semibold mt-4 mb-2",
+                    },
+                  },
+                  p: {
+                    component: "p",
+                    props: {
+                      className:
+                        "mb-4 leading-9 text-black/80 font-medium text-lg ",
+                    },
+                  },
+                  a: {
+                    component: "a",
+                    props: {
+                      className: "text-accent hover:underline",
+                    },
+                  },
+                  ul: {
+                    component: "ul",
+                    props: {
+                      className: "list-disc ml-8 mb-4",
+                    },
+                  },
+                  ol: {
+                    component: "ol",
+                    props: {
+                      className:
+                        "list-decimal tracking-normal ml-8 mb-2 text-lg",
+                    },
+                  },
+                  li: {
+                    component: "li",
+                    props: {
+                      className: "mb-2 ml-4 tracking-normal text-lg",
+                    },
+                  },
+                  blockquote: {
+                    component: "blockquote",
+                    props: {
+                      className:
+                        "border-l-4 border-accent bg-gray-100 dark:bg-gray-800 p-2",
+                    },
+                  },
+                  code: {
+                    component: "code",
+                    props: {
+                      className:
+                        "bg-gray-100 dark:bg-gray-800 p-1 text-sm rounded",
+                    },
+                  },
+                  pre: {
+                    component: "pre",
+                    props: {
+                      className:
+                        "bg-gray-100 dark:bg-gray-800 p-2 text-sm rounded",
+                    },
+                  },
+                  strong: {
+                    component: "strong",
+                    props: {
+                      className: "font-semibold text-black",
+                    },
+                  },
+                  em: {
+                    component: "em",
+                    props: {
+                      className: "italic",
+                    },
+                  },
+                  table: {
+                    component: "table",
+                    props: {
+                      className: "table-auto w-full",
+                    },
+                  },
+                  thead: {
+                    component: "thead",
+                    props: {
+                      className: "bg-gray-100 dark:bg-gray-800",
+                    },
+                  },
+                  th: {
+                    component: "th",
+                    props: {
+                      className: "border dark:border-light p-2",
+                    },
+                  },
+                  td: {
+                    component: "td",
+                    props: {
+                      className: "border dark:border-light p-2",
+                    },
+                  },
+                  tbody: {
+                    component: "tbody",
+                    props: {
+                      className: "text-center",
+                    },
+                  },
+                  tr: {
+                    component: "tr",
+                    props: {
+                      className: "bg-gray-100 dark:bg-gray-800",
+                    },
+                  },
+                  img: {
+                    component: "img",
+                    props: {
+                      className: "w-full",
+                    },
+                  },
+                },
+              }}
+            >
+              {post.content}
+            </Markdown>
           </div>
-
-          {bookToc.map((chap) => (
-            <div key={chap.chapterIdx} id={chap.chapterIdx}>
-              <h1 className="font-bold text-2xl mb-4">{`${chap.chapterIdx}. ${chap.chapterTitle}`}</h1>
-              <ul className="ml-4">
-                {chap.sections.map((sec) => (
-                  <li key={sec.key} className=" mb-2">
-                    <a
-                      href={sec.slug}
-                      className="ml-2 text-lg text-black/80 hover:text-accent font-medium"
-                    >
-                      {sec.key}. {sec.title}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
         </div>
         <div className="w-1/12"></div>
       </div>
