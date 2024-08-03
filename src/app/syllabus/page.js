@@ -1,30 +1,5 @@
-import React from "react";
-
 import Markdown from "markdown-to-jsx";
-import getPostMetadata from "@/lib/getPostMetadata";
-import fs from "fs";
-import matter from "gray-matter";
-
-function getPostContent(slug) {
-  const folder = "syllabus/";
-  const file = folder + `${slug}.md`;
-  const content = fs.readFileSync(file, "utf8");
-
-  const matterResult = matter(content);
-  return matterResult;
-}
-
-export const generateStaticParams = async () => {
-  const posts = getPostMetadata("syllabus");
-  return posts.map((post) => ({ slug: post.slug }));
-};
-
-export async function generateMetadata({ params, searchParams }) {
-  const id = params?.slug ? " ⋅ " + params?.slug : "";
-  return {
-    title: `${id.replaceAll("_", " ")}`,
-  };
-}
+import getPostContent from "@/lib/getPostContent";
 
 const CourseBook = () => {
   const slug = "syllabus";
@@ -41,100 +16,102 @@ const CourseBook = () => {
         </div>
         <div className="absolute top-0 left-0 right-0 bottom-0 h-full bg-green/60 dark:bg-dark/40" />
       </div>
-      <div className="flex mb-8">
-        <div className="w-4/12 hidden sm:block  mt-8 ml-24 text-base text-gray ">
+      <div className="flex mb-8 sm:flex-row flex-col">
+        <div className="w-full sm:w-4/12 sm:block mt-8 ml-24 text-base text-gray">
           <h3 className="mb-2 sticky top-24 font-semibold">Syllabus Nav</h3>
           <ul className="ml-4 sticky top-32">
-            <li className="hover:text-accent mb-2">
+            <li className="hover:text-accent mb-1.5">
               <a href="#contact-information" className="ml-2">
                 <strong>Contact Information</strong>
               </a>
             </li>
-            <li className="hover:text-accent mb-2">
+            <li className="hover:text-accent mb-1.5">
               <a href="#learning-objectives" className="ml-2">
                 <strong>Learning Objectives</strong>
               </a>
             </li>
-            <li className="hover:text-accent mb-2">
+            <li className="hover:text-accent mb-1.5">
               <a href="#components" className="ml-2">
                 <strong>Components</strong>
               </a>
             </li>
-            <ul className="ml-4">
-              <li className="hover:text-accent mb-2">
+
+            <ul className="ml-4 text-sm">
+              <li className="hover:text-accent mb-1">
                 <a href="#lecture" className="ml-2">
                   <strong>Lecture</strong>
                 </a>
               </li>
-              <li className="hover:text-accent mb-2">
+              <li className="hover:text-accent mb-1">
                 <a href="#lab" className="ml-2">
                   <strong>Lab</strong>
                 </a>
               </li>
-              <li className="hover:text-accent mb-2">
+              <li className="hover:text-accent mb-1">
                 <a href="#homework" className="ml-2">
                   <strong>Homework</strong>
                 </a>
               </li>
-              <li className="hover:text-accent mb-2">
+              <li className="hover:text-accent mb-1">
                 <a href="#mps" className="ml-2">
                   <strong>MPs</strong>
                 </a>
               </li>
-              <li className="hover:text-accent mb-2">
+              <li className="hover:text-accent mb-1">
                 <a href="#homework" className="ml-2">
                   <strong>Homework</strong>
                 </a>
               </li>
-              <li className="hover:text-accent mb-2">
+              <li className="hover:text-accent mb-1">
                 <a href="#exams" className="ml-2">
                   <strong>Exams</strong>
                 </a>
               </li>
             </ul>
-            <li className="hover:text-accent mb-2">
+
+            <li className="hover:text-accent mb-1.5">
               <a href="#grades" className="ml-2">
                 <strong>Grades</strong>
               </a>
             </li>
-            <li className="hover:text-accent mb-2">
+            <li className="hover:text-accent mb-1.5">
               <a href="#how-to-get-points" className="ml-2">
                 <strong>How To Get Points</strong>
               </a>
             </li>
-            <li className="hover:text-accent mb-2">
+            <li className="hover:text-accent mb-1.5">
               <a href="#extension-policies" className="ml-2">
                 <strong>Extension Policies</strong>
               </a>
             </li>
-            <li className="hover:text-accent mb-2">
+            <li className="hover:text-accent mb-1.5">
               <a href="#how-to-get-help" className="ml-2">
                 <strong>How to Get Help</strong>
               </a>
             </li>
-            <ul className="ml-4">
-              <li className="hover:text-accent mb-2">
+            <ul className="ml-4 text-sm">
+              <li className="hover:text-accent mb-1">
                 <a href="#office-hours" className="ml-2">
                   <strong>Office Hours</strong>
                 </a>
               </li>
-              <li className="hover:text-accent mb-2">
+              <li className="hover:text-accent mb-1">
                 <a href="#discuss-online-forum" className="ml-2">
                   <strong>Discuss Online Forum</strong>
                 </a>
               </li>
-              <li className="hover:text-accent mb-2">
+              <li className="hover:text-accent mb-1">
                 <a href="#meet-with-the-professor" className="ml-2">
                   <strong>Meet with the Professor</strong>
                 </a>
               </li>
             </ul>
-            <li className="hover:text-accent mb-2">
+            <li className="hover:text-accent mb-1.5">
               <a href="#proffice-hours-professor-office-hours" className="ml-2">
                 <strong>Proffice Hours (Professor Office Hours)</strong>
               </a>
             </li>
-            <li className="hover:text-accent mb-2">
+            <li className="hover:text-accent mb-1.5">
               <a
                 href="#collaborationacademic-integrity-policy"
                 className="ml-2"
@@ -142,19 +119,19 @@ const CourseBook = () => {
                 <strong>Collaboration/Academic Integrity Policy</strong>
               </a>
             </li>
-            <ul className="ml-4">
-              <li className="hover:text-accent mb-2">
+            <ul className="ml-4 text-sm">
+              <li className="hover:text-accent mb-1">
                 <a href="#limited-collaboration-allowed" className="ml-2">
                   <strong>Limited Collaboration Allowed</strong>
                 </a>
               </li>
-              <li className="hover:text-accent mb-2">
+              <li className="hover:text-accent mb-1">
                 <a href="#collaboration-not-allowed" className="ml-2">
                   <strong>Collaboration NOT Allowed</strong>
                 </a>
               </li>
             </ul>
-            <li className="hover:text-accent mb-2">
+            <li className="hover:text-accent mb-1.5">
               <a
                 href="#commitment-to-diversity-equity-and-inclusion"
                 className="ml-2"
@@ -162,19 +139,19 @@ const CourseBook = () => {
                 <strong>Commitment to Diversity, Equity, and Inclusion</strong>
               </a>
             </li>
-            <li className="hover:text-accent mb-2">
+            <li className="hover:text-accent mb-1.5">
               <a href="#students-with-disabilities" className="ml-2">
                 <strong>Students with Disabilities</strong>
               </a>
             </li>
-            <li className="hover:text-accent mb-2">
+            <li className="hover:text-accent mb-1.5">
               <a href="#statement-on-mental-health" className="ml-2">
                 <strong>Statement on Mental Health</strong>
               </a>
             </li>
           </ul>
         </div>
-        <div className="w-7/12 mt-8 p-4 ">
+        <div className="w-full sm:w-7/12 mt-8 p-4">
           <div className="mb-8 ">
             <h1 className="text-3xl font-bold mb-4 text-accent">
               Course Syllabus
@@ -320,7 +297,7 @@ const CourseBook = () => {
             </Markdown>
           </div>
         </div>
-        <div className="w-1/12"></div>
+        <div className="hidden sm:block w-1/12"></div>
       </div>
     </main>
   );
