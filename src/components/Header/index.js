@@ -23,10 +23,10 @@ const Header = () => {
             {" "}
             Lectures{" "}
           </Link>
-          {/* <Link href="/assignments" className="hover:text-accent">
+          <Link href="/assignments" className="hover:text-accent">
             {" "}
             Assignments{" "}
-          </Link> */}
+          </Link>
           <Link href="/quizzes" className="hover:text-accent">
             {" "}
             Quizzes{" "}
