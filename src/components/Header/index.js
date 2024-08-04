@@ -18,7 +18,7 @@ const Header = () => {
       <div className="flex items-center justify-between font-semibold">
         <Logo />
         {/* nav links */}
-        <div className="hidden md:flex items-center space-x-4">
+        <div className="hidden sm:flex items-center space-x-4">
           <Link href="/lectures" className="hover:text-accent">
             {" "}
             Lectures{" "}
@@ -48,19 +48,33 @@ const Header = () => {
         {/* Hamburger Icon */}
         <button
           id="burger-btn"
-          className={
-            isOpen ? "open" : "block hamburger md:hidden focus:outline-none"
-          }
+          className={`flex sm:hidden focus:outline-none ${
+            isOpen ? "open" : ""
+          }`}
           onClick={() => setIsOpen(!isOpen)}
         >
-          <span className="hamburger-top"></span>
-          <span className="hamburger-middle"></span>
-          <span className="hamburger-bottom"></span>
+          <div className="space-y-1">
+            <span
+              className={`block w-8 h-1 bg-black transform transition duration-300 ${
+                isOpen ? "rotate-45 translate-y-1.5" : ""
+              }`}
+            ></span>
+            <span
+              className={`block w-8 h-1 bg-black transition duration-300 ${
+                isOpen ? "opacity-0" : ""
+              }`}
+            ></span>
+            <span
+              className={`block w-8 h-1 bg-black transform transition duration-300 ${
+                isOpen ? "-rotate-45 -translate-y-2.5" : ""
+              }`}
+            ></span>
+          </div>
         </button>
       </div>
 
       {/* Mobile Nav */}
-      <div className="md:hidden w-full">
+      <div className="sm:hidden w-full">
         <div
           id="burger-menu"
           className={
@@ -73,10 +87,10 @@ const Header = () => {
             {" "}
             Lectures{" "}
           </Link>
-          <Link href="/assignments" className="hover:text-accent">
+          {/* <Link href="/assignments" className="hover:text-accent">
             {" "}
             Assignments{" "}
-          </Link>
+          </Link> */}
           <Link href="/quizzes" className="hover:text-accent">
             {" "}
             Quizzes{" "}
@@ -85,10 +99,10 @@ const Header = () => {
             {" "}
             Syllabus{" "}
           </Link>
-          <Link href="/course-book" className="hover:text-accent">
+          {/* <Link href="/course-book" className="hover:text-accent">
             {" "}
             Course Book{" "}
-          </Link>
+          </Link> */}
           <Link href="/support" className="hover:text-accent">
             {" "}
             Support{" "}
