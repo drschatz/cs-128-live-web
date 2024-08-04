@@ -1,0 +1,101 @@
+[
+  {
+    "idx": 1,
+    "topic": "Lab 1: Bottle Toss",
+    "date": "2024-08-30",
+    "weekday": "Fri",
+    "due_date": "2024-09-03",
+    "due_weekday": "Tue",
+    "link": "https://example.com/lab/1"
+  },
+  {
+    "idx": 2,
+    "topic": "Lab 2: Connect-4 Diagonal",
+    "date": "2024-09-06",
+    "weekday": "Fri",
+    "due_date": "2024-09-10",
+    "due_weekday": "Tue",
+    "link": "https://example.com/lab/2"
+  },
+  {
+    "idx": 3,
+    "topic": "Lab 3: Write tests to find all the bugs in code",
+    "date": "2024-09-13",
+    "weekday": "Fri",
+    "due_date": "2024-09-17",
+    "due_weekday": "Tue",
+    "link": "https://example.com/lab/3"
+  },
+  {
+    "idx": 4,
+    "topic": "Lab 4: Social Network",
+    "date": "2024-09-20",
+    "weekday": "Fri",
+    "due_date": "2024-09-24",
+    "due_weekday": "Tue",
+    "link": "https://example.com/lab/4"
+  },
+  {
+    "idx": 6,
+    "topic": "Lab 5: Array Lab",
+    "date": "2024-10-04",
+    "weekday": "Fri",
+    "due_date": "2024-10-08",
+    "due_weekday": "Tue",
+    "link": "https://example.com/lab/5"
+  },
+  {
+    "idx": 7,
+    "topic": "Lab 6: Gotta catch em all memory errors or big three practice",
+    "date": "2024-10-11",
+    "weekday": "Fri",
+    "due_date": "2024-10-15",
+    "due_weekday": "Tue",
+    "link": "https://example.com/lab/5"
+  },
+  {
+    "idx": 8,
+    "topic": "Lab 7: Office hours queue",
+    "date": "2024-10-18",
+    "weekday": "Fri",
+    "due_date": "2024-10-22",
+    "due_weekday": "Tue",
+    "link": "https://example.com/lab/5"
+  },
+  {
+    "idx": 10,
+    "topic": "Lab 8: Bad balance",
+    "date": "2024-11-01",
+    "weekday": "Fri",
+    "due_date": "2024-11-05",
+    "due_weekday": "Tue",
+    "link": "https://example.com/lab/5"
+  },
+  {
+    "idx": 11,
+    "topic": "Lab 9: Iterators",
+    "date": "2024-11-08",
+    "weekday": "Fri",
+    "due_date": "2024-11-12",
+    "due_weekday": "Tue",
+    "link": "https://example.com/lab/5"
+  },
+  {
+    "idx": 12,
+    "topic": "Lab 10: [Place Holder]",
+    "date": "2024-11-15",
+    "weekday": "Fri",
+    "due_date": "2024-11-19",
+    "due_weekday": "Tue",
+    "link": "https://example.com/lab/5"
+  },
+  {
+    "idx": 13,
+    "topic": "Lab 11: Character Inheritance",
+    "date": "2024-11-22",
+    "weekday": "Fri",
+    "due_date": "2024-11-26",
+    "due_weekday": "Tue",
+    "link": "https://example.com/lab/5"
+  }
+]

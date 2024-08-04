@@ -1,0 +1,32 @@
+idx,topic,date,weekday,due_date,due_weekday,link
+1,Homework 1,2024-08-26,Mon,2024-08-28,Wed,https://example.com/homework/1
+2,Homework 2,2024-08-28,Wed,2024-08-30,Fri,https://example.com/homework/2
+3,Homework 3,2024-09-02,Mon,2024-09-04,Wed,https://example.com/homework/3
+4,Homework 4,2024-09-04,Wed,2024-09-06,Fri,https://example.com/homework/4
+5,Homework 5,2024-09-09,Mon,2024-09-11,Wed,https://example.com/homework/5
+6,Homework 6,2024-09-11,Wed,2024-09-13,Fri,https://example.com/homework/6
+7,Homework 7,2024-09-16,Mon,2024-09-18,Wed,https://example.com/homework/7
+8,Homework 8,2024-09-18,Wed,2024-09-20,Fri,https://example.com/homework/8
+9,Homework 9,2024-09-23,Mon,2024-09-25,Wed,https://example.com/homework/9
+10,Homework 10,2024-09-25,Wed,2024-09-27,Fri,https://example.com/homework/10
+22,Homework 22,2024-11-06,Wed,2024-11-08,Fri,https://example.com/homework/10
+21,Homework 21,2024-11-04,Mon,2024-11-06,Wed,https://example.com/homework/10
+20,Homework 20,2024-10-30,Wed,2024-11-01,Fri,https://example.com/homework/10
+19,Homework 19,2024-10-28,Mon,2024-10-30,Wed,https://example.com/homework/10
+18,Homework 18,2024-10-23,Wed,2024-10-25,Fri,https://example.com/homework/10
+17,Homework 17,2024-10-21,Mon,2024-10-23,Wed,https://example.com/homework/10
+16,Homework 16,2024-10-16,Wed,2024-10-18,Fri,https://example.com/homework/10
+15,Homework 15,2024-10-14,Mon,2024-10-16,Wed,https://example.com/homework/10
+14,Homework 14,2024-10-09,Wed,2024-10-11,Fri,https://example.com/homework/10
+13,Homework 13,2024-10-07,Mon,2024-10-09,Wed,https://example.com/homework/10
+12,"Homework 12
+",2024-10-02,Wed,2024-10-04,Fri,https://example.com/homework/10
+11,Homework 11,2024-09-30,Mon,2024-10-02,Wed,https://example.com/homework/10
+26,Homework 26,2024-11-20,Wed,2024-11-22,Fri,https://example.com/homework/10
+25,Homework 25,2024-11-18,Mon,2024-11-20,Wed,https://example.com/homework/10
+24,Homework 24,2024-11-13,Wed,2024-11-15,Fri,https://example.com/homework/10
+23,Homework 23,2024-11-11,Mon,2024-11-13,Wed,https://example.com/homework/10
+32,Homework 30,2024-12-11,Wed,2024-12-13,Fri,https://example.com/homework/10
+31,Homework 29,2024-12-09,Mon,2024-12-11,Wed,https://example.com/homework/10
+30,Homework 28,2024-12-04,Wed,2024-12-06,Fri,https://example.com/homework/10
+29,Homework 27,2024-12-02,Mon,2024-12-04,Wed,https://example.com/homework/10
