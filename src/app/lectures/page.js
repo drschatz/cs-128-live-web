@@ -141,25 +141,6 @@ const LecturesPage = () => {
           <div className="w-full max-w-[1000px] gap-2 mb-8">
             <p className="font-bold mb-5 text-2xl">Schedules: </p>
             <table className="table-fix w-full border-collapse ">
-              {/* <thead className="h-[50px]">
-                <tr>
-                  <th className="w-2/10 border border-b-2 border-x-gray/50 border-t-gray/50">
-                    Date
-                  </th>
-                  <th className="w-3/10 border border-b-2 border-x-gray/50 border-t-gray/50">
-                    Lecture Topic
-                  </th>
-                  <th className="w-2/10 border border-b-2 border-x-gray/50 border-t-gray/50">
-                    Homework & Lab
-                  </th>
-                  <th className="w-2/10 border border-b-2 border-x-gray/50 border-t-gray/50">
-                    MP & Quiz
-                  </th>
-                  <th className="w-1/10 border border-b-2 border-x-gray/50 border-t-gray/50">
-                    Deadline
-                  </th>
-                </tr>
-              </thead> */}
               <thead className="h-[60px]">
                 <tr>
                   <th className="w-[200px] border border-b-2 border-x-gray/50 border-t-gray/50">
@@ -191,6 +172,13 @@ const LecturesPage = () => {
                               ? "border border-x-gray/50  border-b-2"
                               : "border border-x-gray/50 border-b-gray/50"
                           }`}
+                          style={
+                            day.dayoff
+                              ? {
+                                  backgroundColor: "#a1a1a1",
+                                }
+                              : {}
+                          }
                         >
                           <span className="z-20 float-left -translate-x-1/2 -translate-y-5 top-10 border border-blue-500 rounded-xl px-3 py-1 bg-blue-500 font-medium text-white">
                             Week {day.week_idx}
@@ -207,6 +195,13 @@ const LecturesPage = () => {
                             ? "border border-x-gray/50  border-b-2"
                             : "border border-x-gray/50 border-b-gray/50"
                         }`}
+                        style={
+                          day.dayoff
+                            ? {
+                                backgroundColor: "#a1a1a1",
+                              }
+                            : {}
+                        }
                       >
                         <p className="ml-3">
                           {day.week_day}, {day.date}
@@ -220,7 +215,11 @@ const LecturesPage = () => {
                           : "border border-x-gray/50 border-b-gray/50"
                       }`}
                       style={
-                        day.lec_topic
+                        day.dayoff
+                          ? {
+                              backgroundColor: "#a1a1a1",
+                            }
+                          : day.lec_topic
                           ? {
                               backgroundColor: "rgb(99, 102, 241)",
                             }
@@ -242,7 +241,11 @@ const LecturesPage = () => {
                           : "border border-x-gray/50 border-b-gray/50"
                       }`}
                       style={
-                        day.hw_topic
+                        day.dayoff
+                          ? {
+                              backgroundColor: "#a1a1a1",
+                            }
+                          : day.hw_topic
                           ? {
                               backgroundColor: "rgb(59 130 246)",
                             }
@@ -275,7 +278,11 @@ const LecturesPage = () => {
                           : "border border-x-gray/50 border-b-gray/50"
                       }`}
                       style={
-                        day.mp_topic
+                        day.dayoff
+                          ? {
+                              backgroundColor: "#a1a1a1",
+                            }
+                          : day.mp_topic
                           ? {
                               backgroundColor: "rgb(34 197 94)",
                             }
@@ -308,7 +315,11 @@ const LecturesPage = () => {
                           : "border border-x-gray/50 border-b-gray/50"
                       }`}
                       style={
-                        day.hw_due_topic
+                        day.dayoff
+                          ? {
+                              backgroundColor: "#a1a1a1",
+                            }
+                          : day.hw_due_topic
                           ? {
                               backgroundColor: "rgb(59 130 246)",
                             }
