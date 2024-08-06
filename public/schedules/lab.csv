@@ -1,0 +1,12 @@
+idx,topic,date,weekday,due_date,due_weekday,link
+1,Lab 1: Bottle Toss,2024-08-30,Fri,2024-09-03,Tue,https://example.com/lab/1
+2,Lab 2: Connect-4 Diagonal ,2024-09-06,Fri,2024-09-10,Tue,https://example.com/lab/2
+3,Lab 3: Write tests to find all the bugs in code,2024-09-13,Fri,2024-09-17,Tue,https://example.com/lab/3
+4,Lab 4: Social Network,2024-09-20,Fri,2024-09-24,Tue,https://example.com/lab/4
+6,Lab 5: Array Lab,2024-10-04,Fri,2024-10-08,Tue,https://example.com/lab/5
+7,Lab 6: Gotta catch em all memory errors or big three practice,2024-10-11,Fri,2024-10-15,Tue,https://example.com/lab/5
+8,Lab 7: Office hours queue,2024-10-18,Fri,2024-10-22,Tue,https://example.com/lab/5
+10,Lab 8: Bad balance,2024-11-01,Fri,2024-11-05,Tue,https://example.com/lab/5
+11,Lab 9: Iterators,2024-11-08,Fri,2024-11-12,Tue,https://example.com/lab/5
+12,Lab 10: [Place Holder],2024-11-15,Fri,2024-11-19,Tue,https://example.com/lab/5
+13,Lab 11: Character Inheritance,2024-11-22,Fri,2024-11-26,Tue,https://example.com/lab/5

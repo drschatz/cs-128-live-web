@@ -26,6 +26,29 @@ const variantStyles = {
     "border-transparent bg-indigo-500 text-slate-50 hover:bg-indigo-500/80 focus:outline-none focus:ring-0 focus:ring-indigo-500 dark:bg-indigo-900 dark:text-slate-50 dark:hover:bg-indigo-900/80 rounded-full px-2.5 py-0.5 text-xs font-semibold inline-flex items-center focus:outline-none focus:ring-2 focus:ring-slate-950 focus:ring-offset-2 dark:border-slate-800 dark:focus:ring-slate-300 cursor-pointer",
 };
 
+// const ProgressBar = ({ progress }) => {
+// const startDate = new Date("2024-08-26");
+// const endDate = new Date("2024-12-16");
+// const today = new Date();
+
+// const totalDays = Math.ceil((endDate - startDate) / (1000 * 60 * 60 * 24));
+// const daysFromStart = Math.ceil((today - startDate) / (1000 * 60 * 60 * 24));
+
+// let calculatedProgress = daysFromStart / totalDays;
+// if (calculatedProgress > 1) {
+//   calculatedProgress = 0;
+// }
+
+//   return (
+//     <Progress.Root className="ProgressRoot" value={progress}>
+//       <Progress.Indicator
+//         className="ProgressIndicator"
+//         style={{ transform: `translateX(-${100 - calculatedProgress * 100}%)` }}
+//       />
+//     </Progress.Root>
+//   );
+// };
+
 const ProgressBar = ({ progress }) => {
   return (
     <Progress.Root className="ProgressRoot" value={progress}>
@@ -37,10 +60,77 @@ const ProgressBar = ({ progress }) => {
   );
 };
 
-const LecturesPage = () => {
-  const calendar = require("@/public/schedules/calendar24.json");
+const calendar = require("@/public/schedules/calendar24.json");
+const hw = require("@/public/schedules/hw.json");
+const lab = require("@/public/schedules/lab.json");
+const mp = require("@/public/schedules/mp.json");
+const quiz = require("@/public/schedules/quiz.json");
 
-  console.log(calendar);
+const isPastDate = (date) => new Date(date) <= new Date();
+const isFutureDate = (date) => new Date(date) >= new Date();
+
+const LecturesPage = () => {
+  const filteredHw = hw.filter(
+    (item) => isPastDate(item.date) && isFutureDate(item.due_date)
+  );
+  const filteredLab = lab.filter(
+    (item) => isPastDate(item.date) && isFutureDate(item.due_date)
+  );
+  const filteredMp = mp.filter(
+    (item) => isPastDate(item.date) && isFutureDate(item.due_date)
+  );
+  const filteredQuiz = quiz.filter(
+    (item) => isPastDate(item.date) && isFutureDate(item.due_date)
+  );
+
+  // Update the progress bar
+  const startDate = new Date("2024-08-26");
+  const endDate = new Date("2024-12-16");
+  const today = new Date();
+
+  const msInDay = 24 * 60 * 60 * 1000; // Number of milliseconds in a day
+
+  const totalDays = Math.ceil((endDate - startDate) / msInDay);
+  const daysFromStart = Math.ceil((today - startDate) / msInDay);
+
+  let calculatedProgress = (daysFromStart / totalDays) * 100;
+  if (calculatedProgress > 100) {
+    calculatedProgress = 100;
+  } else if (calculatedProgress < 0) {
+    calculatedProgress = 0;
+  }
+
+  // Update the ongoing object with the filtered homework data
+  const ongoings = [
+    ...filteredHw.map((item) => ({
+      key: `HW-${item.id}`,
+      topic: item.topic,
+      due: item.due_date,
+      link: item.link,
+      type: "HW", // Adjust the type as needed
+    })),
+    ...filteredLab.map((item) => ({
+      key: `Lab-${item.id}`,
+      topic: item.topic,
+      due: item.due_date,
+      link: item.link,
+      type: "Lab", // Adjust the type as needed
+    })),
+    ...filteredMp.map((item) => ({
+      key: `MP-${item.id}`,
+      topic: item.topic,
+      due: item.due_date,
+      link: item.link,
+      type: "MP", // Adjust the type as needed
+    })),
+    ...filteredQuiz.map((item) => ({
+      key: `Quiz-${item.id}`,
+      topic: item.topic,
+      due: item.due_date,
+      link: item.link,
+      type: "Quiz", // Adjust the type as needed
+    })),
+  ];
 
   return (
     <div>
@@ -54,41 +144,46 @@ const LecturesPage = () => {
       </div>
       {/* <h1 className="text-3xl mt-8 font-bold mb-4">Lecture S</div>chedules</h1> */}
 
-      <div className="container flex">
-        <div className="w-10/12">
+      <div className="container flex sm:flex-row flex-col">
+        <div className="w-full sm:w-10/12">
           {/* Progress  */}
           <div className="flex flex-col w-full max-w-[1000px] mb-8 ">
             <p className="font-bold mb-5 text-2xl">Semester Progress: </p>
             <Progress
               className="[&>*]:bg-blue-500 h-[15px] border-solid border border-black/80 rounded-full overflow-hidden"
-              value={33}
+              value={calculatedProgress}
               max={100}
             />
+          </div>
+
+          {/* Ongoings mobile */}
+          <div className="flex w-full sm:hidden mb-8 flex-col order-2">
+            <p className="font-bold mb-5 text-2xl">Ongoing</p>
+            <ul>
+              {ongoings.length === 0 ? (
+                <p className="mb-2">No ongoing tasks</p>
+              ) : (
+                ongoings.map((ongoing) => (
+                  <li key={ongoing.key}>
+                    <Link href={ongoing.link}>
+                      <p
+                        className={`p-4 mb-2 ${
+                          variantStyles[ongoing.type] || "bg-gray-200"
+                        }`}
+                      >
+                        {ongoing.topic} - {ongoing.due}
+                      </p>
+                    </Link>
+                  </li>
+                ))
+              )}
+            </ul>
           </div>
 
           {/* Schedules */}
           <div className="w-full max-w-[1000px] gap-2 mb-8">
             <p className="font-bold mb-5 text-2xl">Schedules: </p>
             <table className="table-fix w-full border-collapse ">
-              {/* <thead className="h-[50px]">
-                <tr>
-                  <th className="w-2/10 border border-b-2 border-x-gray/50 border-t-gray/50">
-                    Date
-                  </th>
-                  <th className="w-3/10 border border-b-2 border-x-gray/50 border-t-gray/50">
-                    Lecture Topic
-                  </th>
-                  <th className="w-2/10 border border-b-2 border-x-gray/50 border-t-gray/50">
-                    Homework & Lab
-                  </th>
-                  <th className="w-2/10 border border-b-2 border-x-gray/50 border-t-gray/50">
-                    MP & Quiz
-                  </th>
-                  <th className="w-1/10 border border-b-2 border-x-gray/50 border-t-gray/50">
-                    Deadline
-                  </th>
-                </tr>
-              </thead> */}
               <thead className="h-[60px]">
                 <tr>
                   <th className="w-[200px] border border-b-2 border-x-gray/50 border-t-gray/50">
@@ -120,6 +215,13 @@ const LecturesPage = () => {
                               ? "border border-x-gray/50  border-b-2"
                               : "border border-x-gray/50 border-b-gray/50"
                           }`}
+                          style={
+                            day.dayoff
+                              ? {
+                                  backgroundColor: "#a1a1a1",
+                                }
+                              : {}
+                          }
                         >
                           <span className="z-20 float-left -translate-x-1/2 -translate-y-5 top-10 border border-blue-500 rounded-xl px-3 py-1 bg-blue-500 font-medium text-white">
                             Week {day.week_idx}
@@ -136,12 +238,20 @@ const LecturesPage = () => {
                             ? "border border-x-gray/50  border-b-2"
                             : "border border-x-gray/50 border-b-gray/50"
                         }`}
+                        style={
+                          day.dayoff
+                            ? {
+                                backgroundColor: "#a1a1a1",
+                              }
+                            : {}
+                        }
                       >
                         <p className="ml-3">
                           {day.week_day}, {day.date}
                         </p>
                       </td>
                     )}
+
                     <td
                       className={`${
                         day.day_idx % 5 === 0
@@ -149,7 +259,68 @@ const LecturesPage = () => {
                           : "border border-x-gray/50 border-b-gray/50"
                       }`}
                       style={
-                        day.lec_topic
+                        day.dayoff
+                          ? {
+                              backgroundColor: "#a1a1a1",
+                            }
+                          : {}
+                      }
+                    ></td>
+                    <td
+                      className={`${
+                        day.day_idx % 5 === 0
+                          ? "border border-x-gray/50  border-b-2"
+                          : "border border-x-gray/50 border-b-gray/50"
+                      }`}
+                      style={
+                        day.dayoff
+                          ? {
+                              backgroundColor: "#a1a1a1",
+                            }
+                          : {}
+                      }
+                    ></td>
+                    <td
+                      className={`${
+                        day.day_idx % 5 === 0
+                          ? "border border-x-gray/50  border-b-2"
+                          : "border border-x-gray/50 border-b-gray/50"
+                      }`}
+                      style={
+                        day.dayoff
+                          ? {
+                              backgroundColor: "#a1a1a1",
+                            }
+                          : {}
+                      }
+                    ></td>
+                    <td
+                      className={`${
+                        day.day_idx % 5 === 0
+                          ? "border border-x-gray/50  border-b-2"
+                          : "border border-x-gray/50 border-b-gray/50"
+                      }`}
+                      style={
+                        day.dayoff
+                          ? {
+                              backgroundColor: "#a1a1a1",
+                            }
+                          : {}
+                      }
+                    ></td>
+
+                    {/* <td
+                      className={`${
+                        day.day_idx % 5 === 0
+                          ? "border border-x-gray/50  border-b-2"
+                          : "border border-x-gray/50 border-b-gray/50"
+                      }`}
+                      style={
+                        day.dayoff
+                          ? {
+                              backgroundColor: "#a1a1a1",
+                            }
+                          : day.lec_topic
                           ? {
                               backgroundColor: "rgb(99, 102, 241)",
                             }
@@ -171,7 +342,11 @@ const LecturesPage = () => {
                           : "border border-x-gray/50 border-b-gray/50"
                       }`}
                       style={
-                        day.hw_topic
+                        day.dayoff
+                          ? {
+                              backgroundColor: "#a1a1a1",
+                            }
+                          : day.hw_topic
                           ? {
                               backgroundColor: "rgb(59 130 246)",
                             }
@@ -204,7 +379,11 @@ const LecturesPage = () => {
                           : "border border-x-gray/50 border-b-gray/50"
                       }`}
                       style={
-                        day.mp_topic
+                        day.dayoff
+                          ? {
+                              backgroundColor: "#a1a1a1",
+                            }
+                          : day.mp_topic
                           ? {
                               backgroundColor: "rgb(34 197 94)",
                             }
@@ -237,7 +416,11 @@ const LecturesPage = () => {
                           : "border border-x-gray/50 border-b-gray/50"
                       }`}
                       style={
-                        day.hw_due_topic
+                        day.dayoff
+                          ? {
+                              backgroundColor: "#a1a1a1",
+                            }
+                          : day.hw_due_topic
                           ? {
                               backgroundColor: "rgb(59 130 246)",
                             }
@@ -282,7 +465,7 @@ const LecturesPage = () => {
                           </p>
                         </Link>
                       )}
-                    </td>
+                    </td> */}
                   </tr>
                 </tbody>
               ))}
@@ -291,20 +474,26 @@ const LecturesPage = () => {
         </div>
 
         {/* Ongoings */}
-        <div className="flex w-2/12 mb-8 flex-col ">
+        <div className="hidden sm:flex w-full sm:w-2/12 mb-8 flex-col ">
           <p className="font-bold mb-5 text-2xl">Ongoing</p>
           <ul>
-            {ongoings.map((ongoing) => (
-              <li key={ongoing.key}>
-                <p
-                  className={`p-4 mb-2 ${
-                    variantStyles[ongoing.type] || "bg-gray-200"
-                  }`}
-                >
-                  {ongoing.title} - {ongoing.due}
-                </p>
-              </li>
-            ))}
+            {ongoings.length === 0 ? (
+              <p className="mb-2">No ongoing tasks</p>
+            ) : (
+              ongoings.map((ongoing) => (
+                <li key={ongoing.key}>
+                  <Link href={ongoing.link}>
+                    <p
+                      className={`p-4 mb-2 ${
+                        variantStyles[ongoing.type] || "bg-gray-200"
+                      }`}
+                    >
+                      {ongoing.topic} - {ongoing.due}
+                    </p>
+                  </Link>
+                </li>
+              ))
+            )}
           </ul>
         </div>
       </div>
@@ -313,51 +502,3 @@ const LecturesPage = () => {
 };
 
 export default LecturesPage;
-
-/* <tbody>
-                <tr className="h-[70px]">
-                  <td className="border border-x-gray/50 border-b-gray/50">
-                    Mon May 6
-                  </td>
-                  <td className="border border-x-gray/50 border-b-gray/50">
-                    Introduction to C++
-                  </td>
-                  <td className="border border-x-gray/50 border-b-gray/50">
-                    HW1: IEFHW
-                  </td>
-                  <td className="border border-x-gray/50 border-b-gray/50"></td>
-                  <td className="border border-x-gray/50 border-b-gray/50"></td>
-                </tr>
-                <tr className="h-[70px]">
-                  <td className="border border-gray/50">Tue May 7</td>
-                  <td className="border border-gray/50"></td>
-                  <td className="border border-gray/50"></td>
-                  <td className="border border-gray/50"></td>
-                  <td className="border border-gray/50"></td>
-                </tr>
-                <tr className="h-[70px]">
-                  <td className="border border-gray/50">Wen May 8</td>
-                  <td className="border border-gray/50">
-                    Objects, Variables and Objects, Variables
-                  </td>
-                  <td className="border border-gray/50">HW2: sefwejfn</td>
-                  <td className="border border-gray/50"></td>
-                  <td className="border border-gray/50">HW1 9:00 am</td>
-                </tr>
-                <tr className="h-[70px]">
-                  <td className="border border-x-gray/50 border-t-gray/50">
-                    Fir May 10
-                  </td>
-                  <td className="border border-x-gray/50 border-t-gray/50">
-                    {" "}
-                    sdkfnwjebfnwdjln
-                  </td>
-                  <td className="border border-x-gray/50 border-t-gray/50">
-                    HW3: dhfweond
-                  </td>
-                  <td className="border border-x-gray/50 border-t-gray/50"></td>
-                  <td className="border border-x-gray/50 border-t-gray/50">
-                    HW2 9:00 am
-                  </td>
-                </tr>
-              </tbody> */
