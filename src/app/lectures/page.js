@@ -66,8 +66,13 @@ const lab = require("@/public/schedules/lab.json");
 const mp = require("@/public/schedules/mp.json");
 const quiz = require("@/public/schedules/quiz.json");
 
+<<<<<<< Updated upstream
 const isPastDate = (date) => new Date(date) <= new Date();
 const isFutureDate = (date) => new Date(date) >= new Date();
+=======
+const isPastDate = (date) => new Date(date) <= new Date("2024-10-22");
+const isFutureDate = (date) => new Date(date) >= new Date("2024-10-22");
+>>>>>>> Stashed changes
 
 const LecturesPage = () => {
   const filteredHw = hw.filter(
@@ -83,6 +88,7 @@ const LecturesPage = () => {
     (item) => isPastDate(item.date) && isFutureDate(item.due_date)
   );
 
+<<<<<<< Updated upstream
   // Update the progress bar
   const startDate = new Date("2024-08-26");
   const endDate = new Date("2024-12-16");
@@ -100,6 +106,8 @@ const LecturesPage = () => {
     calculatedProgress = 0;
   }
 
+=======
+>>>>>>> Stashed changes
   // Update the ongoing object with the filtered homework data
   const ongoings = [
     ...filteredHw.map((item) => ({
@@ -131,6 +139,11 @@ const LecturesPage = () => {
       type: "Quiz", // Adjust the type as needed
     })),
   ];
+<<<<<<< Updated upstream
+=======
+
+  console;
+>>>>>>> Stashed changes
 
   return (
     <div>
@@ -156,6 +169,7 @@ const LecturesPage = () => {
             />
           </div>
 
+<<<<<<< Updated upstream
           {/* Ongoings mobile */}
           <div className="flex w-full sm:hidden mb-8 flex-col order-2">
             <p className="font-bold mb-5 text-2xl">Ongoing</p>
@@ -177,6 +191,24 @@ const LecturesPage = () => {
                   </li>
                 ))
               )}
+=======
+          <div className="flex w-full sm:hidden mb-8 flex-col order-2">
+            <p className="font-bold mb-5 text-2xl">Ongoing</p>
+            <ul>
+              {ongoings.map((ongoing) => (
+                <li key={ongoing.key}>
+                  <Link href={ongoing.link}>
+                    <p
+                      className={`p-4 mb-2 ${
+                        variantStyles[ongoing.type] || "bg-gray-200"
+                      }`}
+                    >
+                      {ongoing.topic} - {ongoing.due}
+                    </p>
+                  </Link>
+                </li>
+              ))}
+>>>>>>> Stashed changes
             </ul>
           </div>
 
@@ -263,6 +295,7 @@ const LecturesPage = () => {
                           ? {
                               backgroundColor: "#a1a1a1",
                             }
+<<<<<<< Updated upstream
                           : {}
                       }
                     ></td>
@@ -320,6 +353,8 @@ const LecturesPage = () => {
                           ? {
                               backgroundColor: "#a1a1a1",
                             }
+=======
+>>>>>>> Stashed changes
                           : day.lec_topic
                           ? {
                               backgroundColor: "rgb(99, 102, 241)",
@@ -477,6 +512,7 @@ const LecturesPage = () => {
         <div className="hidden sm:flex w-full sm:w-2/12 mb-8 flex-col ">
           <p className="font-bold mb-5 text-2xl">Ongoing</p>
           <ul>
+<<<<<<< Updated upstream
             {ongoings.length === 0 ? (
               <p className="mb-2">No ongoing tasks</p>
             ) : (
@@ -494,6 +530,21 @@ const LecturesPage = () => {
                 </li>
               ))
             )}
+=======
+            {ongoings.map((ongoing) => (
+              <li key={ongoing.key}>
+                <Link href={ongoing.link}>
+                  <p
+                    className={`p-4 mb-2 ${
+                      variantStyles[ongoing.type] || "bg-gray-200"
+                    }`}
+                  >
+                    {ongoing.topic} - {ongoing.due}
+                  </p>
+                </Link>
+              </li>
+            ))}
+>>>>>>> Stashed changes
           </ul>
         </div>
       </div>

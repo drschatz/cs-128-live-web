@@ -77,7 +77,7 @@ Exam 3 \- 50 mins in the CBTF 12/03 \- 12/05
 Content \- Through and including material from 11/22  
 Exam 3 Second Chance \- 50 Mins in the CBTF 12/09 \- 12/11
 
-## Grades
+# Grades
 
 You have the opportunity to earn up to 1,000 points in the course. Based on your final number of points you will receive the following grade:
 
@@ -95,7 +95,7 @@ You have the opportunity to earn up to 1,000 points in the course. Based on your
 
 \*\*Note your points will be rounded up to the nearest whole number and the cutoffs may change slightly in your favor.
 
-## How To Get Points
+# How To Get Points
 
 The table below describes how to get points for various components in the course. The max number of points per component is different from the available points for lecture, homework, and labs to allow for missed questions, assignments, and attendance. You cannot get more than the Max Points for any component.
 
@@ -107,7 +107,7 @@ The table below describes how to get points for various components in the course
 | MPs       | 270        | 270              | 80 \- 110 points / MP                                | MP 1 \- Part 1 : 30 points MP 1 \- Part 2 : 50 points MP 2 \- Part 1 : 30 points MP 2 \- Part 2 : 30 points MP 2 \- Part 3 : 50 points MP 3 \- Part 1 : 30 points MP 3 \- Part 2 : 50 points |
 | Exams     | 330        | 330              | 110 points / Exam                                    | There are 3 exams total, but each has a second chance to increase your points for that exam.                                                                                                 |
 
-## Extension Policies
+# Extension Policies
 
 There are no extensions for homework or labs. However, as indicated in the table above, there is wiggle room for missing assignments or partial credit.
 
@@ -115,35 +115,35 @@ Each MP part is due at 8pm on the deadline indicated on the specifications for t
 
 \*If you have extenuating circumstances please contact me. **Unless you were unable to do so, you must contact me BEFORE the deadline to get any relevant accommodations for that assignment or exam.\***
 
-## How to Get Help
+# How to Get Help
 
 Computer science is challenging but the 128 team is here to help\!
 
-### Office Hours
+## Office Hours
 
 This is a space to come and ask questions and get clarification on course material and assignments. It is normal to come to office hours at least once a week and often more. They will be held virtually and in-person in the basement of Siebel Center for Computer Science. The exact schedule can be found on the course website.
 
-### Discuss Online Forum
+## Discuss Online Forum
 
 Link is on the website. Feel free to post any quick questions you have on there. However, do not post your code for homeworks, labs, or MPs.
 
 We will do our best to answer your questions as quickly as possible but do not expect an instant response. You may also contribute and answer questions\! This is a great way to solidify your own understanding. However, remain respectful of everyone’s diverse backgrounds and abilities. We are all here to learn\!
 
-### Meet with the Professor
+## Meet with the Professor
 
 If you are struggling in the course and are not sure how to proceed please reach out to Prof. Schatz via email. I can help you figure out what is going wrong and how to improve from there (I do this for students often).
 
-## Proffice Hours (Professor Office Hours)
+# Proffice Hours (Professor Office Hours)
 
 Wednesday after lecture, 10 \- 11 am in Prof. Schatz’s office 2330 Siebel Center for Computer Science. Come say “hi” and check out my lego collection\! I’m happy to answer big picture questions about the course or CS in general or just get to know you a bit better. This is a great opportunity to make a connection with a professor at UIUC.
 
 My office is a bit hard to find… There is a map above\!
 
-## Collaboration/Academic Integrity Policy
+# Collaboration/Academic Integrity Policy
 
 Below are the definitions of the two collaboration policies I have for various components. Please note it is always against the academic integrity policy to try and circumvent the autograder.
 
-### Limited Collaboration Allowed
+## Limited Collaboration Allowed
 
 This means you may work with others to complete the component. However, **you must still submit your own code for grading**.
 
@@ -153,7 +153,7 @@ You may use AI systems for general conceptual questions but not for solutions or
 
 **_Components this policy applies to: Lecture clicker questions, lab, and homework._**
 
-### Collaboration NOT Allowed
+## Collaboration NOT Allowed
 
 **This means you must complete the component on your own**. You may NOT ask anyone besides a current course staff member for help. You may NOT use AI on these components. You may NOT look at another student's code NOR share your code with other students. Violating this policy is violating the academic integrity policy and will result in a FAIR violation. A violation can lead to a zero grade on the assignment and a full letter grade reduction in the course.
 
@@ -161,7 +161,7 @@ For exams you must follow the CBTF policy on what is allowed and what is not all
 
 **_Components this policy applies to: MPs, and Exams._**
 
-## Commitment to Diversity, Equity, and Inclusion
+# Commitment to Diversity, Equity, and Inclusion
 
 As the state’s premier public university, the University of Illinois at Urbana-Champaign’s core mission is to serve the interests of the diverse people of the state of Illinois and beyond. The institution thus values inclusion and a pluralistic learning and research environment, one which we respect the varied perspectives and lived experiences of a diverse community and global workforce.
 
@@ -169,13 +169,13 @@ We support diversity of worldviews, histories, and cultural knowledge across a r
 
 This course and its social resources like Piazza should be a safe and encouraging learning environment that allows for the open exchange of ideas while also ensuring equitable opportunities and respect for all. Everyone is expected to help establish and maintain an environment where students, staff, and faculty can contribute without fear of personal ridicule, or intolerant or offensive language. If you witness or experience racism, discrimination, microaggressions, or other offensive behavior, you are encouraged to bring this to the attention of the course director or the course staff either directly or anonymously. You can also report these behaviors to the Campus Belonging Office [link](https://diversity.illinois.edu/diversity-campus-culture/belonging-resources/) or CS CARES [link](https://cs.illinois.edu/about/cs-cares).
 
-## Students with Disabilities
+# Students with Disabilities
 
 Disability Resources and Educational Services (DRES), a unit of the College of Applied Health Sciences, serves as the designated office of the University that coordinates campus-wide services for students with disabilities. DRES obtains and files disability documentation, certifies eligibility for services, and coordinates the planning and provision of auxiliary aids as well as the implementation of modifications and adjustments in academic rules, policies and procedures. Professional staff are available at DRES to provide University students with disability-related consultation and to assist them in obtaining both academic and nonacademic support and services.
 
 Any student with a disability who may need accommodations in this class should obtain an accommodation letter from the Disability Resources and Education Services (DRES) Office. **Accommodations should be made known early in the semester and cannot be retroactively applied to assignments due before the time the accommodation was made known**.
 
-## Statement on Mental Health
+# Statement on Mental Health
 
 Diminished mental health, including significant stress, mood changes, excessive worry, substance/alcohol abuse, or problems with eating and/or sleeping can interfere with optimal academic performance, social development, and emotional well-being. The University of Illinois offers a variety of confidential services including individual and group counseling, crisis intervention, psychiatric services, and specialized screenings at no additional cost. If you or someone you know experiences any of the above mental health concerns, it is strongly encouraged to contact or visit any of the University’s resources provided below. **_Getting help is a smart and courageous thing to do – for yourself and for those who care about you._**
 
