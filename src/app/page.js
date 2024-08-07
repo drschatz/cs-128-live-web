@@ -1,7 +1,63 @@
+"use client";
+
+import React, { useState, useEffect } from 'react';
+
 export default function Home() {
+  const [squirrelStyle, setSquirrelStyle] = useState({
+    width: '130px', // Initial width
+  });
+  const [squirrelImage, setSquirrelImage] = useState("squir.png"); // Default image
+
+  useEffect(() => {
+    const randomPositionAndRotation = () => {
+      const randomX = Math.floor(Math.random() * 80); // Random position between 0% and 90% for X-axis
+      const randomY = Math.floor(Math.random() * 18); // Random position between 0% and 90% for Y-axis
+      let randomRotation = Math.floor(Math.random() * 11); // Random rotation between 0 and 360 degrees
+      let widthSqur = "130px";
+
+      if(randomRotation < 10){ randomRotation = 0;}
+      else{
+        randomRotation = 180;
+      }
+
+       // Randomly select one of the three images
+       const squirrelImages = ["squir_cz.png", "squir_bt.png", "squir.png"];
+       let randIndex = Math.floor(Math.random() * 11); // Random rotation between 0 and 360 degrees
+       if(randIndex < 5){
+         setSquirrelImage("squir.png");
+
+       }
+       else if(randIndex < 10){
+         setSquirrelImage("squir_cz.png");
+
+       }
+       else{
+         setSquirrelImage("squir_bt.png");
+         widthSqur = "230px";
+       }
+
+      setSquirrelStyle({
+        position: 'absolute',
+        top: `${randomY}%`,
+        left: `${randomX}%`,
+        width: widthSqur,
+        transform: `rotate(${randomRotation}deg)`,
+        transition: 'top 0.5s, left 0.5s, transform 0.5s', // Smooth transitions for fun effect
+      });
+          
+    };
+
+    randomPositionAndRotation();
+  }, []); // Empty dependency array means this effect runs once on mount
+
   return (
     <main>
       <div className="mb-10 text-center relative w-full h-[24vh] bg-blue-500">
+      <img 
+        src={squirrelImage} 
+        alt="Squirrel" 
+        style={squirrelStyle} 
+      />
         <div className="w-full z-10 flex flex-col items-center justify-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
           <h1 className="inline-block mt-6 font-semibold capitalize text-light text-2xl md:text-3xl lg:text-5xl !leading-normal relative w-5/6">
             Welcome to CS 128 live 
@@ -11,9 +67,9 @@ export default function Home() {
       </div>
       <div className="mb-10 mx-8 flex justify-center items-center">
         <h3 className="text-xl text-center">
-        This section has 5 main components, in-person lecture, homework assignments, weekly lab assignments, 3 MPs, and 3 exams. This course
+        This section has 5 main components, in-person lecture, homework, lab, 3 MPs, and 3 exams. This course
          can be challenging but the course staff and myself are here to help! We offer second-chance exams, flexible grading policies, 
-         many office hours, and an online discussion forum. 
+         many office hours, and an online discussion forum. See the syllabus for more details!
         </h3>
       </div>
       <div className="mb-10 mx-8 flex justify-center items-center">
@@ -32,6 +88,25 @@ export default function Home() {
             <h4 className="text-lg text-center mb-2">coming soon...</h4>
           </div>
         </div>
+      </div>
+      <div className="mb-10 mx-8 flex justify-center items-center">
+        
+        <div className="border-4 border-blue-500 rounded-lg w-80 h-30 mr-12">
+          <div className="flex flex-col col-span-2 justify-center p-4">
+            <h3 className="text-xl font-semibold text-center">Discussion Board</h3>
+            <hr className="border-gray/70 my-2" />
+            <h4 className="text-lg text-center mb-2">A place to post your questions</h4>
+          </div>
+        </div>
+        <a href="/lectures" className="hover:text-accent">
+        <div className="border-4 border-purple-500 rounded-lg shadow-md w-80 h-30  ml-12">
+          <div className="flex flex-col col-span-2 justify-center p-4">
+            <h3 className="text-xl font-semibold text-center">Schedule</h3>
+            <hr className="border-gray/70 my-2" />
+            <h4 className="text-lg text-center mb-2">Upcoming lectures and deadlines</h4>
+          </div>
+        </div>
+        </a>
       </div>
     </main>
   );
