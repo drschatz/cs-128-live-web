@@ -10,8 +10,8 @@ export default function Home() {
 
   useEffect(() => {
     const randomPositionAndRotation = () => {
-      const randomX = Math.floor(Math.random() * 80); // Random position between 0% and 90% for X-axis
-      const randomY = Math.floor(Math.random() * 18); // Random position between 0% and 90% for Y-axis
+      let randomX = Math.floor(Math.random() * 80); // Random position between 0% and 90% for X-axis
+      let randomY = Math.floor(Math.random() * 18); // Random position between 0% and 90% for Y-axis
       let randomRotation = Math.floor(Math.random() * 11); // Random rotation between 0 and 360 degrees
       let widthSqur = "130px";
 
@@ -20,20 +20,24 @@ export default function Home() {
         randomRotation = 180;
       }
 
-       // Randomly select one of the three images
-       const squirrelImages = ["squir_cz.png", "squir_bt.png", "squir.png"];
-       let randIndex = Math.floor(Math.random() * 11); // Random rotation between 0 and 360 degrees
-       if(randIndex < 5){
+       let randIndex = Math.floor(Math.random() * 1100); // Random rotation between 0 and 360 degrees
+       if(randIndex > 600){
          setSquirrelImage("squir.png");
-
        }
-       else if(randIndex < 10){
+       else if(randIndex > 150){
          setSquirrelImage("squir_cz.png");
 
        }
-       else{
+       else if( randIndex > 10) {
          setSquirrelImage("squir_bt.png");
          widthSqur = "230px";
+       }
+       else{
+        setSquirrelImage("real_squir.jpg");
+        widthSqur = "100px";
+        randomY = 5;
+        randomRotation = 0;
+        randomX = 10;
        }
 
       setSquirrelStyle({
