@@ -4,7 +4,6 @@ import getPostContent from "@/lib/getPostContent";
 const CourseBook = () => {
   const slug = "syllabus";
   const post = getPostContent(slug);
-  console.log("Hello");
 
   return (
     <main>
@@ -18,7 +17,7 @@ const CourseBook = () => {
       </div>
       <div className="flex mb-8 sm:flex-row flex-col">
         <div className="w-full sm:w-4/12 sm:block mt-8 ml-24 text-base text-gray">
-          <h3 className="mb-2 sticky top-24 font-bold">Syllabus Nav</h3>
+          <h3 className="mb-2 sticky top-24 font-bold">Syllabus</h3>
           <ul className="ml-4 sticky top-32">
             <li className="hover:text-accent mb-1.5">
               <a href="#contact-information" className="ml-2">
@@ -58,11 +57,6 @@ const CourseBook = () => {
                 </a>
               </li>
               <li className="hover:text-accent mb-1">
-                <a href="#homework" className="ml-2">
-                  <strong>Homework</strong>
-                </a>
-              </li>
-              <li className="hover:text-accent mb-1">
                 <a href="#exams" className="ml-2">
                   <strong>Exams</strong>
                 </a>
@@ -74,11 +68,19 @@ const CourseBook = () => {
                 <strong>Grades</strong>
               </a>
             </li>
-            <li className="hover:text-accent mb-1.5">
+            <ul className="ml-4 text-sm">
+            <li className="hover:text-accent mb-1">
+              <a href="#grades" className="ml-2">
+                <strong>Grade Distribution</strong>
+              </a>
+            </li>
+            <li className="hover:text-accent mb-1">
               <a href="#how-to-get-points" className="ml-2">
                 <strong>How To Get Points</strong>
               </a>
             </li>
+
+            </ul>
             <li className="hover:text-accent mb-1.5">
               <a href="#extension-policies" className="ml-2">
                 <strong>Extension Policies</strong>

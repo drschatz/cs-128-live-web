@@ -21,7 +21,7 @@ const Header = () => {
         <div className="hidden md:flex items-center space-x-4">
           <Link href="/lectures" className="hover:text-accent">
             {" "}
-            Lectures{" "}
+            Schedule{" "}
           </Link>
           {/* <Link href="/assignments" className="hover:text-accent">
             {" "}
@@ -71,7 +71,7 @@ const Header = () => {
         >
           <Link href="/lectures" className="hover:text-accent">
             {" "}
-            Lectures{" "}
+            Schedule{" "}
           </Link>
           <Link href="/assignments" className="hover:text-accent">
             {" "}

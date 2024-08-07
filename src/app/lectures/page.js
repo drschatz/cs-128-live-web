@@ -473,7 +473,7 @@ const LecturesPage = () => {
         </div>
 
         {/* Ongoings */}
-        <div className="hidden sm:flex w-full sm:w-2/12 mb-8 flex-col ">
+        <div className="hidden sm:flex w-full sm:w-3/12 mb-8 flex-col ml-6">
           <p className="font-bold mb-5 text-2xl">Ongoing</p>
           <ul>
             {ongoings.length === 0 ? (
