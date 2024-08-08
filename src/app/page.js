@@ -15,6 +15,13 @@ export default function Home() {
       let randomRotation = Math.floor(Math.random() * 11); // Random rotation between 0 and 360 degrees
       let widthSqur = "130px";
 
+      if(randomX > 20 && randomX < 45){
+        randomX = randomX - 15;
+      }
+      if(randomX > 44 && randomX < 65){
+        randomX = randomX + 15;
+      }
+
       if(randomRotation < 10){ randomRotation = 0;}
       else{
         randomRotation = 180;
