@@ -20,15 +20,15 @@ export default function Home() {
         randomRotation = 180;
       }
 
-       let randIndex = Math.floor(Math.random() * 1400); // Random rotation between 0 and 360 degrees
-       if(randIndex > 600){
+       let randIndex = Math.floor(Math.random() * 100); // Random rotation between 0 and 360 degrees
+       if(randIndex > 30){
          setSquirrelImage("squir.png");
        }
-       else if(randIndex > 150){
+       else if(randIndex > 15){
          setSquirrelImage("squir_cz.png");
 
        }
-       else if( randIndex > 20) {
+       else if( randIndex > 5) {
          setSquirrelImage("squir_bt.png");
          widthSqur = "230px";
        }
