@@ -13,8 +13,8 @@ const QuizzesPage = () => {
         <div className="absolute top-0 left-0 right-0 bottom-0 h-full bg-amber/60 dark:bg-amber/40" />
       </div>
 
-      <div className="container flex">
-        <div className="w-9/12">
+      <div className="container flex sm:flex-row flex-col">
+        <div className="w-full sm:w-9/12">
           <div className="w-full max-w-[900px] gap-2 mb-8">
             <h2 className="font-bold text-2xl mb-5">Quizzes</h2>
             <Link href="/">
@@ -63,7 +63,7 @@ const QuizzesPage = () => {
             </Link>
           </div>
         </div>
-        <div className="flex w-3/12 mb-8 flex-col mr-4">
+        <div className="w-full sm:w-3/12 flex mb-8 flex-col mr-4">
           <h2 className="font-bold mb-5 text-2xl">About</h2>
           <p className="mb-3">
             Quizzes are a great way to test your knowledge and understanding of
