@@ -39,10 +39,10 @@ const Header = () => {
             {" "}
             Course Book{" "}
           </Link> */}
-          <Link href="/support" className="hover:text-accent">
+          {/* <Link href="/support" className="hover:text-accent">
             {" "}
             Support{" "}
-          </Link>
+          </Link> */}
         </div>
 
         {/* Hamburger Icon */}
@@ -103,10 +103,10 @@ const Header = () => {
             {" "}
             Course Book{" "}
           </Link> */}
-          <Link href="/support" className="hover:text-accent">
+          {/* <Link href="/support" className="hover:text-accent">
             {" "}
             Support{" "}
-          </Link>
+          </Link> */}
         </div>
       </div>
     </nav>
