@@ -71,7 +71,7 @@ export default function Home() {
       </div>
       <div className="mb-10 mx-8 flex justify-center items-center">
         <h3 className="text-xl text-center">
-        This section has 5 main components, in-person lecture, homework, lab, 3 MPs, and 3 exams. This course
+        This course
          can be challenging but the course staff and myself are here to help! We offer second-chance exams, flexible grading policies, 
          many office hours, and an online discussion forum. See the syllabus for more details!
         </h3>
