@@ -19,18 +19,18 @@ const Header = () => {
         <Logo />
         {/* nav links */}
         <div className="hidden sm:flex items-center space-x-4">
-          <Link href="/lectures" className="hover:text-accent">
+          <Link href="/schedules" className="hover:text-accent">
             {" "}
-            Lectures{" "}
+            Schedules{" "}
           </Link>
-          <Link href="/assignments" className="hover:text-accent">
+          {/* <Link href="/assignments" className="hover:text-accent">
             {" "}
             Assignments{" "}
-          </Link>
-          <Link href="/quizzes" className="hover:text-accent">
+          </Link> */}
+          {/* <Link href="/quizzes" className="hover:text-accent">
             {" "}
             Quizzes{" "}
-          </Link>
+          </Link> */}
           <Link href="/syllabus" className="hover:text-accent">
             {" "}
             Syllabus{" "}
@@ -83,18 +83,18 @@ const Header = () => {
               : "hidden"
           }
         >
-          <Link href="/lectures" className="hover:text-accent">
+          <Link href="/schedules" className="hover:text-accent">
             {" "}
-            Lectures{" "}
+            Schedules{" "}
           </Link>
           {/* <Link href="/assignments" className="hover:text-accent">
             {" "}
             Assignments{" "}
           </Link> */}
-          <Link href="/quizzes" className="hover:text-accent">
+          {/* <Link href="/quizzes" className="hover:text-accent">
             {" "}
             Quizzes{" "}
-          </Link>
+          </Link> */}
           <Link href="/syllabus" className="hover:text-accent">
             {" "}
             Syllabus{" "}
