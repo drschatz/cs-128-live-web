@@ -95,18 +95,18 @@ export default function Home() {
       </div>
       <div className="mb-10 mx-8 flex justify-center items-center">
         
-        <div className="border-4 border-blue-500 rounded-lg w-80 h-30 mr-12">
+      <div className="border-4 border-pink-500 rounded-lg shadow-md w-80 h-30  mr-12">
+          <div className="flex flex-col col-span-2 justify-center p-4">
+            <h3 className="text-xl font-semibold text-center">Office Hours</h3>
+            <hr className="border-gray/70 my-2" />
+            <h4 className="text-lg text-center mb-2">Come by with any questions</h4>
+          </div>
+        </div>
+        <div className="border-4 border-blue-500 rounded-lg w-80 h-30 ml-12">
           <div className="flex flex-col col-span-2 justify-center p-4">
             <h3 className="text-xl font-semibold text-center">Discussion Board</h3>
             <hr className="border-gray/70 my-2" />
             <h4 className="text-lg text-center mb-2">A place to post your questions</h4>
-          </div>
-        </div>
-        <div className="border-4 border-purple-500 rounded-lg shadow-md w-80 h-30  ml-12">
-          <div className="flex flex-col col-span-2 justify-center p-4">
-            <h3 className="text-xl font-semibold text-center"><a href="/lectures" className="hover:text-accent">Schedule</a></h3>
-            <hr className="border-gray/70 my-2" />
-            <h4 className="text-lg text-center mb-2">Upcoming lectures and deadlines</h4>
           </div>
         </div>
       </div>
