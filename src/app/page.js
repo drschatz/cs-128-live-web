@@ -4,9 +4,9 @@ import React, { useState, useEffect } from 'react';
 
 export default function Home() {
   const [squirrelStyle, setSquirrelStyle] = useState({
-    width: '130px', // Initial width
+    width: '100px', // Initial width
   });
-  const [squirrelImage, setSquirrelImage] = useState("squir.png"); // Default image
+  const [squirrelImage, setSquirrelImage] = useState("empty.png"); // Default image
 
   useEffect(() => {
     const randomPositionAndRotation = () => {
