@@ -26,6 +26,12 @@ const variantStyles = {
     "border-transparent bg-indigo-500 text-slate-50 hover:bg-indigo-500/80 focus:outline-none focus:ring-0 focus:ring-indigo-500 dark:bg-indigo-900 dark:text-slate-50 dark:hover:bg-indigo-900/80 rounded-full px-2.5 py-0.5 text-xs font-semibold inline-flex items-center focus:outline-none focus:ring-2 focus:ring-slate-950 focus:ring-offset-2 dark:border-slate-800 dark:focus:ring-slate-300 cursor-pointer",
 };
 
+function formatDate(dateString) {
+  const options = { year: "2-digit", month: "short", day: "2-digit" };
+  const date = new Date(dateString);
+  return date.toLocaleDateString("en-US", options).replace(",", "'");
+}
+
 // const ProgressBar = ({ progress }) => {
 // const startDate = new Date("2024-08-26");
 // const endDate = new Date("2024-12-16");
@@ -225,8 +231,8 @@ const LecturesPage = () => {
                           <span className="z-20 float-left -translate-x-1/2 -translate-y-5 top-10 border border-blue-500 rounded-xl px-3 py-1 bg-blue-500 font-medium text-white">
                             Week {day.week_idx}
                           </span>
-                          <span className="float-left mt-2 translate-x-3">
-                            {day.week_day}, {day.date}
+                          <span className="float-left mt-2 translate-x-3 -translate-y-4">
+                            {day.week_day}, {formatDate(day.date)}
                           </span>
                         </td>
                       </>
@@ -246,7 +252,7 @@ const LecturesPage = () => {
                         }
                       >
                         <p className="ml-3">
-                          {day.week_day}, {day.date}
+                          {day.week_day}, {formatDate(day.date)}
                         </p>
                       </td>
                     )}
