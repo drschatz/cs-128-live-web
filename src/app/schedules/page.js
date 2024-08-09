@@ -32,29 +32,6 @@ function formatDate(dateString) {
   return date.toLocaleDateString("en-US", options).replace(",", "'");
 }
 
-// const ProgressBar = ({ progress }) => {
-// const startDate = new Date("2024-08-26");
-// const endDate = new Date("2024-12-16");
-// const today = new Date();
-
-// const totalDays = Math.ceil((endDate - startDate) / (1000 * 60 * 60 * 24));
-// const daysFromStart = Math.ceil((today - startDate) / (1000 * 60 * 60 * 24));
-
-// let calculatedProgress = daysFromStart / totalDays;
-// if (calculatedProgress > 1) {
-//   calculatedProgress = 0;
-// }
-
-//   return (
-//     <Progress.Root className="ProgressRoot" value={progress}>
-//       <Progress.Indicator
-//         className="ProgressIndicator"
-//         style={{ transform: `translateX(-${100 - calculatedProgress * 100}%)` }}
-//       />
-//     </Progress.Root>
-//   );
-// };
-
 const ProgressBar = ({ progress }) => {
   return (
     <Progress.Root className="ProgressRoot" value={progress}>
@@ -88,23 +65,6 @@ const LecturesPage = () => {
   const filteredQuiz = quiz.filter(
     (item) => isPastDate(item.date) && isFutureDate(item.due_date)
   );
-
-  // // Update the progress bar
-  // const startDate = new Date("2024-08-26");
-  // const endDate = new Date("2024-12-16");
-  // const today = new Date();
-
-  // const msInDay = 24 * 60 * 60 * 1000; // Number of milliseconds in a day
-
-  // const totalDays = Math.ceil((endDate - startDate) / msInDay);
-  // const daysFromStart = Math.ceil((today - startDate) / msInDay);
-
-  // let calculatedProgress = (daysFromStart / totalDays) * 100;
-  // if (calculatedProgress > 100) {
-  //   calculatedProgress = 100;
-  // } else if (calculatedProgress < 0) {
-  //   calculatedProgress = 0;
-  // }
 
   // Update the ongoing object with the filtered homework data
   const ongoings = [
@@ -236,12 +196,6 @@ const LecturesPage = () => {
                               {day.week_day}, {formatDate(day.date)}
                             </span>
                           </div>
-                          {/* <span className="z-20 float-left -translate-x-1/2 -translate-y-8 top-10 border border-blue-500 rounded-xl px-3 py-1 bg-blue-500 font-medium text-white">
-                            Week {day.week_idx}
-                          </span>
-                          <span className="float-left">
-                            {day.week_day}, {formatDate(day.date)}
-                          </span> */}
                         </td>
                       </>
                     ) : (

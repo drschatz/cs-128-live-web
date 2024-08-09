@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import { Progress } from "@/components/ui/progress";
 
 // Update the progress bar
@@ -20,11 +21,85 @@ if (calculatedProgress > 100) {
   calculatedProgress = 0;
 }
 
+const variantStyles = {
+  Quiz: "border-transparent bg-red-500 text-slate-50 hover:bg-red-500/80 dark:bg-red-900 dark:text-slate-50 dark:hover:bg-red-900/80 rounded-full px-2.5 py-0.5 text-xs font-semibold inline-flex items-center focus:outline-none focus:ring-2 focus:ring-slate-950 focus:ring-offset-2 dark:border-slate-800 dark:focus:ring-slate-300 cursor-pointer",
+  HW: "border-transparent bg-blue-500 text-slate-50 hover:bg-blue-500/80 focus:outline-none focus:ring-0 focus:ring-blue-500 dark:bg-blue-900 dark:text-slate-50 dark:hover:bg-blue-900/80 rounded-full px-2.5 py-0.5 text-xs font-semibold inline-flex items-center focus:outline-none focus:ring-2 focus:ring-slate-950 focus:ring-offset-2 dark:border-slate-800 dark:focus:ring-slate-300 cursor-pointer",
+  MP: "border-transparent bg-green-500 text-slate-50 hover:bg-green-500/80 focus:outline-none focus:ring-0 focus:ring-green-500 dark:bg-green-900 dark:text-slate-50 dark:hover:bg-green-900/80 rounded-full px-2.5 py-0.5 text-xs font-semibold inline-flex items-center focus:outline-none focus:ring-2 focus:ring-slate-950 focus:ring-offset-2 dark:border-slate-800 dark:focus:ring-slate-300 cursor-pointer",
+  Lab: "border-transparent bg-orange-500 text-slate-50 hover:bg-orange-500/80 focus:outline-none focus:ring-0 focus:ring-orange-500 dark:bg-orange-900 dark:text-slate-50 dark:hover:bg-orange-900/80 rounded-full px-2.5 py-0.5 text-xs font-semibold inline-flex items-center focus:outline-none focus:ring-2 focus:ring-slate-950 focus:ring-offset-2 dark:border-slate-800 dark:focus:ring-slate-300 cursor-pointer",
+  Lecture:
+    "border-transparent bg-orange-900 text-slate-50 hover:bg-orange-900/80 focus:outline-none focus:ring-0 focus:ring-orange-900 dark:bg-orange-900 dark:text-slate-50 dark:hover:bg-orange-900/80 rounded-full px-2.5 py-0.5 text-xs font-semibold inline-flex items-center focus:outline-none focus:ring-2 focus:ring-slate-950 focus:ring-offset-2 dark:border-slate-800 dark:focus:ring-slate-300 cursor-pointer",
+};
+
+function formatDate(dateString) {
+  const options = { year: "2-digit", month: "short", day: "2-digit" };
+  const date = new Date(dateString);
+  return date.toLocaleDateString("en-US", options).replace(",", "'");
+}
+
+const calendar = require("@/public/schedules/calendar24.json");
+const hw = require("@/public/schedules/hw.json");
+const lab = require("@/public/schedules/lab.json");
+const mp = require("@/public/schedules/mp.json");
+const quiz = require("@/public/schedules/quiz.json");
+
+const isPastDate = (date) => new Date(date) <= new Date();
+const isFutureDate = (date) => new Date(date) >= new Date();
+
 export default function Home() {
   const [squirrelStyle, setSquirrelStyle] = useState({
     width: "100px", // Initial width
   });
   const [squirrelImage, setSquirrelImage] = useState("empty.png"); // Default image
+
+  const currentWeekIdx = Math.max(
+    ...calendar.filter((day) => isPastDate(day.date)).map((day) => day.week_idx)
+  );
+
+  const currentWeek = calendar.filter((day) => day.week_idx === currentWeekIdx);
+
+  const filteredHw = hw.filter(
+    (item) => isPastDate(item.date) && isFutureDate(item.due_date)
+  );
+  const filteredLab = lab.filter(
+    (item) => isPastDate(item.date) && isFutureDate(item.due_date)
+  );
+  const filteredMp = mp.filter(
+    (item) => isPastDate(item.date) && isFutureDate(item.due_date)
+  );
+  const filteredQuiz = quiz.filter(
+    (item) => isPastDate(item.date) && isFutureDate(item.due_date)
+  );
+
+  const ongoings = [
+    ...filteredHw.map((item) => ({
+      key: `HW-${item.id}`,
+      topic: item.topic,
+      due: item.due_date,
+      link: item.link,
+      type: "HW",
+    })),
+    ...filteredLab.map((item) => ({
+      key: `Lab-${item.id}`,
+      topic: item.topic,
+      due: item.due_date,
+      link: item.link,
+      type: "Lab",
+    })),
+    ...filteredMp.map((item) => ({
+      key: `MP-${item.id}`,
+      topic: item.topic,
+      due: item.due_date,
+      link: item.link,
+      type: "MP",
+    })),
+    ...filteredQuiz.map((item) => ({
+      key: `Quiz-${item.id}`,
+      topic: item.topic,
+      due: item.due_date,
+      link: item.link,
+      type: "Quiz",
+    })),
+  ];
 
   useEffect(() => {
     const randomPositionAndRotation = () => {
@@ -86,7 +161,7 @@ export default function Home() {
         </div>
         <div className="absolute top-0 left-10 right-10 bottom-0 h-full bg-amber/60 dark:bg-amber/40" />
       </div>
-      <div className="container max-w-[1200px]">
+      <div className="container max-w-[1200px] flex flex-col">
         <div className="mb-16 mx-8 flex justify-center items-center">
           <h3 className="text-xl text-center">
             This course can be challenging but the course staff and myself are
@@ -95,7 +170,7 @@ export default function Home() {
             syllabus for more details!
           </h3>
         </div>
-        <div className="flex flex-col w-full mb-8 mx-10">
+        <div className="flex flex-col w-full mb-8">
           <p className="font-semibold mb-2 text-lg">Semester Progress: </p>
           <Progress
             className="[&>*]:bg-blue-500 h-[15px] border-solid border border-black/80 rounded-full overflow-hidden mb-2"
@@ -107,48 +182,166 @@ export default function Home() {
             <span className="text-sm">Dec</span>
           </div>
         </div>
-        {/* <div className="mb-10 mx-8 flex justify-center items-center">
-        <div className="border-4 border-green-500 rounded-lg w-80 h-30 mr-12">
-          <div className="flex flex-col col-span-2 justify-center p-4">
-            <h3 className="text-xl font-semibold text-center">Prairie Learn</h3>
-            <hr className="border-gray/70 my-2" />
-            <h4 className="text-lg text-center mb-2">
-              Homeworks, labs, and MPs
-            </h4>
+
+        {/* Mobile Ongoing */}
+        <div className="flex w-full sm:hidden mb-8 flex-col">
+          <p className="font-bold mb-5 text-2xl">Ongoing</p>
+          <ul>
+            {ongoings.length === 0 ? (
+              <p className="mb-2">No ongoing tasks</p>
+            ) : (
+              ongoings.map((ongoing) => (
+                <li key={ongoing.key}>
+                  <Link href={ongoing.link}>
+                    <p
+                      className={`p-4 mb-2 ${
+                        variantStyles[ongoing.type] || "bg-gray-200"
+                      }`}
+                    >
+                      {ongoing.topic} - {ongoing.due}
+                    </p>
+                  </Link>
+                </li>
+              ))
+            )}
+          </ul>
+        </div>
+
+        <div className="w-full flex justify-around">
+          {/* Current Week Calendar */}
+          <div className="w-full gap-2 mb-8">
+            <p className="font-semibold mb-5 text-lg">This Week's Agenda:</p>
+            {today < startDate ? (
+              <p>The course has not started yet. Please check back later.</p>
+            ) : (
+              <table className="table-fix w-full border-collapse">
+                <thead className="h-[60px]">
+                  <tr>
+                    <th className="w-[200px] border border-b-2 border-x-gray/50 border-t-gray/50">
+                      Date
+                    </th>
+                    <th className="w-[200px] border border-b-2 border-x-gray/50 border-t-gray/50">
+                      Lecture Topic
+                    </th>
+                    <th className="w-[200px] border border-b-2 border-x-gray/50 border-t-gray/50">
+                      Homework & Lab
+                    </th>
+                    <th className="w-[200px] border border-b-2 border-x-gray/50 border-t-gray/50">
+                      MP & Quiz
+                    </th>
+                    <th className="w-[200px] border border-b-2 border-x-gray/50 border-t-gray/50">
+                      Deadline
+                    </th>
+                  </tr>
+                </thead>
+                {currentWeek.map((day, idx) => (
+                  <tbody key={idx}>
+                    <tr className="h-[70px]">
+                      <td className="border border-x-gray/50 border-b-gray/50">
+                        {day.week_day}, {formatDate(day.date)}
+                      </td>
+                      <td className="border border-x-gray/50 border-b-gray/50">
+                        {day.lec_topic && (
+                          <Link href={day.lec_link}>
+                            <p className="p-4 mb-2 text-orange-900 font-semibold">
+                              {day.lec_topic}
+                            </p>
+                          </Link>
+                        )}
+                      </td>
+                      <td className="border border-x-gray/50 border-b-gray/50">
+                        {day.hw_topic && (
+                          <Link href={day.hw_link}>
+                            <p className="p-4 mb-2 text-blue-500 font-semibold">
+                              {day.hw_topic}
+                            </p>
+                          </Link>
+                        )}
+                        {day.lab_topic && (
+                          <Link href={day.lab_link}>
+                            <p className="p-4 mb-2 text-orange-500 font-semibold">
+                              {day.lab_topic}
+                            </p>
+                          </Link>
+                        )}
+                      </td>
+                      <td className="border border-x-gray/50 border-b-gray/50">
+                        {day.mp_topic && (
+                          <Link href={day.mp_link}>
+                            <p className="p-4 mb-2 text-green-500 font-semibold">
+                              {day.mp_topic}
+                            </p>
+                          </Link>
+                        )}
+                        {day.quiz_topic && (
+                          <Link href={day.quiz_link}>
+                            <p className="p-4 mb-2 text-red-500 font-semibold">
+                              {day.quiz_topic}
+                            </p>
+                          </Link>
+                        )}
+                      </td>
+                      <td className="border border-x-gray/50 border-b-gray/50">
+                        {day.hw_due_topic && (
+                          <Link href={day.hw_due_link}>
+                            <p className="p-4 mb-2 text-blue-500 font-semibold">
+                              {day.hw_due_topic} : 8:30 AM
+                            </p>
+                          </Link>
+                        )}
+                        {day.lab_due_topic && (
+                          <Link href={day.lab_due_link}>
+                            <p className="p-4 mb-2 text-orange-500 font-semibold">
+                              {day.lab_due_topic} : 23:59
+                            </p>
+                          </Link>
+                        )}
+                        {day.mp_due_topic && (
+                          <Link href={day.mp_due_link}>
+                            <p className="p-4 mb-2 text-green-500 font-semibold">
+                              {day.mp_due_topic} : 23:59
+                            </p>
+                          </Link>
+                        )}
+                        {day.quiz_due_topic && (
+                          <Link href={day.quiz_due_link}>
+                            <p className="p-4 mb-2 text-red-500 font-semibold">
+                              {day.quiz_due_topic} : 23:59
+                            </p>
+                          </Link>
+                        )}
+                      </td>
+                    </tr>
+                  </tbody>
+                ))}
+              </table>
+            )}
+          </div>
+
+          {/* Ongoing Assignments */}
+          <div className="hidden sm:flex w-full sm:w-3/12 mb-8 flex-col ml-32">
+            <p className="font-semibold mb-5 text-lg">Ongoing</p>
+            <ul>
+              {ongoings.length === 0 ? (
+                <p className="mb-2">No ongoing tasks</p>
+              ) : (
+                ongoings.map((ongoing) => (
+                  <li key={ongoing.key}>
+                    <Link href={ongoing.link}>
+                      <p
+                        className={`p-4 mb-2 ${
+                          variantStyles[ongoing.type] || "bg-gray-200"
+                        }`}
+                      >
+                        {ongoing.topic} - {ongoing.due}
+                      </p>
+                    </Link>
+                  </li>
+                ))
+              )}
+            </ul>
           </div>
         </div>
-        <div className="border-4 border-yellow-500 rounded-lg shadow-md w-80 h-30  ml-12">
-          <div className="flex flex-col col-span-2 justify-center p-4">
-            <h3 className="text-xl font-semibold text-center">
-              Lecture Recordings
-            </h3>
-            <hr className="border-gray/70 my-2" />
-            <h4 className="text-lg text-center mb-2">coming soon...</h4>
-          </div>
-        </div>
-      </div>
-      <div className="mb-10 mx-8 flex justify-center items-center">
-        <div className="border-4 border-pink-500 rounded-lg shadow-md w-80 h-30  mr-12">
-          <div className="flex flex-col col-span-2 justify-center p-4">
-            <h3 className="text-xl font-semibold text-center">Office Hours</h3>
-            <hr className="border-gray/70 my-2" />
-            <h4 className="text-lg text-center mb-2">
-              Come by with any questions
-            </h4>
-          </div>
-        </div>
-        <div className="border-4 border-blue-500 rounded-lg w-80 h-30 ml-12">
-          <div className="flex flex-col col-span-2 justify-center p-4">
-            <h3 className="text-xl font-semibold text-center">
-              Discussion Board
-            </h3>
-            <hr className="border-gray/70 my-2" />
-            <h4 className="text-lg text-center mb-2">
-              A place to post your questions
-            </h4>
-          </div>
-        </div>
-      </div> */}
       </div>
     </main>
   );
