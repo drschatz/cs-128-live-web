@@ -89,22 +89,22 @@ const LecturesPage = () => {
     (item) => isPastDate(item.date) && isFutureDate(item.due_date)
   );
 
-  // Update the progress bar
-  const startDate = new Date("2024-08-26");
-  const endDate = new Date("2024-12-16");
-  const today = new Date();
+  // // Update the progress bar
+  // const startDate = new Date("2024-08-26");
+  // const endDate = new Date("2024-12-16");
+  // const today = new Date();
 
-  const msInDay = 24 * 60 * 60 * 1000; // Number of milliseconds in a day
+  // const msInDay = 24 * 60 * 60 * 1000; // Number of milliseconds in a day
 
-  const totalDays = Math.ceil((endDate - startDate) / msInDay);
-  const daysFromStart = Math.ceil((today - startDate) / msInDay);
+  // const totalDays = Math.ceil((endDate - startDate) / msInDay);
+  // const daysFromStart = Math.ceil((today - startDate) / msInDay);
 
-  let calculatedProgress = (daysFromStart / totalDays) * 100;
-  if (calculatedProgress > 100) {
-    calculatedProgress = 100;
-  } else if (calculatedProgress < 0) {
-    calculatedProgress = 0;
-  }
+  // let calculatedProgress = (daysFromStart / totalDays) * 100;
+  // if (calculatedProgress > 100) {
+  //   calculatedProgress = 100;
+  // } else if (calculatedProgress < 0) {
+  //   calculatedProgress = 0;
+  // }
 
   // Update the ongoing object with the filtered homework data
   const ongoings = [
@@ -152,14 +152,14 @@ const LecturesPage = () => {
       <div className="container flex sm:flex-row flex-col">
         <div className="w-full sm:w-10/12">
           {/* Progress  */}
-          <div className="flex flex-col w-full max-w-[1000px] mb-8 ">
+          {/* <div className="flex flex-col w-full max-w-[1000px] mb-8 ">
             <p className="font-bold mb-5 text-2xl">Semester Progress: </p>
             <Progress
               className="[&>*]:bg-blue-500 h-[15px] border-solid border border-black/80 rounded-full overflow-hidden"
               value={calculatedProgress}
               max={100}
             />
-          </div>
+          </div> */}
 
           {/* Ongoings mobile */}
           <div className="flex w-full sm:hidden mb-8 flex-col order-2">
@@ -228,12 +228,20 @@ const LecturesPage = () => {
                               : {}
                           }
                         >
-                          <span className="z-20 float-left -translate-x-1/2 -translate-y-5 top-10 border border-blue-500 rounded-xl px-3 py-1 bg-blue-500 font-medium text-white">
+                          <div className="relative flex flex-col items-start">
+                            <span className="z-20 -translate-x-1/2 -translate-y-5 top-10 border border-blue-500 rounded-xl px-3 py-1 bg-blue-500 font-medium text-white">
+                              Week {day.week_idx}
+                            </span>
+                            <span className="mt-2 translate-x-3 -translate-y-5">
+                              {day.week_day}, {formatDate(day.date)}
+                            </span>
+                          </div>
+                          {/* <span className="z-20 float-left -translate-x-1/2 -translate-y-8 top-10 border border-blue-500 rounded-xl px-3 py-1 bg-blue-500 font-medium text-white">
                             Week {day.week_idx}
                           </span>
-                          <span className="float-left mt-2 translate-x-3 -translate-y-4">
+                          <span className="float-left">
                             {day.week_day}, {formatDate(day.date)}
-                          </span>
+                          </span> */}
                         </td>
                       </>
                     ) : (
