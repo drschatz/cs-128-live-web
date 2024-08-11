@@ -3,7 +3,7 @@ import fs from "fs";
 import matter from "gray-matter";
 
 import getPostMetadata from "@/lib/getPostMetadata";
-import parseMarkdownHeadings from "../../utils/parseTOC";
+import parseMarkdownHeadings from "src/utils/parseTOC.js";
 
 function getPostContent(slug) {
   const folder = "mps/";
@@ -33,10 +33,10 @@ const MPPage = (props) => {
 
   return (
     <main>
-      <div className="mb-8 text-center relative w-full h-[24vh] bg-blue-500 ">
+      <div className="mb-8 text-center relative w-full h-[24vh] bg-green-500 ">
         <div className="w-full z-10 flex flex-col items-center justify-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
           <h1 className="inline-block mt-6 font-semibold capitalize text-light text-2xl md:text-3xl lg:text-5xl !leading-normal relative w-5/6">
-            MPs
+            MPs - {post.data.title}
           </h1>
         </div>
         <div className="absolute top-0 left-0 right-0 bottom-0 h-full bg-green/60 dark:bg-dark/40" />
@@ -71,7 +71,7 @@ const MPPage = (props) => {
         <div className="w-full sm:w-7/12 mt-8 p-4">
           <div className="mb-8 ">
             <h1 className="text-3xl font-bold mb-4 text-accent">
-              Course Syllabus
+              {post.data.title}
             </h1>
             <Markdown
               options={{
@@ -143,7 +143,7 @@ const MPPage = (props) => {
                     component: "code",
                     props: {
                       className:
-                        "bg-gray-100 dark:bg-gray-800 p-1 text-sm rounded",
+                        "bg-neutral-700 dark:bg-gray-800 p-1 text-sm rounded text-white",
                     },
                   },
                   pre: {

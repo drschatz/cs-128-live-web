@@ -4,7 +4,7 @@ import React from "react";
 const QuizzesPage = () => {
   return (
     <main>
-      <div className="mb-8 text-center relative w-full h-[24vh] bg-blue-500 ">
+      <div className="mb-8 text-center relative w-full h-[24vh] bg-green-500 ">
         <div className="w-full z-10 flex flex-col items-center justify-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
           <h1 className="inline-block mt-6 font-semibold capitalize text-light text-2xl md:text-3xl lg:text-5xl !leading-normal relative w-5/6">
             MPs
@@ -17,11 +17,11 @@ const QuizzesPage = () => {
         <div className="w-full sm:w-9/12">
           <div className="w-full max-w-[900px] gap-2 mb-8">
             <h2 className="font-bold text-2xl mb-5">MPs</h2>
-            <Link href="/assignments/syllabus">
+            <Link href="/assignments/WordGuess">
               <div className="w-full h-[140px] border border-gray/50 rounded-lg overflow-hidden shadow-sm hover:shadow-lg mb-6">
                 <div className="p-4 mx-5">
                   <h4 className="text-xl text-accent font-bold mb-3">
-                    MP 1: Topic of MP 1
+                    MP 1: Word Guesss
                   </h4>
                   <div className="flex flex-row justify-between mb-2 mr-10">
                     <p className="inline-block">
