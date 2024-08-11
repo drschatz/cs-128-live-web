@@ -1,8 +1,6 @@
-import Image from "next/image";
 import React from "react";
 
-import squ from "public/profile_img/squ.jpg";
-import StaffCard from "./StaffCard";
+import StaffCard from "../people/StaffCard";
 
 const SupportPage = () => {
   return (
@@ -22,11 +20,6 @@ const SupportPage = () => {
             <li className="hover:text-accent mb-2">
               <a href="#faq" className="ml-2 ">
                 <strong>How to get support?</strong>
-              </a>
-            </li>
-            <li className="hover:text-accent mb-2">
-              <a href="#contact" className="ml-2">
-                <strong>Meet Staffs</strong>
               </a>
             </li>
           </ul>
@@ -67,7 +60,7 @@ const SupportPage = () => {
             ></iframe>
 
             <br />
-            <br />
+            {/* <br />
             <br />
             <h1 className="text-3xl font-bold mb-4 text-accent" id="contact">
               Meet Staffs
@@ -76,7 +69,7 @@ const SupportPage = () => {
               <StaffCard />
               <StaffCard />
               <StaffCard />
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="hidden sm:block w-1/12"></div>
