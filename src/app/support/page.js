@@ -23,11 +23,6 @@ const SupportPage = () => {
                 <strong>How to get support?</strong>
               </a>
             </li>
-            <li className="hover:text-accent mb-2">
-              <a href="#contact" className="ml-2 ">
-                <strong>Meet Staffs</strong>
-              </a>
-            </li>
           </ul>
         </div>
         <div className="w-full sm:w-7/12 mt-8 p-4">
@@ -108,6 +103,14 @@ const SupportPage = () => {
             </div>
 
             <br />
+            <iframe
+              src="https://calendar.google.com/calendar/embed?src=44815dd08de6091a40e8e218ace5da10b991d26ded639574aefc0ef9eab47964%40group.calendar.google.com&ctz=America%2FChicago"
+              width="800"
+              height="600"
+              frameborder="0"
+            ></iframe>
+
+            {/* <br />
             <h1 className="text-3xl font-bold mb-4 text-accent" id="contact">
               Meet Staffs
             </h1>
@@ -115,7 +118,7 @@ const SupportPage = () => {
               <StaffCard />
               <StaffCard />
               <StaffCard />
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="hidden sm:block w-1/12"></div>
