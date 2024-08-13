@@ -16,12 +16,6 @@ const SupportPage = () => {
       </div>
 
       <div className="container">
-        <h1
-          className="text-3xl font-bold mb-4 text-accent text-center"
-          id="faq"
-        >
-          How to get support?
-        </h1>
 
         <div className="flex flex-col justify-center items-center">
           <div className="mb-10 mx-8 mt-10 flex justify-center items-center">
