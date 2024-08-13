@@ -211,7 +211,9 @@ export default function Home() {
         <div className="w-full flex justify-around">
           {/* Current Week Calendar */}
           <div className="w-full gap-2 mb-8">
-            <p className="font-semibold mb-5 text-lg">This Week Agenda:</p>
+            <p className="font-semibold mb-5 text-lg">
+              This Week&apos;s Agenda:
+            </p>
             {today < startDate ? (
               <p>The course has not started yet. Please check back later.</p>
             ) : (
