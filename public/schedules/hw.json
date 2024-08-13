@@ -1,7 +1,7 @@
 [
   {
     "idx": 1,
-    "topic": "Homework 1",
+    "topic": "Homework 1.1",
     "date": "2024-08-26",
     "weekday": "Mon",
     "due_date": "2024-08-28",
@@ -10,7 +10,7 @@
   },
   {
     "idx": 2,
-    "topic": "Homework 2",
+    "topic": "Homework 1.2",
     "date": "2024-08-28",
     "weekday": "Wed",
     "due_date": "2024-08-30",
@@ -19,7 +19,7 @@
   },
   {
     "idx": 3,
-    "topic": "Homework 3",
+    "topic": "Homework 1.3",
     "date": "2024-09-02",
     "weekday": "Mon",
     "due_date": "2024-09-04",
@@ -28,7 +28,7 @@
   },
   {
     "idx": 4,
-    "topic": "Homework 4",
+    "topic": "Homework 2.1",
     "date": "2024-09-04",
     "weekday": "Wed",
     "due_date": "2024-09-06",
@@ -37,7 +37,7 @@
   },
   {
     "idx": 5,
-    "topic": "Homework 5",
+    "topic": "Homework 2.2",
     "date": "2024-09-09",
     "weekday": "Mon",
     "due_date": "2024-09-11",

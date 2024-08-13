@@ -20,10 +20,10 @@ const CourseBook = () => {
       <div className="flex mb-8 sm:flex-row flex-col">
         <div className="w-full sm:w-4/12 sm:block mt-8 ml-24 text-base text-gray">
           <h3 className="mb-2 sticky top-24 font-bold">Syllabus</h3>
-          <ul className="ml-4 sticky top-32">
+          {/* <ul className="ml-4 sticky top-32">
             {headings.map((heading) => (
               <li key={heading.slug} className="hover:text-accent mb-1.5">
-                <a href={`#${heading.slug}`} className="ml-2">
+                <a href={`#${heading.slug}`} className="ml-2 \">
                   <strong>{heading.text}</strong>
                 </a>
                 {heading.subheadings && (
@@ -31,7 +31,45 @@ const CourseBook = () => {
                     {heading.subheadings.map((subheading) => (
                       <li
                         key={subheading.slug}
-                        className="hover:text-accent mb-1"
+                        className="hover:text-accent mb-1 "
+                      >
+                        <a href={`#${subheading.slug}`} className="ml-2 ">
+                          <strong>{subheading.text}</strong>
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </li>
+            ))}
+          </ul> */}
+          <ul className="ml-4 sticky top-32">
+            {headings.map((heading, index) => (
+              <li
+                key={index}
+                className={`hover:text-accent mb-1.5 ml-${
+                  heading.level === 1 ? "0" : heading.level === 2 ? "4" : "8"
+                }`}
+              >
+                <a href={`#${heading.slug}`} className="ml-2">
+                  <strong>{heading.text}</strong>
+                </a>
+                {heading.subheadings && heading.subheadings.length > 0 && (
+                  <ul
+                    className={`ml-${
+                      heading.level === 1
+                        ? "4"
+                        : heading.level === 2
+                        ? "8"
+                        : "12"
+                    } text-sm`}
+                  >
+                    {heading.subheadings.map((subheading, subIndex) => (
+                      <li
+                        key={subIndex}
+                        className={`hover:text-accent mb-1 ml-${
+                          subheading.level === 2 ? "4" : "8"
+                        }`}
                       >
                         <a href={`#${subheading.slug}`} className="ml-2">
                           <strong>{subheading.text}</strong>

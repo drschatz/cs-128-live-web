@@ -70,34 +70,35 @@ export default function Home() {
     (item) => isPastDate(item.date) && isFutureDate(item.due_date)
   );
 
+  // Update the ongoing object with the filtered homework data
   const ongoings = [
     ...filteredHw.map((item) => ({
       key: `HW-${item.id}`,
       topic: item.topic,
       due: item.due_date,
       link: item.link,
-      type: "HW",
+      type: "HW", // Adjust the type as needed
     })),
     ...filteredLab.map((item) => ({
       key: `Lab-${item.id}`,
       topic: item.topic,
       due: item.due_date,
       link: item.link,
-      type: "Lab",
+      type: "Lab", // Adjust the type as needed
     })),
     ...filteredMp.map((item) => ({
       key: `MP-${item.id}`,
       topic: item.topic,
       due: item.due_date,
       link: item.link,
-      type: "MP",
+      type: "MP", // Adjust the type as needed
     })),
     ...filteredQuiz.map((item) => ({
       key: `Quiz-${item.id}`,
       topic: item.topic,
       due: item.due_date,
       link: item.link,
-      type: "Quiz",
+      type: "Quiz", // Adjust the type as needed
     })),
   ];
 

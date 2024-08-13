@@ -6,7 +6,7 @@ Welcome to CS 128\! This course will help expand your programming knowledge thro
 
 # Contact Information
 
-### Instructor 
+### Instructor
 
 Professor Jule Schatz (you-la shots) _she/her_  
 Website: juleschatz.com  
@@ -99,13 +99,13 @@ You have the opportunity to earn up to 1,000 points in the course. Based on your
 
 The table below describes how to get points for various components in the course. The max number of points per component is different from the available points for lecture, homework, and labs to allow for missed questions, assignments, and attendance. You cannot get more than the Max Points for any component.
 
-| Component | Max Points | Available Points | Points / Instance                                    | Details                                                                                                                                                                                      |
-| :-------- | :--------- | :--------------- | :--------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Lecture   | 100        | 129              | 3 points / Lecture                                   | There will be at least 43 lectures. You receive points at each lecture depending on the clicker questions.                                                                                   |
-| Homework  | 150        | 184              | 8 points / Homework                                  | There will be at least 23 homework assignments over the semester.                                                                                                                            |
-| Labs      | 150        | 175              | 5 points / Lab Attendance<br><br>10 points / Lab Assignment | There will be at least 11 lab sessions/assignments over the semester.                                                                                                                        |
-| MPs       | 270        | 270              | 80 \- 110 points / MP                                | MP 1 \- Part 1 : 30 points<br>MP 1 \- Part 2 : 50 points<br><br>MP 2 \- Part 1 : 30 points<br>MP 2 \- Part 2 : 30 points<br>MP 2 \- Part 3 : 50 points<br><br>MP 3 \- Part 1 : 30 points<br>MP 3 \- Part 2 : 50 points|
-| Exams     | 330        | 330              | 110 points / Exam                                    | There are 3 exams total, but each has a second chance to increase your points for that exam.                                                                                                 |
+| Component | Max Points | Available Points | Points / Instance                                           | Details                                                                                                                                                                                                                |
+| :-------- | :--------- | :--------------- | :---------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Lecture   | 100        | 129              | 3 points / Lecture                                          | There will be at least 43 lectures. You receive points at each lecture depending on the clicker questions.                                                                                                             |
+| Homework  | 150        | 184              | 8 points / Homework                                         | There will be at least 23 homework assignments over the semester.                                                                                                                                                      |
+| Labs      | 150        | 175              | 5 points / Lab Attendance<br><br>10 points / Lab Assignment | There will be at least 11 lab sessions/assignments over the semester.                                                                                                                                                  |
+| MPs       | 270        | 270              | 80 \- 110 points / MP                                       | MP 1 \- Part 1 : 30 points<br>MP 1 \- Part 2 : 50 points<br><br>MP 2 \- Part 1 : 30 points<br>MP 2 \- Part 2 : 30 points<br>MP 2 \- Part 3 : 50 points<br><br>MP 3 \- Part 1 : 30 points<br>MP 3 \- Part 2 : 50 points |
+| Exams     | 330        | 330              | 110 points / Exam                                           | There are 3 exams total, but each has a second chance to increase your points for that exam.                                                                                                                           |
 
 # Extension Policies
 
@@ -184,4 +184,3 @@ Counseling Center: 217-333-3704, 610 East John Street Champaign, IL 61820
 McKinley Health Center:217-333-2700, 1109 South Lincoln Avenue, Urbana, Illinois 61801
 
 University wellness center: [https://wellness.illinois.edu/](https://wellness.illinois.edu/)
-

@@ -218,7 +218,6 @@ const LecturesPage = () => {
                         </p>
                       </td>
                     )}
-
                     <td
                       className={`${
                         day.day_idx % 5 === 0
@@ -275,7 +274,7 @@ const LecturesPage = () => {
                           : {}
                       }
                     ></td>
-
+                    {/* dividing places */}
                     {/* <td
                       className={`${
                         day.day_idx % 5 === 0
@@ -432,7 +431,7 @@ const LecturesPage = () => {
                           </p>
                         </Link>
                       )}
-                    </td> */}
+                    </td>{" "} */}
                   </tr>
                 </tbody>
               ))}
