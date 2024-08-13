@@ -5,7 +5,7 @@ import squ from "public/profile_img/squ.jpg";
 
 const StaffCard = () => {
   return (
-    <div className="flex flex-col col-span-1  justify-center bg-white p-4 rounded-lg shadow-md w-60">
+    <div className="flex flex-col col-span-1  justify-center bg-white p-4 rounded-lg shadow-sm w-60 hover:shadow-lg transition-shadow duration-300">
       <div>
         <Image
           src={squ}

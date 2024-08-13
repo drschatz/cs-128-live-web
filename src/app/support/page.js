@@ -1,6 +1,7 @@
 import React from "react";
 
-import StaffCard from "../people/StaffCard";
+import StaffCard from "./StaffCard";
+import Link from "next/link";
 
 const SupportPage = () => {
   return (
@@ -22,6 +23,11 @@ const SupportPage = () => {
                 <strong>How to get support?</strong>
               </a>
             </li>
+            <li className="hover:text-accent mb-2">
+              <a href="#contact" className="ml-2 ">
+                <strong>Meet Staffs</strong>
+              </a>
+            </li>
           </ul>
         </div>
         <div className="w-full sm:w-7/12 mt-8 p-4">
@@ -29,38 +35,78 @@ const SupportPage = () => {
             <h1 className="text-3xl font-bold mb-4 text-accent" id="faq">
               How to get support?
             </h1>
-            <p className="leading-9 mb-4 text-lg text-black/80 font-medium">
-              This is the introduction of the book. Tailwind CSS uses a lot of
-              custom CSS at-rules like @tailwind, @apply, and @config, and in
-              many editors this can trigger warnings or errors where these rules
-              aren’t recognized. The solution to this is almost always to
-              install a plugin for your editor/IDE for PostCSS language support
-              instead of regular CSS. If you are using VS Code, our official
-              Tailwind CSS IntelliSense plugin includes a dedicated Tailwind CSS
-              language mode that has support for all of the custom at-rules and
-              functions Tailwind uses. In some cases, you may need to disable
-              native CSS linting/validations if your editor is very strict about
-              the syntax it expects in your CSS files.
+            {/* <div>
+              <p className="leading-9 mb-4 text-lg text-black/80 font-medium">
+                This is the introduction of the book. Tailwind CSS uses a lot of
+                custom CSS at-rules like @tailwind, @apply, and @config, and in
+                many editors this can trigger warnings or errors where these
+                rules aren’t recognized. The solution to this is almost always
+                to install a plugin for your editor/IDE for PostCSS language
+                support instead of regular CSS. If you are using VS Code, our
+                official Tailwind CSS IntelliSense plugin includes a dedicated
+                Tailwind CSS language mode that has support for all of the
+                custom at-rules and functions Tailwind uses. In some cases, you
+                may need to disable native CSS linting/validations if your
+                editor is very strict about the syntax it expects in your CSS
+                files.
+                <br />
+                <br />
+                This is the introduction of the book. Tailwind CSS uses a lot of
+                custom CSS at-rules like @tailwind, @apply, and @config, and in
+                many editors this can trigger warnings or errors where these
+                rules aren’t recognized. The solution to this is almost always
+                to install a plugin for your editor/IDE for PostCSS language
+                support instead of regular CSS. If you are using VS Code, our
+                official Tailwind CSS IntelliSense plugin includes a dedicated
+                Tailwind
+              </p>
               <br />
-              <br />
-              This is the introduction of the book. Tailwind CSS uses a lot of
-              custom CSS at-rules like @tailwind, @apply, and @config, and in
-              many editors this can trigger warnings or errors where these rules
-              aren’t recognized. The solution to this is almost always to
-              install a plugin for your editor/IDE for PostCSS language support
-              instead of regular CSS. If you are using VS Code, our official
-              Tailwind CSS IntelliSense plugin includes a dedicated Tailwind
-            </p>
-            <br />
-            <iframe
-              src="https://calendar.google.com/calendar/embed?src=44815dd08de6091a40e8e218ace5da10b991d26ded639574aefc0ef9eab47964%40group.calendar.google.com&ctz=America%2FChicago"
-              width="800"
-              height="600"
-              frameborder="0"
-            ></iframe>
+              <iframe
+                src="https://calendar.google.com/calendar/embed?src=44815dd08de6091a40e8e218ace5da10b991d26ded639574aefc0ef9eab47964%40group.calendar.google.com&ctz=America%2FChicago"
+                width="800"
+                height="600"
+                frameborder="0"
+              ></iframe>
+            </div> */}
 
-            <br />
-            {/* <br />
+            <div className="mb-10 mx-8 mt-10 flex justify-center items-center">
+              <Link
+                href="https://queue.illinois.edu/q/cs128"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="border-4 border-pink-500 rounded-lg shadow-sm w-80 h-30 mr-12 hover:shadow-lg transition-shadow duration-300">
+                  <div className="flex flex-col col-span-2 justify-center p-4">
+                    <h3 className="text-xl font-semibold text-center">
+                      Office Hours
+                    </h3>
+                    <hr className="border-gray/70 my-2" />
+                    <h4 className="text-lg text-center mb-2">
+                      Come by with any questions
+                    </h4>
+                  </div>
+                </div>
+              </Link>
+
+              <Link
+                href="https://edstem.org/us/join/CDc7Ea"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="border-4 border-blue-500 rounded-lg shadow-sm w-80 h-30 ml-12 hover:shadow-lg transition-shadow duration-300">
+                  <div className="flex flex-col col-span-2 justify-center p-4">
+                    <h3 className="text-xl font-semibold text-center">
+                      Discussion Board
+                    </h3>
+                    <hr className="border-gray/70 my-2" />
+                    <h4 className="text-lg text-center mb-2">
+                      A place to post your questions
+                    </h4>
+                  </div>
+                </div>
+              </Link>
+            </div>
+
             <br />
             <h1 className="text-3xl font-bold mb-4 text-accent" id="contact">
               Meet Staffs
@@ -69,7 +115,7 @@ const SupportPage = () => {
               <StaffCard />
               <StaffCard />
               <StaffCard />
-            </div> */}
+            </div>
           </div>
         </div>
         <div className="hidden sm:block w-1/12"></div>
