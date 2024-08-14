@@ -43,11 +43,11 @@ const ProgressBar = ({ progress }) => {
   );
 };
 
-const calendar = require("@/public/schedules/calendar24.json");
-const hw = require("@/public/schedules/hw.json");
-const lab = require("@/public/schedules/lab.json");
-const mp = require("@/public/schedules/mp.json");
-const quiz = require("@/public/schedules/quiz.json");
+const calendar = require("@/public/schedule/calendar24.json");
+const hw = require("@/public/schedule/hw.json");
+const lab = require("@/public/schedule/lab.json");
+const mp = require("@/public/schedule/mp.json");
+const quiz = require("@/public/schedule/quiz.json");
 
 const isPastDate = (date) => new Date(date) <= new Date();
 const isFutureDate = (date) => new Date(date) >= new Date();
@@ -102,7 +102,7 @@ const LecturesPage = () => {
       <div className="mb-8 text-center relative w-full h-[24vh] bg-indigo-500 ">
         <div className="w-full z-10 flex flex-col items-center justify-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
           <h1 className="inline-block mt-6 font-semibold capitalize text-light text-2xl md:text-3xl lg:text-5xl !leading-normal relative w-5/6">
-            Schedules
+            Schedule
           </h1>
         </div>
         <div className="absolute top-0 left-0 right-0 bottom-0 h-full bg-dark/60 dark:bg-dark/40" />
@@ -145,9 +145,8 @@ const LecturesPage = () => {
             </ul>
           </div>
 
-          {/* Schedules */}
+          {/* Schedule */}
           <div className="w-full max-w-[1000px] gap-2 mb-8">
-            <p className="font-bold mb-5 text-2xl">Schedules: </p>
             <table className="table-fix w-full border-collapse ">
               <thead className="h-[60px]">
                 <tr>

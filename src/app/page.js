@@ -36,11 +36,11 @@ function formatDate(dateString) {
   return date.toLocaleDateString("en-US", options).replace(",", "'");
 }
 
-const calendar = require("@/public/schedules/calendar24.json");
-const hw = require("@/public/schedules/hw.json");
-const lab = require("@/public/schedules/lab.json");
-const mp = require("@/public/schedules/mp.json");
-const quiz = require("@/public/schedules/quiz.json");
+const calendar = require("@/public/schedule/calendar24.json");
+const hw = require("@/public/schedule/hw.json");
+const lab = require("@/public/schedule/lab.json");
+const mp = require("@/public/schedule/mp.json");
+const quiz = require("@/public/schedule/quiz.json");
 
 const isPastDate = (date) => new Date(date) <= new Date();
 const isFutureDate = (date) => new Date(date) >= new Date();
