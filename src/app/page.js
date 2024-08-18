@@ -230,7 +230,7 @@ export default function Home() {
                       Homework & Lab
                     </th>
                     <th className="w-[200px] border border-b-2 border-x-gray/50 border-t-gray/50">
-                      MP & Quiz
+                      MP & Exams
                     </th>
                     <th className="w-[200px] border border-b-2 border-x-gray/50 border-t-gray/50">
                       Deadline
