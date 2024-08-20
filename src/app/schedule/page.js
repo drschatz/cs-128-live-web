@@ -66,6 +66,11 @@ const LecturesPage = () => {
     (item) => isPastDate(item.date) && isFutureDate(item.due_date)
   );
 
+  // Update the calendar to only show data before a 2024-08-30
+  const filteredCalendar = calendar.filter(
+    (item) => new Date(item.date) <= new Date("2024-09-28")
+  );
+
   // Update the ongoing object with the filtered homework data
   const ongoings = [
     ...filteredHw.map((item) => ({
@@ -111,16 +116,6 @@ const LecturesPage = () => {
 
       <div className="container flex sm:flex-row flex-col">
         <div className="w-full sm:w-10/12">
-          {/* Progress  */}
-          {/* <div className="flex flex-col w-full max-w-[1000px] mb-8 ">
-            <p className="font-bold mb-5 text-2xl">Semester Progress: </p>
-            <Progress
-              className="[&>*]:bg-blue-500 h-[15px] border-solid border border-black/80 rounded-full overflow-hidden"
-              value={calculatedProgress}
-              max={100}
-            />
-          </div> */}
-
           {/* Ongoings mobile */}
           <div className="flex w-full sm:hidden mb-8 flex-col order-2">
             <p className="font-bold mb-5 text-2xl">Ongoing</p>
@@ -168,7 +163,7 @@ const LecturesPage = () => {
                 </tr>
               </thead>
 
-              {calendar.map((day, idx) => (
+              {filteredCalendar.map((day, idx) => (
                 <tbody key={idx}>
                   <tr className="h-[70px]">
                     {day.day_idx % 5 === 1 ? (
@@ -217,64 +212,64 @@ const LecturesPage = () => {
                         </p>
                       </td>
                     )}
-                    <td
-                      className={`${
-                        day.day_idx % 5 === 0
-                          ? "border border-x-gray/50  border-b-2"
-                          : "border border-x-gray/50 border-b-gray/50"
-                      }`}
-                      style={
-                        day.dayoff
-                          ? {
-                              backgroundColor: "#a1a1a1",
-                            }
-                          : {}
-                      }
-                    ></td>
-                    <td
-                      className={`${
-                        day.day_idx % 5 === 0
-                          ? "border border-x-gray/50  border-b-2"
-                          : "border border-x-gray/50 border-b-gray/50"
-                      }`}
-                      style={
-                        day.dayoff
-                          ? {
-                              backgroundColor: "#a1a1a1",
-                            }
-                          : {}
-                      }
-                    ></td>
-                    <td
-                      className={`${
-                        day.day_idx % 5 === 0
-                          ? "border border-x-gray/50  border-b-2"
-                          : "border border-x-gray/50 border-b-gray/50"
-                      }`}
-                      style={
-                        day.dayoff
-                          ? {
-                              backgroundColor: "#a1a1a1",
-                            }
-                          : {}
-                      }
-                    ></td>
-                    <td
-                      className={`${
-                        day.day_idx % 5 === 0
-                          ? "border border-x-gray/50  border-b-2"
-                          : "border border-x-gray/50 border-b-gray/50"
-                      }`}
-                      style={
-                        day.dayoff
-                          ? {
-                              backgroundColor: "#a1a1a1",
-                            }
-                          : {}
-                      }
-                    ></td>
-                    {/* dividing places */}
                     {/* <td
+                      className={`${
+                        day.day_idx % 5 === 0
+                          ? "border border-x-gray/50  border-b-2"
+                          : "border border-x-gray/50 border-b-gray/50"
+                      }`}
+                      style={
+                        day.dayoff
+                          ? {
+                              backgroundColor: "#a1a1a1",
+                            }
+                          : {}
+                      }
+                    ></td>
+                    <td
+                      className={`${
+                        day.day_idx % 5 === 0
+                          ? "border border-x-gray/50  border-b-2"
+                          : "border border-x-gray/50 border-b-gray/50"
+                      }`}
+                      style={
+                        day.dayoff
+                          ? {
+                              backgroundColor: "#a1a1a1",
+                            }
+                          : {}
+                      }
+                    ></td>
+                    <td
+                      className={`${
+                        day.day_idx % 5 === 0
+                          ? "border border-x-gray/50  border-b-2"
+                          : "border border-x-gray/50 border-b-gray/50"
+                      }`}
+                      style={
+                        day.dayoff
+                          ? {
+                              backgroundColor: "#a1a1a1",
+                            }
+                          : {}
+                      }
+                    ></td>
+                    <td
+                      className={`${
+                        day.day_idx % 5 === 0
+                          ? "border border-x-gray/50  border-b-2"
+                          : "border border-x-gray/50 border-b-gray/50"
+                      }`}
+                      style={
+                        day.dayoff
+                          ? {
+                              backgroundColor: "#a1a1a1",
+                            }
+                          : {}
+                      }
+                    ></td> */}
+                    {/* dividing places */}
+                    <td
                       className={`${
                         day.day_idx % 5 === 0
                           ? "border border-x-gray/50  border-b-2"
@@ -430,7 +425,7 @@ const LecturesPage = () => {
                           </p>
                         </Link>
                       )}
-                    </td>{" "} */}
+                    </td>{" "}
                   </tr>
                 </tbody>
               ))}

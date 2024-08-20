@@ -7,7 +7,7 @@ import { Progress } from "@/components/ui/progress";
 // Update the progress bar
 const startDate = new Date("2024-08-26");
 const endDate = new Date("2024-12-16");
-const today = new Date();
+const today = new Date("2024-08-26");
 
 const msInDay = 24 * 60 * 60 * 1000; // Number of milliseconds in a day
 
@@ -51,9 +51,11 @@ export default function Home() {
   });
   const [squirrelImage, setSquirrelImage] = useState("empty.png"); // Default image
 
-  const currentWeekIdx = Math.max(
-    ...calendar.filter((day) => isPastDate(day.date)).map((day) => day.week_idx)
-  );
+  // const currentWeekIdx = Math.max(
+  //   ...calendar.filter((day) => isPastDate(day.date)).map((day) => day.week_idx)
+  // );
+  // currentWeekIdx is not related to isPastDate or isFutureDate but a specific week index
+  const currentWeekIdx = 1;
 
   const currentWeek = calendar.filter((day) => day.week_idx === currentWeekIdx);
 
