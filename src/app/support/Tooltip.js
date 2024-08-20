@@ -26,7 +26,7 @@ const Tooltip = ({ text, children }) => {
     >
       {children}
       {showTooltip && (
-        <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-32 bg-black text-white text-center text-sm rounded py-1 px-2 ">
+        <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-48 bg-black text-white text-center text-sm rounded py-1 px-2 ">
           {text}
         </div>
       )}
