@@ -1,5 +1,5 @@
 ﻿---
-title: "Word Guesss"
+title: "WordGuess"
 ---
 
 ## Introduction
