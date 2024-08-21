@@ -74,3 +74,21 @@
       @apply bg-background text-foreground;
     }
   } */
+
+/* Global styles or CSS module */
+pre code {
+  background-color: black;
+  color: white;
+}
+
+pre code .comment {
+  color: gray;
+}
+
+/* For PrismJS highlighting */
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: gray;
+}
