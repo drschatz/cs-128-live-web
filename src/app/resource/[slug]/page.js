@@ -18,7 +18,7 @@ function getPostContent(slug) {
   return matterResult;
 }
 
-export async function generateMetadata({ params, searchParams }) {
+export async function generateMetadata({ params }) {
   const id = params?.slug ? " ⋅ " + params?.slug : "";
   return {
     title: `Resource: ${id.replaceAll("_", " ")}`,
