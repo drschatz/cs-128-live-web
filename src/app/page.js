@@ -25,7 +25,7 @@ const variantStyles = {
   Quiz: "border-transparent bg-red-500 text-slate-50 hover:bg-red-500/80 dark:bg-red-900 dark:text-slate-50 dark:hover:bg-red-900/80 rounded-full px-2.5 py-0.5 text-xs font-semibold inline-flex items-center focus:outline-none focus:ring-2 focus:ring-slate-950 focus:ring-offset-2 dark:border-slate-800 dark:focus:ring-slate-300 cursor-pointer",
   HW: "border-transparent bg-blue-500 text-slate-50 hover:bg-blue-500/80 focus:outline-none focus:ring-0 focus:ring-blue-500 dark:bg-blue-900 dark:text-slate-50 dark:hover:bg-blue-900/80 rounded-full px-2.5 py-0.5 text-xs font-semibold inline-flex items-center focus:outline-none focus:ring-2 focus:ring-slate-950 focus:ring-offset-2 dark:border-slate-800 dark:focus:ring-slate-300 cursor-pointer",
   MP: "border-transparent bg-green-500 text-slate-50 hover:bg-green-500/80 focus:outline-none focus:ring-0 focus:ring-green-500 dark:bg-green-900 dark:text-slate-50 dark:hover:bg-green-900/80 rounded-full px-2.5 py-0.5 text-xs font-semibold inline-flex items-center focus:outline-none focus:ring-2 focus:ring-slate-950 focus:ring-offset-2 dark:border-slate-800 dark:focus:ring-slate-300 cursor-pointer",
-  Lab: "border-transparent bg-orange-500 text-slate-50 hover:bg-orange-500/80 focus:outline-none focus:ring-0 focus:ring-orange-500 dark:bg-orange-900 dark:text-slate-50 dark:hover:bg-orange-900/80 rounded-full px-2.5 py-0.5 text-xs font-semibold inline-flex items-center focus:outline-none focus:ring-2 focus:ring-slate-950 focus:ring-offset-2 dark:border-slate-800 dark:focus:ring-slate-300 cursor-pointer",
+  Lab: "border-transparent bg-yellow-500 text-slate-50 hover:bg-yellow-500/80 focus:outline-none focus:ring-0 focus:ring-yellow-500 dark:bg-yellow-900 dark:text-slate-50 dark:hover:bg-yellow-900/80 rounded-full px-2.5 py-0.5 text-xs font-semibold inline-flex items-center focus:outline-none focus:ring-2 focus:ring-slate-950 focus:ring-offset-2 dark:border-slate-800 dark:focus:ring-slate-300 cursor-pointer",
   Lecture:
     "border-transparent bg-orange-900 text-slate-50 hover:bg-orange-900/80 focus:outline-none focus:ring-0 focus:ring-orange-900 dark:bg-orange-900 dark:text-slate-50 dark:hover:bg-orange-900/80 rounded-full px-2.5 py-0.5 text-xs font-semibold inline-flex items-center focus:outline-none focus:ring-2 focus:ring-slate-950 focus:ring-offset-2 dark:border-slate-800 dark:focus:ring-slate-300 cursor-pointer",
 };
@@ -201,7 +201,7 @@ export default function Home() {
                         variantStyles[ongoing.type] || "bg-gray-200"
                       }`}
                     >
-                      {ongoing.topic} - {ongoing.due}
+                      {ongoing.topic} - {ongoing.due.substring(5)}
                     </p>
                   </Link>
                 </li>
@@ -242,75 +242,207 @@ export default function Home() {
                 {currentWeek.map((day, idx) => (
                   <tbody key={idx}>
                     <tr className="h-[70px]">
-                      <td className="border border-x-gray/50 border-b-gray/50">
-                        {day.week_day}, {formatDate(day.date)}
-                      </td>
-                      <td className="border border-x-gray/50 border-b-gray/50">
-                        {day.lec_topic && (
-                          <Link href={day.lec_link}>
-                            <p className="p-4 mb-2 text-orange-900 font-semibold">
-                              {day.lec_topic}
+                      {day.day_idx % 5 === 1 ? (
+                        <>
+                          <td
+                            className={`${
+                              day.day_idx % 5 === 0
+                                ? "border border-x-gray/50  border-b-2"
+                                : "border border-x-gray/50 border-b-gray/50"
+                            }`}
+                            style={
+                              day.dayoff
+                                ? {
+                                    backgroundColor: "#a1a1a1",
+                                  }
+                                : {}
+                            }
+                          >
+                            <div className="relative flex flex-col items-start">
+                              <span className="z-20 -translate-x-1/2 -translate-y-10 top-10 border border-blue-500 rounded-xl px-3 py-1 bg-blue-500 font-medium text-white">
+                                Week {day.week_idx}
+                              </span>
+                              <span className="mt-2 translate-x-3 -translate-y-5">
+                                {day.week_day}, {formatDate(day.date)}
+                              </span>
+                            </div>
+                          </td>
+                        </>
+                      ) : (
+                        <td
+                          className={`${
+                            day.day_idx % 5 === 0
+                              ? "border border-x-gray/50  border-b-2"
+                              : "border border-x-gray/50 border-b-gray/50"
+                          }`}
+                          style={
+                            day.dayoff
+                              ? {
+                                  backgroundColor: "#a1a1a1",
+                                }
+                              : {}
+                          }
+                        >
+                          <p className="ml-3">
+                            {day.week_day}, {formatDate(day.date)}
+                          </p>
+                        </td>
+                      )}
+                      <td
+                        className={`${
+                          day.day_idx % 5 === 0
+                            ? "border border-x-gray/50  border-b-2"
+                            : "border border-x-gray/50 border-b-gray/50"
+                        }`}
+                        style={
+                          day.dayoff
+                            ? {
+                                backgroundColor: "#a1a1a1",
+                              }
+                            : day.lecture_topic
+                            ? {
+                                backgroundColor: "rgb(124 45 18)",
+                              }
+                            : {}
+                        }
+                      >
+                        {day.lecture_topic && (
+                          <Link
+                            href={day.lecture_link}
+                            className="hover:text-accent"
+                          >
+                            <p className="p-4 mb-2 ml-3 text-white font-semibold">
+                              {day.lecture_topic}
                             </p>
                           </Link>
                         )}
                       </td>
-                      <td className="border border-x-gray/50 border-b-gray/50">
+                      <td
+                        className={`${
+                          day.day_idx % 5 === 0
+                            ? "border border-x-gray/50  border-b-2"
+                            : "border border-x-gray/50 border-b-gray/50"
+                        }`}
+                        style={
+                          day.dayoff
+                            ? {
+                                backgroundColor: "#a1a1a1",
+                              }
+                            : day.hw_topic
+                            ? {
+                                backgroundColor: "rgb(59 130 246)",
+                              }
+                            : day.lab_topic
+                            ? {
+                                backgroundColor: "rgb(234 179 8)",
+                              }
+                            : {}
+                        }
+                      >
                         {day.hw_topic && (
                           <Link href={day.hw_link}>
-                            <p className="p-4 mb-2 text-blue-500 font-semibold">
+                            <p className="p-4 mb-2 ml-3 text-white font-semibold">
                               {day.hw_topic}
                             </p>
                           </Link>
                         )}
                         {day.lab_topic && (
                           <Link href={day.lab_link}>
-                            <p className="p-4 mb-2 text-orange-500 font-semibold">
+                            <p className="p-4 mb-2 ml-3 text-white font-semibold">
                               {day.lab_topic}
                             </p>
                           </Link>
                         )}
                       </td>
-                      <td className="border border-x-gray/50 border-b-gray/50">
+                      <td
+                        className={`${
+                          day.day_idx % 5 === 0
+                            ? "border border-x-gray/50  border-b-2"
+                            : "border border-x-gray/50 border-b-gray/50"
+                        }`}
+                        style={
+                          day.dayoff
+                            ? {
+                                backgroundColor: "#a1a1a1",
+                              }
+                            : day.mp_topic
+                            ? {
+                                backgroundColor: "rgb(34 197 94)",
+                              }
+                            : day.quiz_topic
+                            ? {
+                                backgroundColor: "rgb(239 68 68)",
+                              }
+                            : {}
+                        }
+                      >
                         {day.mp_topic && (
                           <Link href={day.mp_link}>
-                            <p className="p-4 mb-2 text-green-500 font-semibold">
+                            <p className="p-4 mb-2 ml-3 text-white font-semibold">
                               {day.mp_topic}
                             </p>
                           </Link>
                         )}
                         {day.quiz_topic && (
                           <Link href={day.quiz_link}>
-                            <p className="p-4 mb-2 text-red-500 font-semibold">
+                            <p className="p-4 mb-2 ml-3 text-white font-semibold">
                               {day.quiz_topic}
                             </p>
                           </Link>
                         )}
                       </td>
-                      <td className="border border-x-gray/50 border-b-gray/50">
+                      <td
+                        className={`${
+                          day.day_idx % 5 === 0
+                            ? "border border-x-gray/50  border-b-2 "
+                            : "border border-x-gray/50 border-b-gray/50"
+                        }`}
+                        style={
+                          day.dayoff
+                            ? {
+                                backgroundColor: "#a1a1a1",
+                              }
+                            : day.hw_due_topic
+                            ? {
+                                backgroundColor: "rgb(59 130 246)",
+                              }
+                            : day.lab_due_topic
+                            ? {
+                                backgroundColor: "rgb(234 179 8)",
+                              }
+                            : day.mp_due_topic
+                            ? { backgroundColor: "rgb(34 197 94)" }
+                            : day.quiz_due_topic
+                            ? {
+                                backgroundColor: "rgb(239 68 68)",
+                              }
+                            : {}
+                        }
+                      >
                         {day.hw_due_topic && (
                           <Link href={day.hw_due_link}>
-                            <p className="p-4 mb-2 text-blue-500 font-semibold">
-                              {day.hw_due_topic} : 8:30 AM
+                            <p className="p-4 mb-2 ml-3 text-white font-semibold">
+                              {day.hw_due_topic} : 8:59 AM
                             </p>
                           </Link>
                         )}
                         {day.lab_due_topic && (
                           <Link href={day.lab_due_link}>
-                            <p className="p-4 mb-2 text-orange-500 font-semibold">
+                            <p className="p-4 mb-2 ml-3 text-white font-semibold">
                               {day.lab_due_topic} : 23:59
                             </p>
                           </Link>
                         )}
                         {day.mp_due_topic && (
                           <Link href={day.mp_due_link}>
-                            <p className="p-4 mb-2 text-green-500 font-semibold">
+                            <p className="p-4 mb-2 ml-3 text-white font-semibold">
                               {day.mp_due_topic} : 23:59
                             </p>
                           </Link>
                         )}
                         {day.quiz_due_topic && (
                           <Link href={day.quiz_due_link}>
-                            <p className="p-4 mb-2 text-red-500 font-semibold">
+                            <p className="p-4 mb-2 ml-3 text-white font-semibold">
                               {day.quiz_due_topic} : 23:59
                             </p>
                           </Link>
@@ -338,7 +470,7 @@ export default function Home() {
                           variantStyles[ongoing.type] || "bg-gray-200"
                         }`}
                       >
-                        {ongoing.topic} - {ongoing.due}
+                        {ongoing.topic} - {ongoing.due.substring(5)}
                       </p>
                     </Link>
                   </li>

@@ -9,7 +9,7 @@ const Tooltip = ({ text, children }) => {
   const handleMouseEnter = () => {
     const timeout = setTimeout(() => {
       setShowTooltip(true);
-    }, 1000); // 1 second
+    }, 100); // 0.1 second
     setHoverTimeout(timeout);
   };
 
@@ -26,7 +26,7 @@ const Tooltip = ({ text, children }) => {
     >
       {children}
       {showTooltip && (
-        <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-48 bg-black text-white text-center text-sm rounded py-1 px-2 ">
+        <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-48 bg-black text-white text-center text-sm rounded py-1 px-1">
           {text}
         </div>
       )}

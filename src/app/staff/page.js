@@ -14,12 +14,12 @@ const PeoplePage = () => {
       name: "Jule Schatz",
       pronouns: "She/Her",
       emojis: [
+        { text: "I often paint in my free time.", symbol: "🎨" },
+        { text: "I have a lego problem...", symbol: "👷‍♀️" },
         {
           text: "I started college wanting to major in atmospheric science. Now I have 3 computer science degrees!",
           symbol: "⛅",
         },
-        { text: "I often paint in my free time.", symbol: "🎨" },
-        { text: "I have a lego problem...", symbol: "👷‍♀️" },
         { text: "I make the best chocolate chip cookies.", symbol: "🍪" },
       ],
     },
