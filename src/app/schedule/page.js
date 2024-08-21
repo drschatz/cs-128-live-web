@@ -1,21 +1,11 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 import { Progress } from "@/components/ui/progress";
-import { ongoings } from "@/src/constant/ongoings";
-
-// import * as Progress from "@radix-ui/react-progress";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Badge, badgeVariants } from "@/components/ui/badge";
+import video from "@/public/icons/video.svg";
+import ppt from "@/public/icons/ppt.svg";
 
 const variantStyles = {
   Quiz: "border-transparent bg-red-500 text-slate-50 hover:bg-red-500/80 dark:bg-red-900 dark:text-slate-50 dark:hover:bg-red-900/80 rounded-full px-2.5 py-0.5 text-xs font-semibold inline-flex items-center focus:outline-none focus:ring-2 focus:ring-slate-950 focus:ring-offset-2 dark:border-slate-800 dark:focus:ring-slate-300 cursor-pointer",
@@ -23,7 +13,7 @@ const variantStyles = {
   MP: "border-transparent bg-green-500 text-slate-50 hover:bg-green-500/80 focus:outline-none focus:ring-0 focus:ring-green-500 dark:bg-green-900 dark:text-slate-50 dark:hover:bg-green-900/80 rounded-full px-2.5 py-0.5 text-xs font-semibold inline-flex items-center focus:outline-none focus:ring-2 focus:ring-slate-950 focus:ring-offset-2 dark:border-slate-800 dark:focus:ring-slate-300 cursor-pointer",
   Lab: "border-transparent bg-yellow-500 text-slate-50 hover:bg-yellow-500/80 focus:outline-none focus:ring-0 focus:ring-yellow-500 dark:bg-yellow-900 dark:text-slate-50 dark:hover:bg-yellow-900/80 rounded-full px-2.5 py-0.5 text-xs font-semibold inline-flex items-center focus:outline-none focus:ring-2 focus:ring-slate-950 focus:ring-offset-2 dark:border-slate-800 dark:focus:ring-slate-300 cursor-pointer",
   Lecture:
-    "border-transparent bg-orange-900 text-slate-50 hover:bg-orange-900/80 focus:outline-none focus:ring-0 focus:ring-orange-900 dark:bg-orange-900 dark:text-slate-50 dark:hover:bg-orange-900/80 rounded-full px-2.5 py-0.5 text-xs font-semibold inline-flex items-center focus:outline-none focus:ring-2 focus:ring-slate-950 focus:ring-offset-2 dark:border-slate-800 dark:focus:ring-slate-300 cursor-pointer",
+    "border-transparent bg-slate-400 text-slate-50 hover:bg-slate-400/80 focus:outline-none focus:ring-0 focus:ring-slate-400 dark:bg-slate-400 dark:text-slate-50 dark:hover:bg-slate-400/80 rounded-full px-2.5 py-0.5 text-xs font-semibold inline-flex items-center focus:outline-none focus:ring-2 focus:ring-slate-950 focus:ring-offset-2 dark:border-slate-800 dark:focus:ring-slate-400 cursor-pointer",
 };
 
 function formatDate(dateString) {
@@ -104,13 +94,13 @@ const LecturesPage = () => {
   ];
   return (
     <div>
-      <div className="mb-8 text-center relative w-full h-[24vh] bg-indigo-500">
+      <div className="mb-8 text-center relative w-full h-[24vh] bg-slate-400">
         <div className="w-full z-10 flex flex-col items-center justify-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
           <h1 className="inline-block mt-6 font-semibold capitalize text-light text-2xl md:text-3xl lg:text-5xl !leading-normal relative w-5/6">
             Schedule
           </h1>
         </div>
-        <div className="absolute top-0 left-0 right-0 bottom-0 h-full bg-dark/60 dark:bg-dark/40" />
+        <div className="absolute top-0 left-0 right-0 bottom-0 h-full " />
       </div>
 
       <div className="container flex sm:flex-row flex-col">
@@ -281,20 +271,38 @@ const LecturesPage = () => {
                             }
                           : day.lecture_topic
                           ? {
-                              backgroundColor: "rgb(124 45 18)",
+                              backgroundColor: "rgb(148 163 184)",
                             }
                           : {}
                       }
                     >
                       {day.lecture_topic && (
-                        <Link
-                          href={day.lecture_link}
-                          className="hover:text-accent"
-                        >
-                          <p className="p-4 mb-2 ml-3 text-white font-semibold">
-                            {day.lecture_topic}
-                          </p>
-                        </Link>
+                        <div className="flex flex-col justify-center pb-2">
+                          <Link
+                            href={day.lecture_link}
+                            className="hover:text-accent"
+                          >
+                            <p className="p-4 mb-2 ml-3 text-white font-semibold">
+                              {day.lecture_topic}
+                            </p>
+                          </Link>
+                          <div className="flex justify-around content-center">
+                            <Link href={day.lecture_link}>
+                              <Image
+                                src={ppt}
+                                alt="ppt"
+                                className="w-6 h-6 ml-3"
+                              />
+                            </Link>
+                            <Link href={day.lecture_link}>
+                              <Image
+                                src={video}
+                                alt="video"
+                                className="w-6 h-6 ml-3"
+                              />
+                            </Link>
+                          </div>
+                        </div>
                       )}
                     </td>
                     <td

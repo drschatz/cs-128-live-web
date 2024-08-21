@@ -2,7 +2,11 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
+
 import { Progress } from "@/components/ui/progress";
+import video from "@/public/icons/video.svg";
+import ppt from "@/public/icons/ppt.svg";
 
 // Update the progress bar
 const startDate = new Date("2024-08-26");
@@ -27,7 +31,7 @@ const variantStyles = {
   MP: "border-transparent bg-green-500 text-slate-50 hover:bg-green-500/80 focus:outline-none focus:ring-0 focus:ring-green-500 dark:bg-green-900 dark:text-slate-50 dark:hover:bg-green-900/80 rounded-full px-2.5 py-0.5 text-xs font-semibold inline-flex items-center focus:outline-none focus:ring-2 focus:ring-slate-950 focus:ring-offset-2 dark:border-slate-800 dark:focus:ring-slate-300 cursor-pointer",
   Lab: "border-transparent bg-yellow-500 text-slate-50 hover:bg-yellow-500/80 focus:outline-none focus:ring-0 focus:ring-yellow-500 dark:bg-yellow-900 dark:text-slate-50 dark:hover:bg-yellow-900/80 rounded-full px-2.5 py-0.5 text-xs font-semibold inline-flex items-center focus:outline-none focus:ring-2 focus:ring-slate-950 focus:ring-offset-2 dark:border-slate-800 dark:focus:ring-slate-300 cursor-pointer",
   Lecture:
-    "border-transparent bg-orange-900 text-slate-50 hover:bg-orange-900/80 focus:outline-none focus:ring-0 focus:ring-orange-900 dark:bg-orange-900 dark:text-slate-50 dark:hover:bg-orange-900/80 rounded-full px-2.5 py-0.5 text-xs font-semibold inline-flex items-center focus:outline-none focus:ring-2 focus:ring-slate-950 focus:ring-offset-2 dark:border-slate-800 dark:focus:ring-slate-300 cursor-pointer",
+    "border-transparent bg-slate-400 text-slate-50 hover:bg-slate-400/80 focus:outline-none focus:ring-0 focus:ring-slate-400 dark:bg-slate-400 dark:text-slate-50 dark:hover:bg-slate-400/80 rounded-full px-2.5 py-0.5 text-xs font-semibold inline-flex items-center focus:outline-none focus:ring-2 focus:ring-slate-950 focus:ring-offset-2 dark:border-slate-800 dark:focus:ring-slate-400 cursor-pointer",
 };
 
 function formatDate(dateString) {
@@ -301,20 +305,38 @@ export default function Home() {
                               }
                             : day.lecture_topic
                             ? {
-                                backgroundColor: "rgb(124 45 18)",
+                                backgroundColor: "rgb(148 163 184)",
                               }
                             : {}
                         }
                       >
                         {day.lecture_topic && (
-                          <Link
-                            href={day.lecture_link}
-                            className="hover:text-accent"
-                          >
-                            <p className="p-4 mb-2 ml-3 text-white font-semibold">
-                              {day.lecture_topic}
-                            </p>
-                          </Link>
+                          <div className="flex flex-col justify-center pb-2">
+                            <Link
+                              href={day.lecture_link}
+                              className="hover:text-accent"
+                            >
+                              <p className="p-4 mb-2 ml-3 text-white font-semibold">
+                                {day.lecture_topic}
+                              </p>
+                            </Link>
+                            <div className="flex justify-around content-center">
+                              <Link href={day.lecture_link}>
+                                <Image
+                                  src={ppt}
+                                  alt="ppt"
+                                  className="w-6 h-6 ml-3"
+                                />
+                              </Link>
+                              <Link href={day.lecture_link}>
+                                <Image
+                                  src={video}
+                                  alt="video"
+                                  className="w-6 h-6 ml-3"
+                                />
+                              </Link>
+                            </div>
+                          </div>
                         )}
                       </td>
                       <td
