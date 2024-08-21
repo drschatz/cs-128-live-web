@@ -20,7 +20,7 @@ const Header = () => {
         {/* nav links */}
         <div className="hidden sm:flex items-center space-x-4">
           <Link href="/schedule" className="hover:text-accent">
-            {" "} 
+            {" "}
             Schedule{" "}
           </Link>
           {/* <Link href="/assignments" className="hover:text-accent">

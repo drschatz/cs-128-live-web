@@ -112,7 +112,6 @@ const LecturesPage = () => {
         </div>
         <div className="absolute top-0 left-0 right-0 bottom-0 h-full bg-dark/60 dark:bg-dark/40" />
       </div>
-      {/* <h1 className="text-3xl mt-8 font-bold mb-4">Lecture S</div>chedules</h1> */}
 
       <div className="container flex sm:flex-row flex-col">
         <div className="w-full sm:w-10/12">
@@ -143,7 +142,7 @@ const LecturesPage = () => {
           {/* Schedule */}
           <div className="w-full max-w-[1000px] gap-2 mb-8">
             <table className="table-fix w-full border-collapse ">
-              <thead className="h-[60px]">
+              <thead className="h-[60px] sticky top-[75px] z-10 bg-white shadow-[0px_2px_0px_0px_rgba(0,0,0,1)]">
                 <tr>
                   <th className="w-[200px] border border-b-2 border-x-gray/50 border-t-gray/50">
                     Date
@@ -164,7 +163,7 @@ const LecturesPage = () => {
               </thead>
 
               {filteredCalendar.map((day, idx) => (
-                <tbody key={idx}>
+                <tbody key={idx} className="overflow-y-auto">
                   <tr className="h-[70px]">
                     {day.day_idx % 5 === 1 ? (
                       <>

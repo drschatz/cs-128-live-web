@@ -519,8 +519,8 @@
     "mp_link": "",
     "mp_due_topic": "",
     "mp_due_link": "",
-    "quiz_topic": "Exam 1",
-    "quiz_link": "https://example.com/quiz/1",
+    "quiz_topic": "",
+    "quiz_link": "",
     "quiz_due_topic": "",
     "quiz_due_link": ""
   },
@@ -544,8 +544,8 @@
     "mp_link": "",
     "mp_due_topic": "",
     "mp_due_link": "",
-    "quiz_topic": "",
-    "quiz_link": "",
+    "quiz_topic": "Exam 1",
+    "quiz_link": "https://example.com/quiz/1",
     "quiz_due_topic": "",
     "quiz_due_link": ""
   },
@@ -569,8 +569,8 @@
     "mp_link": "",
     "mp_due_topic": "",
     "mp_due_link": "",
-    "quiz_topic": "",
-    "quiz_link": "",
+    "quiz_topic": "Exam 1",
+    "quiz_link": "https://example.com/quiz/1",
     "quiz_due_topic": "",
     "quiz_due_link": ""
   },
@@ -594,8 +594,8 @@
     "mp_link": "",
     "mp_due_topic": "",
     "mp_due_link": "",
-    "quiz_topic": "",
-    "quiz_link": "",
+    "quiz_topic": "Exam 1",
+    "quiz_link": "https://example.com/quiz/1",
     "quiz_due_topic": "Exam 1",
     "quiz_due_link": "https://example.com/quiz/1"
   },
@@ -1096,8 +1096,8 @@
     "mp_due_link": "",
     "quiz_topic": "",
     "quiz_link": "",
-    "quiz_due_topic": "Exam 2",
-    "quiz_due_link": "https://example.com/quiz/2"
+    "quiz_due_topic": "",
+    "quiz_due_link": ""
   },
   {
     "day_idx": 45,
@@ -1144,8 +1144,8 @@
     "mp_link": "",
     "mp_due_topic": "",
     "mp_due_link": "",
-    "quiz_topic": "Exam 2",
-    "quiz_link": "https://example.com/quiz/2",
+    "quiz_topic": "",
+    "quiz_link": "",
     "quiz_due_topic": "",
     "quiz_due_link": ""
   },
@@ -1169,8 +1169,8 @@
     "mp_link": "",
     "mp_due_topic": "",
     "mp_due_link": "",
-    "quiz_topic": "",
-    "quiz_link": "",
+    "quiz_topic": "Exam 2",
+    "quiz_link": "https://example.com/quiz/2",
     "quiz_due_topic": "",
     "quiz_due_link": ""
   },
@@ -1194,8 +1194,8 @@
     "mp_link": "",
     "mp_due_topic": "",
     "mp_due_link": "",
-    "quiz_topic": "",
-    "quiz_link": "",
+    "quiz_topic": "Exam 2",
+    "quiz_link": "https://example.com/quiz/2",
     "quiz_due_topic": "",
     "quiz_due_link": ""
   },
@@ -1219,10 +1219,10 @@
     "mp_link": "",
     "mp_due_topic": "",
     "mp_due_link": "",
-    "quiz_topic": "",
-    "quiz_link": "",
-    "quiz_due_topic": "",
-    "quiz_due_link": ""
+    "quiz_topic": "Exam 2",
+    "quiz_link": "https://example.com/quiz/2",
+    "quiz_due_topic": "Exam 2",
+    "quiz_due_link": "https://example.com/quiz/2"
   },
   {
     "day_idx": 50,
@@ -1769,8 +1769,8 @@
     "mp_link": "",
     "mp_due_topic": "",
     "mp_due_link": "",
-    "quiz_topic": "Exam 3",
-    "quiz_link": "https://example.com/quiz/3",
+    "quiz_topic": "",
+    "quiz_link": "",
     "quiz_due_topic": "",
     "quiz_due_link": ""
   },
@@ -1794,8 +1794,8 @@
     "mp_link": "",
     "mp_due_topic": "",
     "mp_due_link": "",
-    "quiz_topic": "",
-    "quiz_link": "",
+    "quiz_topic": "Exam 3",
+    "quiz_link": "https://example.com/quiz/3",
     "quiz_due_topic": "",
     "quiz_due_link": ""
   },
@@ -1819,8 +1819,8 @@
     "mp_link": "",
     "mp_due_topic": "",
     "mp_due_link": "",
-    "quiz_topic": "",
-    "quiz_link": "",
+    "quiz_topic": "Exam 3",
+    "quiz_link": "https://example.com/quiz/3",
     "quiz_due_topic": "",
     "quiz_due_link": ""
   },
@@ -1844,8 +1844,8 @@
     "mp_link": "",
     "mp_due_topic": "",
     "mp_due_link": "",
-    "quiz_topic": "",
-    "quiz_link": "",
+    "quiz_topic": "Exam 3",
+    "quiz_link": "https://example.com/quiz/3",
     "quiz_due_topic": "Exam 3",
     "quiz_due_link": "https://example.com/quiz/3"
   },
