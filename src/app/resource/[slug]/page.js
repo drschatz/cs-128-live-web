@@ -18,11 +18,6 @@ function getPostContent(slug) {
   return matterResult;
 }
 
-const generateStaticParams = async () => {
-  const posts = getPostMetadata("resource");
-  return posts.map((post) => ({ slug: post.slug }));
-};
-
 export async function generateMetadata({ params, searchParams }) {
   const id = params?.slug ? " ⋅ " + params?.slug : "";
   return {
