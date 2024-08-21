@@ -20,7 +20,7 @@ const ResourcePage = () => {
 
         <div className="mb-10 flex space-x-6 overflow-x-auto">
           <Link
-            href="https://queue.illinois.edu/q/cs128"
+            href="/resource/Workspaces"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -37,7 +37,7 @@ const ResourcePage = () => {
             </div>
           </Link>
 
-          <Link
+          {/* <Link
             href="https://queue.illinois.edu/q/cs128"
             target="_blank"
             rel="noopener noreferrer"
@@ -53,25 +53,19 @@ const ResourcePage = () => {
                 </h4>
               </div>
             </div>
-          </Link>
+          </Link> */}
         </div>
 
-        {/* Setting up Devices Section */}
+        {/* RMEs */}
         <h1 className="text-3xl font-bold mb-8 text-accent" id="faq">
-          Setting-up Devices
+          RMEs
         </h1>
 
         <div className="mb-10 flex space-x-6 overflow-x-auto">
-          <Link
-            href="https://queue.illinois.edu/q/cs128"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <Link href="/resource/RMEs" target="_blank" rel="noopener noreferrer">
             <div className="border-4 border-pink-500 rounded-lg shadow-sm w-80 h-30 flex-shrink-0 hover:shadow-lg transition-shadow duration-300">
               <div className="flex flex-col justify-center p-6">
-                <h3 className="text-xl font-semibold text-center">
-                  Setting up your local environment
-                </h3>
+                <h3 className="text-xl font-semibold text-center">RMEs</h3>
                 <hr className="border-gray/70 my-2" />
                 <h4 className="text-lg text-center mb-2">
                   Come by with any questions
