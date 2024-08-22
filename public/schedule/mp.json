@@ -1,23 +1,9 @@
 [
   {
     "idx": 1,
-    "topic": "MP 1: first mp",
-    "date": "2024-09-09",
+    "topic": "MP 1: Word Guess",
+    "date": "2024-09-06",
     "due_date": "2024-09-19",
-    "link": "https://example.com/mp/1"
-  },
-  {
-    "idx": 3,
-    "topic": "MP 3: third mp",
-    "date": "2024-11-04",
-    "due_date": "2024-11-14",
-    "link": "https://example.com/mp/3"
-  },
-  {
-    "idx": 2,
-    "topic": "MP 2: second mp",
-    "date": "2024-10-07",
-    "due_date": "2024-10-17",
-    "link": "https://example.com/mp/2"
+    "link": "/NA"
   }
 ]

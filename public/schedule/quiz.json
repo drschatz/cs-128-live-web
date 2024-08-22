@@ -1,20 +1,16 @@
 [
   {
-    "idx": 3,
-    "topic": "Quiz 1: First Quiz",
-    "date": "2024-12-03",
-    "link": "https://example.com/quiz/3"
+    "idx": 1,
+    "topic": "Exam 1",
+    "date": "2024-09-24",
+    "due_date": "2024-09-26",
+    "link": "/NA"
   },
   {
     "idx": 2,
-    "topic": "Quiz 1: First Quiz",
-    "date": "2024-10-22",
-    "link": "https://example.com/quiz/2"
-  },
-  {
-    "idx": 1,
-    "topic": "Quiz 1: First Quiz",
-    "date": "2024-09-24",
-    "link": "https://example.com/quiz/1"
+    "topic": "Exam 1: Second Chance",
+    "date": "2024-10-01",
+    "due_date": "2024-10-03",
+    "link": "/NA"
   }
 ]
