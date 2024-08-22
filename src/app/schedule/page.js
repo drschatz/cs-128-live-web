@@ -17,9 +17,15 @@ const variantStyles = {
 };
 
 function formatDate(dateString) {
-  const options = { year: "2-digit", month: "short", day: "2-digit" };
-  const date = new Date(dateString);
-  return date.toLocaleDateString("en-US", options).replace(",", "'");
+  // Parse the date components manually to avoid automatic timezone adjustments
+  const [year, month, day] = dateString.split('-').map(Number);
+
+  // Create a Date object in UTC time, equivalent to midnight CST
+  const utcDate = new Date(Date.UTC(year, month - 1, day, 6, 0, 0)); // UTC midnight + 6 hours = CST midnight
+
+  // Convert the UTC date to CST explicitly using the time zone option
+  const options = { year: "2-digit", month: "short", day: "2-digit", timeZone: "America/Chicago" };
+  return utcDate.toLocaleDateString("en-US", options).replace(",", "'");
 }
 
 const ProgressBar = ({ progress }) => {
