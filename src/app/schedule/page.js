@@ -293,23 +293,19 @@ const filteredQuiz = quiz.filter((item) =>
                     >
                       {day.lecture_topic && (
                         <div className="flex flex-col justify-center pb-2">
-                          <Link
-                            href={day.lecture_link}
-                            className="hover:text-accent"
-                          >
+                
                             <p className="p-4 mb-2 ml-3 text-white font-semibold">
                               {day.lecture_topic}
                             </p>
-                          </Link>
                           <div className="flex justify-around content-center">
-                            <Link href={day.lecture_link}>
+                            <Link href={"https://drive.google.com/drive/folders/11X2Z4soOMgYt8grNo9Ks121HjSTMoj6Z?usp=sharing"}>
                               <Image
                                 src={ppt}
                                 alt="ppt"
                                 className="w-6 h-6 ml-3"
                               />
                             </Link>
-                            <Link href={day.lecture_link}>
+                            <Link href={"https://mediaspace.illinois.edu/channel/Intro+to+Computer+Science+II+%28CS+128+BL1%29+%28CS+128+BL2%29+Fall+2024/350015692"}>
                               <Image
                                 src={video}
                                 alt="video"
