@@ -35,7 +35,7 @@ Lecture will include clicker questions via \<insert clicker app\>. This is a fre
 
 Lab is intended to give you an opportunity to work with your peers on a challenging coding assignment. Labs are collaborative but everyone needs to submit their own assignment to get credit. You will have until the following Tuesday at 8pm to submit the work.
 
-Points will be awarded for attendance and the lab activity. To receive attendance points you must be present at the lab for at least 1 hour 10 minutes of the allotted 1 hour 20 minutes of class or until the TA has given you premission to leave.
+Points will be awarded for attendance and the lab activity. To receive attendance points you must be present at the lab for at least 1 hour 10 minutes of the allotted 1 hour 20 minutes of class or until the TA has given you permission to leave.
 
 ### Homework
 
@@ -117,16 +117,15 @@ Each MP part is due at 8pm on the deadline indicated on the specifications for t
 
 # How to Get Help
 
-Computer science is challenging but the 128 team is here to help\!
+Computer science is challenging but the 128 team is here to help\! I'm happy to answer emails about policies or special circumstances but often you can get help faster by using the following resources first,
 
 ## Office Hours
 
 This is a space to come and ask questions and get clarification on course material and assignments. It is normal to come to office hours at least once a week and often more. They will be held virtually and in-person in the basement of Siebel Center for Computer Science. The exact schedule can be found on the course website.
 
 ## Discuss Online Forum
-
-Link is on the website. Feel free to post any quick questions you have on there. However, do not post your code for homeworks, labs, or MPs.
-
+ The link can be found on the Support page of the course website. This is a place where you can post questions, see updates, and interact with your peers. Feel free to post any quick questions you have on there from policies to content. However, do not post your code for homeworks, labs, or MPs.
+ 
 We will do our best to answer your questions as quickly as possible but do not expect an instant response. You may also contribute and answer questions\! This is a great way to solidify your own understanding. However, remain respectful of everyone’s diverse backgrounds and abilities. We are all here to learn\!
 
 ## Meet with the Professor
@@ -141,7 +140,7 @@ My office is a bit hard to find… There is a map above\!
 
 # Collaboration Policy
 
-Below are the definitions of the two collaboration policies I have for various components. Going against these policies is a violation of acedemic integrity. Please note it is also against the academic integrity policy to try and circumvent the autograder.
+Below are the definitions of the two collaboration policies I have for various components. Going against these policies is a violation of academic integrity. Please note it is also against the academic integrity policy to try and circumvent the autograder.
 
 ## Limited Collaboration Allowed
 
@@ -174,7 +173,10 @@ The Grainger College of Engineering is committed to the creation of an anti-raci
 The effectiveness of this course is dependent upon each of us to create a safe and encouraging learning environment that allows for the open exchange of ideas while also ensuring equitable opportunities and respect for all of us. Everyone is expected to help establish and maintain an environment where students, staff, and faculty can contribute without fear of personal ridicule, or intolerant or offensive language. If you witness or experience racism, discrimination, micro-aggressions, or other offensive behavior, you are encouraged to bring this to the attention of the course director if you feel comfortable. You can also report these behaviors to Campus Belonging Resources (https://diversity.illinois.edu/diversity-campus-culture/belonging-resources/). Based on your report, Members of the Office of the Vice Chancellor for Diversity, Equity & Inclusion staff will follow up and reach out to students to make sure they have the support they need to be healthy and safe. If the reported behavior also violates university policy, staff in the Office for Student Conflict Resolution may respond as well and will take appropriate action.
 
 # Students with Disabilities
-To obtain disability-related academic adjustments and/or auxiliary aids, students with disabilities must contact the course instructor as soon as possible and provide the instructor with a Letter of Academic Accommodations from Disability Resources and Educational Services (DRES). To ensure that disability-related concerns are properly addressed from the beginning, students with disabilities who require assistance to participate in this class should apply for services with DRES and see the instructor as soon as possible. If you need accommodations for any sort of disability, please speak to me after class, or make an appointment to see me or see me during my office hours. DRES provides students with academic accommodations, access, and support services. To contact DRES, you may visit 1207 S. Oak St., Champaign, call 217-333-1970, e-mail disability@illinois.edu or visit the DRES website at http://www.disability.illinois.edu/. Here is the direct link to apply for services at DRES, https://www.disability.illinois.edu/applying-services.  **Accommodations should be made known early in the semester and cannot be retroactively applied to assignments due before the time the accommodation was made known**.
+To obtain disability-related academic adjustments and/or auxiliary aids, students with disabilities must contact the course instructor as soon as possible and provide the instructor with a Letter of Academic Accommodations from Disability Resources and Educational Services (DRES). To ensure that disability-related concerns are properly addressed from the beginning, students with disabilities who require assistance to participate in this class should apply for services with DRES and see the instructor as soon as possible. 
+
+<br>
+If you need accommodations for any sort of disability for Exams, please submit them directly to the CBTF as specified above in the "Exam" section. If you have other accomodations not related to exams, please speak to me after class, or make an appointment to see me or see me during my office hours. DRES provides students with academic accommodations, access, and support services. To contact DRES, you may visit 1207 S. Oak St., Champaign, call 217-333-1970, e-mail disability@illinois.edu or visit the DRES website at http://www.disability.illinois.edu/. Here is the direct link to apply for services at DRES, https://www.disability.illinois.edu/applying-services.<br>  **Accommodations should be made known early in the semester and cannot be retroactively applied to assignments due before the time the accommodation was made known**.
 
 # Statement on Mental Health
 Significant stress, mood changes, excessive worry, substance/alcohol misuse or interferences in eating or sleep can have an impact on academic performance, social development, and emotional wellbeing. The University of Illinois offers a variety of confidential services including individual and group counseling, crisis intervention, psychiatric services, and specialized screenings which are covered through the Student Health Fee. If you or someone you know experiences any of the above mental health concerns, it is strongly encouraged to contact or visit any of the University’s resources provided below. Getting help is a smart and courageous thing to do for yourself and for those who care about you. <br><br>
