@@ -467,6 +467,11 @@ const filteredQuiz = quiz.filter((item) =>
           </ul>
         </div>
       </div>
+      <div className="text-center mt-8">
+        <p className="text-3xl font-bold text-gray-800">
+          More weeks coming soon...<br></br><br></br>
+        </p>
+      </div>
     </div>
   );
 };
