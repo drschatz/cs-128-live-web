@@ -45,8 +45,8 @@ const lab = require("@/public/schedule/lab.json");
 const mp = require("@/public/schedule/mp.json");
 const quiz = require("@/public/schedule/quiz.json");
 
-const isPastDate = (date) => new Date(date) <= new Date("2024-08-30");
-const isFutureDate = (date) => new Date(date) >= new Date("2024-08-30");
+const isPastDate = (date) => new Date(date) <= new Date();
+const isFutureDate = (date) => new Date(date) >= new Date();
 
 const LecturesPage = () => {
   const filteredHw = hw.filter(
