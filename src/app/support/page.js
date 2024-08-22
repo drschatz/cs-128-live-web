@@ -1,6 +1,5 @@
 import React from "react";
 
-import StaffCard from "./StaffCard";
 import Link from "next/link";
 
 const SupportPage = () => {

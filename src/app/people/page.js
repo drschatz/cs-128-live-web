@@ -1,17 +1,20 @@
-import StaffCard from "../support/StaffCard";
+import StaffCard from "./StaffCard";
 
 import Emilia from "public/profile_img/Emilia_Daniels.jpg";
 import Lumi from "public/profile_img/Lumi_Xu.png";
 import Sarah from "public/profile_img/Sarah_Dowden.jpeg";
 import Vani from "public/profile_img/Vani_Ramesh.jpg";
 import Jule from "public/profile_img/Jule_Schatz.JPG";
+import Elen from "public/profile_img/Elen.jpg";
 
 const PeoplePage = () => {
-  const instructorList = [
+  const staffList = 
+  [
     {
       imgSrc: Jule,
-      name: "Jule Schatz",
+      name: "Jule Schatz (you-la shots)",
       pronouns: "She/Her",
+      title: "Professor",
       email: "drschatz@illinois.edu",
       website: "juleschatz.com",
       emojis: [
@@ -21,15 +24,13 @@ const PeoplePage = () => {
           text: "I started college wanting to major in atmospheric science. Now I have 3 computer science degrees!",
           symbol: "⛅",
         },
-        { text: "I make the best chocolate chip cookies.", symbol: "🍪" },
-      ],
-    }
-  ];
-  const staffList = [
-    {
+        { text: "I make the best chocolate chip cookies.", symbol: "🍪" }]
+      },
+      {
       imgSrc: Emilia,
       name: "Emilia Daniels",
       pronouns: "She/Her",
+      title: "Course Assistant (CA)",
       emojis: [
         { text: "Matcha enthusiast :D", symbol: "🍵" },
         { text: "I enjoy both listening to and playing music", symbol: "🎶" },
@@ -44,6 +45,7 @@ const PeoplePage = () => {
       imgSrc: Lumi,
       name: "Lumi Xu",
       pronouns: "She/Her",
+      title: "Course Assistant (CA)",
       emojis: [
         {
           text: "I’ve just started training for my first half marathon!",
@@ -60,6 +62,7 @@ const PeoplePage = () => {
       imgSrc: Sarah,
       name: "Sarah Dowden",
       pronouns: "She/Her",
+      title: "Course Assistant (CA)",
       emojis: [
         { text: "I am on the UIUC women's rugby team", symbol: "🏉" },
         {
@@ -73,6 +76,7 @@ const PeoplePage = () => {
       imgSrc: Vani,
       name: "Vani Ramesh",
       pronouns: "She/Her",
+      title: "Course Assistant (CA)",
       emojis: [
         { text: "I'm an extreme foodie :)", symbol: "🍲" },
         { text: "I love reading!", symbol: "📚" },
@@ -80,6 +84,18 @@ const PeoplePage = () => {
         { text: "I love learning about culture and history", symbol: "🪷" },
       ],
     },
+    {
+      imgSrc: Elen,
+      name: "Elen Chatikyan",
+      pronouns: "She/Her",
+      title: "Teaching Assistant (TA)",
+      emojis: [
+        { text: "My favorite hobby", symbol: "😴" },
+        { text: "Crafting one line at a time", symbol: "👩‍💻" },
+        { text: "Whipping up something delicious in the kitchen is my happy place", symbol: "👩‍🍳" },
+        { text: "Armenian food is my soul's comfort", symbol: "🇦🇲" },
+      ],
+    }
   ];
   return (
 <div>
@@ -91,28 +107,6 @@ const PeoplePage = () => {
     </div>
     <div className="absolute top-0 left-0 right-0 bottom-0 h-full bg-dark/60 dark:bg-dark/40" />
   </div>
-
-  <div className="container mx-auto mb-10">
-    <h1 className="text-3xl font-bold mb-4 text-accent" id="contact">
-      Instructor
-    </h1>
-    <div className="flex flex-wrap justify-start gap-4">
-      {instructorList.map((staff, index) => (
-        <StaffCard
-          key={index}
-          imgSrc={staff.imgSrc}
-          name={staff.name}
-          pronouns={staff.pronouns}
-          emojis={staff.emojis}
-        />
-      ))}
-    </div>
-  </div>
-
-  <div className="container mx-auto">
-    <h1 className="text-3xl font-bold mb-4 text-accent" id="contact">
-      Staff
-    </h1>
     <div className="flex flex-wrap justify-start gap-4">
       {staffList.map((staff, index) => (
         <StaffCard
@@ -120,14 +114,12 @@ const PeoplePage = () => {
           imgSrc={staff.imgSrc}
           name={staff.name}
           pronouns={staff.pronouns}
+          title={staff.title}
           emojis={staff.emojis}
         />
       ))}
     </div>
   </div>
-</div>
-
-
   );
 };
 
