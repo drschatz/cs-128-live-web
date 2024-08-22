@@ -3,21 +3,18 @@
     "idx": 3,
     "topic": "Quiz 1: First Quiz",
     "date": "2024-12-03",
-    "due_date": "2024-12-05",
     "link": "https://example.com/quiz/3"
   },
   {
     "idx": 2,
     "topic": "Quiz 1: First Quiz",
     "date": "2024-10-22",
-    "due_date": "2024-10-24",
     "link": "https://example.com/quiz/2"
   },
   {
     "idx": 1,
     "topic": "Quiz 1: First Quiz",
     "date": "2024-09-24",
-    "due_date": "2024-09-26",
     "link": "https://example.com/quiz/1"
   }
 ]

@@ -31,10 +31,10 @@ const Header = () => {
             {" "}
             Support{" "}
           </Link>
-          {/* <Link href="/staff" className="hover:text-accent">
+          <Link href="/people" className="hover:text-accent">
             {" "}
             People{" "}
-          </Link> */}
+          </Link>
           <Link href="/syllabus" className="hover:text-accent">
             {" "}
             Syllabus{" "}
