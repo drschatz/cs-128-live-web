@@ -20,7 +20,7 @@ const ResourcePage = () => {
 
         <div className="mb-10 flex space-x-6 overflow-x-auto">
           <Link
-            href="/resource/Workspaces"
+            href="course-book/resource/Workspaces"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -62,7 +62,11 @@ const ResourcePage = () => {
         </h1>
 
         <div className="mb-10 flex space-x-6 overflow-x-auto">
-          <Link href="/resource/RMEs" target="_blank" rel="noopener noreferrer">
+          <Link
+            href="course-book/resource/RMEs"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <div className="border-4 border-pink-500 rounded-lg shadow-sm w-80 h-30 flex-shrink-0 hover:shadow-lg transition-shadow duration-300">
               <div className="flex flex-col justify-center p-6">
                 <h3 className="text-xl font-semibold text-center">RMEs</h3>
