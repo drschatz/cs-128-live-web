@@ -122,7 +122,7 @@ const PeoplePage = () => {
     <div className="absolute top-0 left-0 right-0 bottom-0 h-full bg-dark/60 dark:bg-dark/40" />
   </div>
   
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center mb-20">
     {staffList.map((staff, index) => (
       <StaffCard
         key={index}

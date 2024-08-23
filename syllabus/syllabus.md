@@ -29,17 +29,17 @@ At the end of the course, a successful student should be able to:
 9 am \- 9:50 am Monday, Wednesday, and Friday in 1404 Siebel Center for Comp Sci.  
 See the course calendar for specifics and updates.
 
-Lecture will include clicker questions via \<insert clicker app\>. This is a free app you will need to download and use during lecture. Some clicker question points are based on participation, others on the correct answer (collaboration is allowed).
+Lecture will include clicker questions via Disovery Clicker. This is a free web app for UIUC courses Provided by Professor Wade Fagen-Ulmschneider. All you will need is a phone or device that can read a QR code. Some clicker question points are based on participation, others on the correct answer (collaboration is allowed).
 
 ### Lab
 
-Lab is intended to give you an opportunity to work with your peers on a challenging coding assignment. Labs are collaborative but everyone needs to submit their own assignment to get credit. You will have until the following Tuesday at 8pm to submit the work.
+Lab is intended to give you an opportunity to work with your peers on a challenging coding assignment. Labs are collaborative but everyone needs to submit their own assignment to get credit. You will have until the following Tuesday at 11:59pm CST to submit the work.
 
 Points will be awarded for attendance and the lab activity. To receive attendance points you must be present at the lab for at least 1 hour 10 minutes of the allotted 1 hour 20 minutes of class or until the TA has given you permission to leave.
 
 ### Homework
 
-Homework is there to give you practice with the material you just learned in lecture. This is a great way of assessing your own knowledge as well as solidifying your understanding. Homework is always released after lecture and is due before the next class. For example, homework after Monday’s lecture is due Wednesday at 8:59am. There is limited collaboration allowed on the homework assignments. See the collaboration policy below for more details.
+Homework is there to give you practice with the material you just learned in lecture. This is a great way of assessing your own knowledge as well as solidifying your understanding. Homework is always released after lecture and is due before the next class. For example, homework after Monday’s lecture is due Wednesday at 8:59am. There is limited collaboration allowed on the homework assignments which means you can work together but everyone still needs to submit the assignment. See the collaboration policy below for more details.
 
 ### MPs
 
@@ -48,7 +48,7 @@ There are two main goals of the MPs
 1. To give you experience developing a bigger project. From planning, to writing, to testing.
 1. To be a fun and cool application that you can show off to friends or family.
 
-MPs have a no collaboration policy. See the collaboration policy below for more details. Exact deadlines and instructions can be found on the course website.
+MPs have a no collaboration policy. See the collaboration policy below for more details. Exact deadlines and instructions can be found on the course website when MPs are released.
 
 ### Exams
 
@@ -65,17 +65,17 @@ Note, you must register for a time slot for the second chance exams just like yo
 **Exam Schedule**  
 Exams and second chance exams run from Tuesday \- Thursday, except for the second chance Exam 3 which runs from Monday \- Wednesday due to the end of the semester. Exams cover topics through and including that previous Friday.
 
-Exam 1 \- 50 mins in the CBTF 09/24 \- 09/26  
-Content \- Through and including material from 9/20  
-Exam 1 Second Chance \- 50 Mins in the CBTF 10/01 \- 10/03
+<b>Exam 1</b> \- 50 mins in the CBTF 09/24 \- 09/26  
+<b>Content</b> \- Through and including material from 9/20  
+<b>Exam 1</b> Second Chance \- 50 Mins in the CBTF 10/01 \- 10/03
 
-Exam 2 \- 50 mins in the CBTF 10/29 \- 10/31  
-Content \- Through and including material from 10/25  
-Exam 2 Second Chance \- 50 Mins in the CBTF 11/05- 11/07
+<b>Exam 2</b> \- 50 mins in the CBTF 10/29 \- 10/31  
+<b>Content</b> \- Through and including material from 10/25  
+<b>Exam 2</b> Second Chance \- 50 Mins in the CBTF 11/05- 11/07
 
-Exam 3 \- 50 mins in the CBTF 12/03 \- 12/05  
-Content \- Through and including material from 11/22  
-Exam 3 Second Chance \- 50 Mins in the CBTF 12/09 \- 12/11
+<b>Exam 3</b> \- 50 mins in the CBTF 12/03 \- 12/05  
+<b>Content</b> \- Through and including material from 11/22  
+<b>Exam 3</b> Second Chance \- 50 Mins in the CBTF 12/09 \- 12/11
 
 # Grades
 
@@ -111,7 +111,7 @@ The table below describes how to get points for various components in the course
 
 There are no extensions for homework or labs. However, as indicated in the table above, there is wiggle room for missing assignments or partial credit.
 
-Each MP part is due at 8pm on the deadline indicated on the specifications for that MP. However, you may turn in any part 24 hours late for a 10 point reduction on that part.
+Each MP part is due at 11:59pm on the deadline indicated on the specifications for that MP. However, you may turn in any part 24 hours late for a 10 point reduction on that part.
 
 \*If you have extenuating circumstances please contact me. **Unless you were unable to do so, you must contact me BEFORE the deadline to get any relevant accommodations for that assignment or exam.\***
 
@@ -121,12 +121,12 @@ Computer science is challenging but the 128 team is here to help\! I'm happy to 
 
 ## Office Hours
 
-This is a space to come and ask questions and get clarification on course material and assignments. It is normal to come to office hours at least once a week and often more. They will be held virtually and in-person in the basement of Siebel Center for Computer Science. The exact schedule can be found on the course website.
+This is a space to come and ask questions and get clarification on course material and assignments. It is normal to come to office hours at least once a week and often more. They will be held virtually and in-person in the basement of Siebel Center for Computer Science. The exact schedule can be found on the course website under Support.
 
 ## Discuss Online Forum
- The link can be found on the Support page of the course website. This is a place where you can post questions, see updates, and interact with your peers. Feel free to post any quick questions you have on there from policies to content. However, do not post your code for homeworks, labs, or MPs.
+ The link can be found on the Support page of the course website. This is a place where you can post questions, see updates, and interact with your peers. Feel free to post any quick questions you have on there from policies to content. However, do not post your answers for homeworks, labs, or MPs.
  
-We will do our best to answer your questions as quickly as possible but do not expect an instant response. You may also contribute and answer questions\! This is a great way to solidify your own understanding. However, remain respectful of everyone’s diverse backgrounds and abilities. We are all here to learn\!
+We will do our best to answer your questions as quickly as possible but do not expect an instant response. You may also contribute and answer questions\! This is a great way to solidify your own understanding. However, remain respectful of everyone’s diverse backgrounds and abilities. We are all here to learn.
 
 ## Meet with the Professor
 
@@ -144,7 +144,7 @@ Below are the definitions of the two collaboration policies I have for various c
 
 ## Limited Collaboration Allowed
 
-This means you may work with others to complete the component. However, **you must still submit your own code for grading**.
+This means you may work with others to complete the component. However, **you must still submit your own work for grading**.
 
 I recommend implementing buddy programming. This is where everyone codes on their own computer but you may look at and discuss code together. This lets you work together while still forcing you to write the code for yourself. This is important for learning and doing well on the exams\!
 
