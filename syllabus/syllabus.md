@@ -65,18 +65,20 @@ Note, you must register for a time slot for the second chance exams just like yo
 **Exam Schedule**  
 Exams and second chance exams run from Tuesday \- Thursday, except for the second chance Exam 3 which runs from Monday \- Wednesday due to the end of the semester. Exams cover topics through and including that previous Friday.
 
-***Exam 1*** 
+***Exam 1*** <br>
 50 mins in the CBTF 09/24 \- 09/26  
-Content through and including material from 9/20  
+Content up through material covered on 9/20  
 Second Chance Exam \- 50 Mins in the CBTF 10/01 \- 10/03
 
-<b>Exam 2</b> \- 50 mins in the CBTF 10/29 \- 10/31  
-<b>Content</b> \- Through and including material from 10/25  
-<b>Exam 2</b> Second Chance \- 50 Mins in the CBTF 11/05- 11/07
+***Exam 2*** <br>
+50 mins in the CBTF 10/29 \- 10/31  
+Content up through material covered on 10/25  
+Second Chance Exam \- 50 Mins in the CBTF 11/05- 11/07
 
-<b>Exam 3</b> \- 50 mins in the CBTF 12/03 \- 12/05  
-<b>Content</b> \- Through and including material from 11/22  
-<b>Exam 3</b> Second Chance \- 50 Mins in the CBTF 12/09 \- 12/11
+***Exam 3*** <br>
+50 mins in the CBTF 12/03 \- 12/05  
+Content up through material covered on 11/22  
+Second Chance Exam \- 50 Mins in the CBTF 12/09 \- 12/11
 
 # Grades
 
