@@ -2,11 +2,9 @@ import Markdown from "markdown-to-jsx";
 import fs from "fs";
 import matter from "gray-matter";
 
-import getPostMetadata from "@/lib/getPostMetadata";
 import parseMarkdownHeadings from "src/utils/parseTOC.js";
 
 import "src/app/globals.css";
-import Prism from "prismjs";
 import "prismjs/themes/prism-okaidia.css";
 
 function getPostContent(slug) {
@@ -16,13 +14,6 @@ function getPostContent(slug) {
 
   const matterResult = matter(content);
   return matterResult;
-}
-
-export async function generateMetadata({ params }) {
-  const id = params?.slug ? " ⋅ " + params?.slug : "";
-  return {
-    title: `Resource: ${id.replaceAll("_", " ")}`,
-  };
 }
 
 const ResourcePage = (props) => {
