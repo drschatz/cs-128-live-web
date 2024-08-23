@@ -121,19 +121,23 @@ const PeoplePage = () => {
     </div>
     <div className="absolute top-0 left-0 right-0 bottom-0 h-full bg-dark/60 dark:bg-dark/40" />
   </div>
-    <div className="flex flex-wrap justify-start gap-4">
-      {staffList.map((staff, index) => (
-        <StaffCard
-          key={index}
-          imgSrc={staff.imgSrc}
-          name={staff.name}
-          pronouns={staff.pronouns}
-          title={staff.title}
-          emojis={staff.emojis}
-        />
-      ))}
-    </div>
+  
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+    {staffList.map((staff, index) => (
+      <StaffCard
+        key={index}
+        imgSrc={staff.imgSrc}
+        name={staff.name}
+        pronouns={staff.pronouns}
+        title={staff.title}
+        emojis={staff.emojis}
+      />
+    ))}
   </div>
+</div>
+
+
+
   );
 };
 
