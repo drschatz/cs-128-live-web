@@ -35,7 +35,7 @@ Lecture will include clicker questions via \<insert clicker app\>. This is a fre
 
 Lab is intended to give you an opportunity to work with your peers on a challenging coding assignment. Labs are collaborative but everyone needs to submit their own assignment to get credit. You will have until the following Tuesday at 8pm to submit the work.
 
-Points will be awarded for attendance and the lab activity. To receive attendance points you must be present at the lab for at least 1 hour 10 minutes of the allotted 1 hour 20 minutes of class.
+Points will be awarded for attendance and the lab activity. To receive attendance points you must be present at the lab for at least 1 hour 10 minutes of the allotted 1 hour 20 minutes of class or until the TA has given you permission to leave.
 
 ### Homework
 
@@ -117,16 +117,15 @@ Each MP part is due at 8pm on the deadline indicated on the specifications for t
 
 # How to Get Help
 
-Computer science is challenging but the 128 team is here to help\!
+Computer science is challenging but the 128 team is here to help\! I'm happy to answer emails about policies or special circumstances but often you can get help faster by using the following resources first,
 
 ## Office Hours
 
 This is a space to come and ask questions and get clarification on course material and assignments. It is normal to come to office hours at least once a week and often more. They will be held virtually and in-person in the basement of Siebel Center for Computer Science. The exact schedule can be found on the course website.
 
 ## Discuss Online Forum
-
-Link is on the website. Feel free to post any quick questions you have on there. However, do not post your code for homeworks, labs, or MPs.
-
+ The link can be found on the Support page of the course website. This is a place where you can post questions, see updates, and interact with your peers. Feel free to post any quick questions you have on there from policies to content. However, do not post your code for homeworks, labs, or MPs.
+ 
 We will do our best to answer your questions as quickly as possible but do not expect an instant response. You may also contribute and answer questions\! This is a great way to solidify your own understanding. However, remain respectful of everyone’s diverse backgrounds and abilities. We are all here to learn\!
 
 ## Meet with the Professor
@@ -139,9 +138,9 @@ Wednesday after lecture, 10 \- 11 am in Prof. Schatz’s office 2330 Siebel Cent
 
 My office is a bit hard to find… There is a map above\!
 
-# Collaboration/Academic Integrity Policy
+# Collaboration Policy
 
-Below are the definitions of the two collaboration policies I have for various components. Please note it is always against the academic integrity policy to try and circumvent the autograder.
+Below are the definitions of the two collaboration policies I have for various components. Going against these policies is a violation of academic integrity. Please note it is also against the academic integrity policy to try and circumvent the autograder.
 
 ## Limited Collaboration Allowed
 
@@ -161,26 +160,49 @@ For exams you must follow the CBTF policy on what is allowed and what is not all
 
 **_Components this policy applies to: MPs, and Exams._**
 
+# Academic Integrity
+
+The University of Illinois at Urbana-Champaign Student Code should also be considered as a part of this syllabus. Students should pay particular attention to Article 1, Part 4: Academic Integrity. Read the Code at the following URL: http://studentcode.illinois.edu/.
+
+Academic dishonesty may result in a failing grade. Every student is expected to review and abide by the Academic Integrity Policy: https://studentcode.illinois.edu/article1/part4/1-401/. Ignorance is not an excuse for any academic dishonesty. It is your responsibility to read this policy to avoid any misunderstanding. Do not hesitate to ask the instructor(s) if you are ever in doubt about what constitutes plagiarism, cheating, or any other breach of academic integrity.
+
 # Commitment to Diversity, Equity, and Inclusion
 
-As the state’s premier public university, the University of Illinois at Urbana-Champaign’s core mission is to serve the interests of the diverse people of the state of Illinois and beyond. The institution thus values inclusion and a pluralistic learning and research environment, one which we respect the varied perspectives and lived experiences of a diverse community and global workforce.
+The Grainger College of Engineering is committed to the creation of an anti-racist, inclusive community that welcomes diversity along a number of dimensions, including, but not limited to, race, ethnicity and national origins, gender and gender identity, sexuality, disability status, class, age, or religious beliefs. The College recognizes that we are learning together in the midst of the Black Lives Matter movement, that Black, Hispanic, and Indigenous voices and contributions have largely either been excluded from, or not recognized in, science and engineering, and that both overt racism and micro-aggressions threaten the well-being of our students and our university community.
 
-We support diversity of worldviews, histories, and cultural knowledge across a range of social groups including, but not limited to, race, ethnicity, gender identity, sexual orientation, abilities, economic class, age, religion, and their intersections. The Grainger College of Engineering recognizes that we are learning together in the midst of the Black Lives Matter movement, that Black, Hispanic, and Indigenous voices and contributions have largely either been excluded from, or not recognized in, science and engineering, and that both overt racism and microaggressions threaten the well-being of our students and our university community.
-
-This course and its social resources like Piazza should be a safe and encouraging learning environment that allows for the open exchange of ideas while also ensuring equitable opportunities and respect for all. Everyone is expected to help establish and maintain an environment where students, staff, and faculty can contribute without fear of personal ridicule, or intolerant or offensive language. If you witness or experience racism, discrimination, microaggressions, or other offensive behavior, you are encouraged to bring this to the attention of the course director or the course staff either directly or anonymously. You can also report these behaviors to the Campus Belonging Office [link](https://diversity.illinois.edu/diversity-campus-culture/belonging-resources/) or CS CARES [link](https://cs.illinois.edu/about/cs-cares).
+The effectiveness of this course is dependent upon each of us to create a safe and encouraging learning environment that allows for the open exchange of ideas while also ensuring equitable opportunities and respect for all of us. Everyone is expected to help establish and maintain an environment where students, staff, and faculty can contribute without fear of personal ridicule, or intolerant or offensive language. If you witness or experience racism, discrimination, micro-aggressions, or other offensive behavior, you are encouraged to bring this to the attention of the course director if you feel comfortable. You can also report these behaviors to Campus Belonging Resources (https://diversity.illinois.edu/diversity-campus-culture/belonging-resources/). Based on your report, Members of the Office of the Vice Chancellor for Diversity, Equity & Inclusion staff will follow up and reach out to students to make sure they have the support they need to be healthy and safe. If the reported behavior also violates university policy, staff in the Office for Student Conflict Resolution may respond as well and will take appropriate action.
 
 # Students with Disabilities
+To obtain disability-related academic adjustments and/or auxiliary aids, students with disabilities must contact the course instructor as soon as possible and provide the instructor with a Letter of Academic Accommodations from Disability Resources and Educational Services (DRES). To ensure that disability-related concerns are properly addressed from the beginning, students with disabilities who require assistance to participate in this class should apply for services with DRES and see the instructor as soon as possible. 
 
-Disability Resources and Educational Services (DRES), a unit of the College of Applied Health Sciences, serves as the designated office of the University that coordinates campus-wide services for students with disabilities. DRES obtains and files disability documentation, certifies eligibility for services, and coordinates the planning and provision of auxiliary aids as well as the implementation of modifications and adjustments in academic rules, policies and procedures. Professional staff are available at DRES to provide University students with disability-related consultation and to assist them in obtaining both academic and nonacademic support and services.
-
-Any student with a disability who may need accommodations in this class should obtain an accommodation letter from the Disability Resources and Education Services (DRES) Office. **Accommodations should be made known early in the semester and cannot be retroactively applied to assignments due before the time the accommodation was made known**.
+<br>
+If you need accommodations for any sort of disability for Exams, please submit them directly to the CBTF as specified above in the "Exam" section. If you have other accommodations not related to exams, please speak to me after class, or make an appointment to see me or see me during my office hours. DRES provides students with academic accommodations, access, and support services. To contact DRES, you may visit 1207 S. Oak St., Champaign, call 217-333-1970, e-mail disability@illinois.edu or visit the DRES website at http://www.disability.illinois.edu/. Here is the direct link to apply for services at DRES, https://www.disability.illinois.edu/applying-services.<br>  **Accommodations should be made known early in the semester and cannot be retroactively applied to assignments due before the time the accommodation was made known**.
 
 # Statement on Mental Health
+Significant stress, mood changes, excessive worry, substance/alcohol misuse or interferences in eating or sleep can have an impact on academic performance, social development, and emotional wellbeing. The University of Illinois offers a variety of confidential services including individual and group counseling, crisis intervention, psychiatric services, and specialized screenings which are covered through the Student Health Fee. If you or someone you know experiences any of the above mental health concerns, it is strongly encouraged to contact or visit any of the University’s resources provided below. Getting help is a smart and courageous thing to do for yourself and for those who care about you. <br><br>
 
-Diminished mental health, including significant stress, mood changes, excessive worry, substance/alcohol abuse, or problems with eating and/or sleeping can interfere with optimal academic performance, social development, and emotional well-being. The University of Illinois offers a variety of confidential services including individual and group counseling, crisis intervention, psychiatric services, and specialized screenings at no additional cost. If you or someone you know experiences any of the above mental health concerns, it is strongly encouraged to contact or visit any of the University’s resources provided below. **_Getting help is a smart and courageous thing to do – for yourself and for those who care about you._**
+Counseling Center (217) 333-3704
+McKinley Health Center (217) 333-2700
+National Suicide Prevention Lifeline (800) 273-8255
+Rosecrance Crisis Line (217) 359-4141 (available 24/7, 365 days a year)
+If you are in immediate danger, call 911.<br><br>
+ 
+*This statement is approved by the University of Illinois Counseling Center
 
-Counseling Center: 217-333-3704, 610 East John Street Champaign, IL 61820
+# Emergency Response Recommendations 
+Emergency response recommendations and campus building floor plans can be found at the following website: https://police.illinois.edu/em/run-hide-fight/. I encourage you to review this website within the first 10 days of class. 
 
-McKinley Health Center:217-333-2700, 1109 South Lincoln Avenue, Urbana, Illinois 61801
+# Religious Observances
 
-University wellness center: [https://wellness.illinois.edu/](https://wellness.illinois.edu/)
+Illinois law requires the University to reasonably accommodate its students' religious beliefs, observances, and practices in regard to admissions, class attendance, and the scheduling of examinations and work requirements. Students should complete the Request for Accommodation for Religious Observances form should any instructors require an absence letter in order to manage the absence. In order to best facilitate planning and communication between students and faculty, students should make requests for absence letters as early as possible in the semester in which the request applies. 
+
+# Disruptive Behavior
+ 
+Behavior that persistently or grossly interferes with classroom activities is considered disruptive behavior and may be subject to disciplinary action. Such behavior inhibits other students’ ability to learn and an instructor’s ability to teach. A student responsible for disruptive behavior may be required to leave class pending discussion and resolution of the problem and may be reported to the Office for Student Conflict Resolution (https://conflictresolution.illinois.edu; conflictresolution@illinois.edu; 333-3680) for disciplinary action.
+
+
+# Sexual Misconduct Reporting Obligation
+ 
+The University of Illinois is committed to combating sexual misconduct. Faculty and staff members are required to report any instances of sexual misconduct to the University’s Title IX and Disability Office. In turn, an individual with the Title IX and Disability Office will provide information about rights and options, including accommodations, support services, the campus disciplinary process, and law enforcement options.
+
+A list of the designated University employees who, as counselors, confidential advisors, and medical professionals, do not have this reporting responsibility and can maintain confidentiality, can be found here: wecare.illinois.edu/resources/students/#confidential.

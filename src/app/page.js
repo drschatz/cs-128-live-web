@@ -35,9 +35,15 @@ const variantStyles = {
 };
 
 function formatDate(dateString) {
-  const options = { year: "2-digit", month: "short", day: "2-digit" };
-  const date = new Date(dateString);
-  return date.toLocaleDateString("en-US", options).replace(",", "'");
+  // Parse the date components manually to avoid automatic timezone adjustments
+  const [year, month, day] = dateString.split('-').map(Number);
+
+  // Create a Date object in UTC time, equivalent to midnight CST
+  const utcDate = new Date(Date.UTC(year, month - 1, day, 6, 0, 0)); // UTC midnight + 6 hours = CST midnight
+
+  // Convert the UTC date to CST explicitly using the time zone option
+  const options = { year: "2-digit", month: "short", day: "2-digit", timeZone: "America/Chicago" };
+  return utcDate.toLocaleDateString("en-US", options).replace(",", "'");
 }
 
 const calendar = require("@/public/schedule/calendar24.json");
@@ -46,8 +52,6 @@ const lab = require("@/public/schedule/lab.json");
 const mp = require("@/public/schedule/mp.json");
 const quiz = require("@/public/schedule/quiz.json");
 
-const isPastDate = (date) => new Date(date) <= new Date();
-const isFutureDate = (date) => new Date(date) >= new Date();
 
 export default function Home() {
   const [squirrelStyle, setSquirrelStyle] = useState({
@@ -63,48 +67,65 @@ export default function Home() {
 
   const currentWeek = calendar.filter((day) => day.week_idx === currentWeekIdx);
 
-  const filteredHw = hw.filter(
-    (item) => isPastDate(item.date) && isFutureDate(item.due_date)
-  );
-  const filteredLab = lab.filter(
-    (item) => isPastDate(item.date) && isFutureDate(item.due_date)
-  );
-  const filteredMp = mp.filter(
-    (item) => isPastDate(item.date) && isFutureDate(item.due_date)
-  );
-  const filteredQuiz = quiz.filter(
-    (item) => isPastDate(item.date) && isFutureDate(item.due_date)
+  const isOngoing = (startDateString, startTimeString, dueDateString, dueTimeString) => {
+    const startDateTime = new Date(`${startDateString}T${startTimeString}`); 
+    const dueDateTime = new Date(`${dueDateString}T${dueTimeString}`);
+    
+    const now = new Date();
+    //const now = new Date("2024-09-10T12:00:00");
+
+    return now >= startDateTime && now < dueDateTime;
+  };
+
+  const filteredHw = hw.filter((item) =>
+  isOngoing(item.date,"09:50:00", item.due_date, "08:59:00")
+);
+const filteredLab = lab.filter((item) =>
+  isOngoing(item.date, "11:50:00", item.due_date, "23:59:00")
+);
+const filteredMp = mp.filter((item) =>
+  isOngoing(item.date,"09:50:00", item.due_date, "23:59:00")
+);
+const filteredQuiz = quiz.filter((item) =>
+  isOngoing(item.date, "00:00:00", item.due_date, "23:59:00")
+);
+  // Update the calendar to only show data before a specific date
+  const filteredCalendar = calendar.filter(
+    (item) => new Date(item.date) <= new Date("2024-09-28")
   );
 
-  // Update the ongoing object with the filtered homework data
   const ongoings = [
     ...filteredHw.map((item) => ({
       key: `HW-${item.id}`,
       topic: item.topic,
       due: item.due_date,
+      time: "08:59 AM",
       link: item.link,
-      type: "HW", // Adjust the type as needed
+      type: "HW",
     })),
     ...filteredLab.map((item) => ({
       key: `Lab-${item.id}`,
       topic: item.topic,
       due: item.due_date,
+      time: "11:59 PM",
       link: item.link,
-      type: "Lab", // Adjust the type as needed
+      type: "Lab",
     })),
     ...filteredMp.map((item) => ({
       key: `MP-${item.id}`,
       topic: item.topic,
       due: item.due_date,
+      time: "11:59 PM",
       link: item.link,
-      type: "MP", // Adjust the type as needed
+      type: "MP",
     })),
     ...filteredQuiz.map((item) => ({
       key: `Quiz-${item.id}`,
       topic: item.topic,
       due: item.due_date,
+      time: "11:59 PM",
       link: item.link,
-      type: "Quiz", // Adjust the type as needed
+      type: "Quiz",
     })),
   ];
 
@@ -205,7 +226,7 @@ export default function Home() {
                         variantStyles[ongoing.type] || "bg-gray-200"
                       }`}
                     >
-                      {ongoing.topic} - {ongoing.due.substring(5)}
+                      {ongoing.topic}
                     </p>
                   </Link>
                 </li>
@@ -310,34 +331,30 @@ export default function Home() {
                             : {}
                         }
                       >
-                        {day.lecture_topic && (
-                          <div className="flex flex-col justify-center pb-2">
-                            <Link
-                              href={day.lecture_link}
-                              className="hover:text-accent"
-                            >
-                              <p className="p-4 mb-2 ml-3 text-white font-semibold">
-                                {day.lecture_topic}
-                              </p>
+                       {day.lecture_topic && (
+                        <div className="flex flex-col justify-center pb-2">
+                
+                            <p className="p-4 mb-2 ml-3 text-white font-semibold">
+                              {day.lecture_topic}
+                            </p>
+                          <div className="flex justify-around content-center">
+                            <Link href={"https://drive.google.com/drive/folders/11X2Z4soOMgYt8grNo9Ks121HjSTMoj6Z?usp=sharing"}>
+                              <Image
+                                src={ppt}
+                                alt="ppt"
+                                className="w-6 h-6 ml-3"
+                              />
                             </Link>
-                            <div className="flex justify-around content-center">
-                              <Link href={day.lecture_link}>
-                                <Image
-                                  src={ppt}
-                                  alt="ppt"
-                                  className="w-6 h-6 ml-3"
-                                />
-                              </Link>
-                              <Link href={day.lecture_link}>
-                                <Image
-                                  src={video}
-                                  alt="video"
-                                  className="w-6 h-6 ml-3"
-                                />
-                              </Link>
-                            </div>
+                            <Link href={"https://mediaspace.illinois.edu/channel/Intro+to+Computer+Science+II+%28CS+128+BL1%29+%28CS+128+BL2%29+Fall+2024/350015692"}>
+                              <Image
+                                src={video}
+                                alt="video"
+                                className="w-6 h-6 ml-3"
+                              />
+                            </Link>
                           </div>
-                        )}
+                        </div>
+                      )}
                       </td>
                       <td
                         className={`${
@@ -444,28 +461,21 @@ export default function Home() {
                         {day.hw_due_topic && (
                           <Link href={day.hw_due_link}>
                             <p className="p-4 mb-2 ml-3 text-white font-semibold">
-                              {day.hw_due_topic} : 8:59 AM
+                            {day.hw_due_topic} <br></br><br></br> Due - 8:59 AM
                             </p>
                           </Link>
                         )}
                         {day.lab_due_topic && (
                           <Link href={day.lab_due_link}>
                             <p className="p-4 mb-2 ml-3 text-white font-semibold">
-                              {day.lab_due_topic} : 23:59
+                            {day.lab_due_topic} <br></br><br></br> Due - 11:59 PM
                             </p>
                           </Link>
                         )}
                         {day.mp_due_topic && (
                           <Link href={day.mp_due_link}>
                             <p className="p-4 mb-2 ml-3 text-white font-semibold">
-                              {day.mp_due_topic} : 23:59
-                            </p>
-                          </Link>
-                        )}
-                        {day.quiz_due_topic && (
-                          <Link href={day.quiz_due_link}>
-                            <p className="p-4 mb-2 ml-3 text-white font-semibold">
-                              {day.quiz_due_topic} : 23:59
+                              {day.mp_due_topic} <br></br><br></br> Due - 11:59 PM
                             </p>
                           </Link>
                         )}
@@ -492,7 +502,7 @@ export default function Home() {
                           variantStyles[ongoing.type] || "bg-gray-200"
                         }`}
                       >
-                        {ongoing.topic} - {ongoing.due.substring(5)}
+                        {ongoing.topic}
                       </p>
                     </Link>
                   </li>

@@ -18,11 +18,17 @@ In this MP you will create a program that plays a word guessing game with a user
 
 Primitive data types, iteration, selection, functions, vectors, maps, and testing.
 
-## Background Informations
+## Background Information
 
 Word guess is a two player game. Player-1 picks a secret word of a given length. Player-2 must try and guess the word 1 letter at a time. Each time player-2 guesses a letter, player-1 must tell report where in the word that letter appears or if it does not appear at all. Player-2 has a limited number of times they can be wrong on a guess before loosing the game to player-1. If player-2 guesses the word before they run out of attempts, they win. In this MP, the user will be player-2 and the code you write will be player-1.
 
-### Overview
+## Getting Started
+Download the starter files onto your computer by visiting this link, 
+https://github.com/CS-128-Live/student-word-guess/archive/refs/heads/main.zip 
+
+Unzip the folder and open up a new window of VS Code. Click "Open..." and navigate to the folder called "student-word-guess-main". Click "open". 
+
+## Overview
 
 This MP is split into two parts.
 
@@ -36,7 +42,7 @@ The final version of this project is a combined part 1 and part 2 where the user
 
 1.  Read through all of the specifications.
 2.  Download the stater code and read through each file.
-3.  Work on Part 1 (Due Thursday the XX at 10pm)
+3.  Work on Part 1 (Due Thursday the XX at 11:59pm)
 
     1. Implement a function declared in word_guess_functions.hpp in the file word_guess_functions.cc.
     2. Run the tests for that function locally. Debug your code until the tests pass.
@@ -44,10 +50,10 @@ The final version of this project is a combined part 1 and part 2 where the user
     4. Submit on the autograder to verify functionality.
     5. Complete driver.cc as specified. Test locally and then submit on the autograder.
 
-4.  Work on Part 2 (Due Thursday the XX at 10pm)
+4.  Work on Part 2 (Due Thursday the XX at 11:59pm)
 
     1. Plan out driver_full.cc to work with two modes, normal and evil. As you go, note functions you will need to write.
-    2. Implement the functions you noted above.
+    2. Implement the functions you noted above in main.cc above the main function.
     3. Write tests for the new functions to verify correctness.
     4. Submit on the autograder.
 

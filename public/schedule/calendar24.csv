@@ -1,5 +1,5 @@
 day_idx,date,week_day,week_idx,dayoff,lecture_topic,lecture_link,hw_topic,hw_link,hw_due_topic,hw_due_link,lab_topic,lab_link,lab_due_topic,lab_due_link,mp_topic,mp_link,mp_due_topic,mp_due_link,quiz_topic,quiz_link,quiz_due_topic,quiz_due_link
-1,2024-08-26,Mon,1,0,Welcome and first c++ program. ,https://example.com/lecture1,HW 1.1: Getting Started with C++,https://example.com/homework/1,,,,,,,,,,,,,,
+1,2024-08-27,Mon,1,0,Welcome and first c++ program. ,https://example.com/lecture1,HW 1.1: Getting Started with C++,https://example.com/homework/1,,,,,,,,,,,,,,
 2,2024-08-27,Tue,1,0,,,,,,,,,,,,,,,,,,
 3,2024-08-28,Wed,1,0,"Variables, Constants, Casting, Selection",https://example.com/lecture2,HW 1.2: Selection Statements,https://example.com/homework/2,HW 1.1: Getting Started with C++,https://example.com/homework/1,,,,,,,,,,,,
 4,2024-08-29,Thu,1,0,,,,,,,,,,,,,,,,,,
