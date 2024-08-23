@@ -6,6 +6,8 @@ import Sarah from "public/profile_img/Sarah_Dowden.jpeg";
 import Vani from "public/profile_img/Vani_Ramesh.jpg";
 import Jule from "public/profile_img/Jule_Schatz.JPG";
 import Elen from "public/profile_img/Elen.jpg";
+import Eero from "public/profile_img/Eero.jpg";
+
 
 const PeoplePage = () => {
   const staffList = 
@@ -25,6 +27,18 @@ const PeoplePage = () => {
           symbol: "⛅",
         },
         { text: "I make the best chocolate chip cookies.", symbol: "🍪" }]
+      },
+      {
+        imgSrc: Elen,
+        name: "Elen Chatikyan",
+        pronouns: "She/Her",
+        title: "Teaching Assistant (TA)",
+        emojis: [
+          { text: "My favorite hobby", symbol: "😴" },
+          { text: "Crafting one line at a time", symbol: "👩‍💻" },
+          { text: "Whipping up something delicious in the kitchen is my happy place", symbol: "👩‍🍳" },
+          { text: "Armenian food is my soul's comfort", symbol: "🇦🇲" },
+        ],
       },
       {
       imgSrc: Emilia,
@@ -85,15 +99,15 @@ const PeoplePage = () => {
       ],
     },
     {
-      imgSrc: Elen,
-      name: "Elen Chatikyan",
-      pronouns: "She/Her",
-      title: "Teaching Assistant (TA)",
+      imgSrc: Eero,
+      name: "Eero Dunham",
+      pronouns: "He/Him",
+      title: "Course Assistant (CA)",
       emojis: [
-        { text: "My favorite hobby", symbol: "😴" },
-        { text: "Crafting one line at a time", symbol: "👩‍💻" },
-        { text: "Whipping up something delicious in the kitchen is my happy place", symbol: "👩‍🍳" },
-        { text: "Armenian food is my soul's comfort", symbol: "🇦🇲" },
+        { text: "Rarely spotted without headphones", symbol: "🎧" },
+        { text: "My preferred mode of transportation", symbol: "🚲" },
+        { text: "I'm always sketching something", symbol: "🖊" },
+        { text: "I almost majored in astronomy", symbol: "🪐" },
       ],
     }
   ];
