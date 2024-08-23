@@ -2,8 +2,6 @@ import Markdown from "markdown-to-jsx";
 import fs from "fs";
 import matter from "gray-matter";
 
-import parseMarkdownHeadings from "src/utils/parseTOC.js";
-
 import "src/app/globals.css";
 import "prismjs/themes/prism-okaidia.css";
 
@@ -19,7 +17,6 @@ function getPostContent(slug) {
 const ResourcePage = (props) => {
   const slug = props.params.slug;
   const post = getPostContent(slug);
-  const headings = parseMarkdownHeadings(post.content);
 
   return (
     <main>
@@ -32,33 +29,7 @@ const ResourcePage = (props) => {
         <div className="absolute top-0 left-0 right-0 bottom-0 h-full bg-green/60 dark:bg-dark/40" />
       </div>
       <div className="flex mb-8 sm:flex-row flex-col">
-        <div className="w-full sm:w-4/12 sm:block mt-8 ml-24 text-base text-gray">
-          <h3 className="mb-2 sticky top-24 font-bold">Syllabus Nav</h3>
-          <ul className="ml-4 sticky top-32">
-            {headings.map((heading) => (
-              <li key={heading.slug} className="hover:text-accent mb-1.5">
-                <a href={`#${heading.slug}`} className="ml-2">
-                  <strong>{heading.text}</strong>
-                </a>
-                {heading.subheadings && (
-                  <ul className="ml-4 text-sm">
-                    {heading.subheadings.map((subheading) => (
-                      <li
-                        key={subheading.slug}
-                        className="hover:text-accent mb-1"
-                      >
-                        <a href={`#${subheading.slug}`} className="ml-2">
-                          <strong>{subheading.text}</strong>
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className="w-full sm:w-7/12 mt-8 p-4">
+        <div className="w-full sm:w-7/12 mt-8 p-4 mx-auto">
           <div className="mb-8 ">
             <h1 className="text-3xl font-bold mb-4 text-accent">
               {post.data.title}
@@ -202,7 +173,6 @@ const ResourcePage = (props) => {
             </Markdown>
           </div>
         </div>
-        <div className="hidden sm:block w-1/12"></div>
       </div>
     </main>
   );
