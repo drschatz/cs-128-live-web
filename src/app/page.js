@@ -198,6 +198,13 @@ const filteredQuiz = quiz.filter((item) =>
             syllabus for more details!
           </h3>
         </div>
+        <div className="mb-16 mx-8 flex justify-center items-center">
+          <h3 className="text-xl text-center">
+          <a href="https://docs.google.com/document/d/13sOxVvYKhqAmpR2kVeetSFS5PXsogbg_ABcIkDmSfII/edit?usp=sharing"
+                className="underline"
+                >Welcome Email</a>
+          </h3>
+        </div>
         <div className="flex flex-col w-full mb-8">
           <p className="font-semibold mb-2 text-lg">Semester Progress: </p>
           <Progress

@@ -20,7 +20,7 @@ Primitive data types, iteration, selection, functions, vectors, maps, and testin
 
 ## Background Information
 
-Word guess is a two player game. Player-1 picks a secret word of a given length. Player-2 must try and guess the word 1 letter at a time. Each time player-2 guesses a letter, player-1 must tell report where in the word that letter appears or if it does not appear at all. Player-2 has a limited number of times they can be wrong on a guess before loosing the game to player-1. If player-2 guesses the word before they run out of attempts, they win. In this MP, the user will be player-2 and the code you write will be player-1.
+Word guess is a two player game. Player-1 picks a secret word of a given length. Player-2 must try and guess the word 1 letter at a time. Each time player-2 guesses a letter, player-1 must tell report where in the word that letter appears or if it does not appear at all. Player-2 has a limited number of times they can be wrong on a guess before losing the game to player-1. If player-2 guesses the word before they run out of attempts, they win. In this MP, the user will be player-2 and the code you write will be player-1.
 
 ## Getting Started
 Download the starter files onto your computer by visiting this link, 
@@ -139,7 +139,7 @@ The algorithm creates the following groups:
 
 It then picks the "\_ \_ \_ \_ \_ _" group because it has the most potential words. The algorithm tells the user their guess was incorrect and still shows the user "_ \_ \_ \_ \_ e" as the state.
 
-This continues until the user is out of attempts and looses or if the user finds a way to reduce the group size to 1 and then guesses all the relevant letters. The evil algorithm is hard to beat!
+This continues until the user is out of attempts and loses or if the user finds a way to reduce the group size to 1 and then guesses all the relevant letters. The evil algorithm is hard to beat!
 
 #### Algorithm Tips
 
@@ -155,10 +155,12 @@ One goal of this project and the course is to help you develop the skills needed
 4.  Come to office hours if you get stuck.
 5.  Start early! If you start late and you get stuck there may not be enough time to help.
 
-For information on how to exactly prompt the user please see the sample examples provided. To run and compare your output do the following:
+For information on how to exactly prompt the user please see the sample examples provided. Note there are no test cases for this part because we let you decide what functions to write. However, to check your code is working as expected, 
+do the following with different part2 examples:
 
 `make driver-full
 ./bin/driver-full < tests/input/input_part2_ex1.txt > tests/output/output_part2_ex1.txt
 diff tests/output/output_part2_ex1.txt tests/output/output_part2_ex1_sol.txt`
+
 
 **see above for a description of what each of these lines do.**
