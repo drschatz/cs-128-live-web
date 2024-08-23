@@ -3,7 +3,7 @@ import Link from "next/link";
 const ResourcePage = () => {
   return (
     <div className="mb-20">
-      <div className="mb-8 text-center relative w-full h-[24vh] bg-teal-600">
+      <div className="mb-8 text-center relative w-full h-[24vh] bg-amber-600">
         <div className="w-full z-10 flex flex-col items-center justify-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
           <h1 className="inline-block mt-6 font-semibold capitalize text-light text-2xl md:text-3xl lg:text-5xl !leading-normal relative w-5/6">
             Resources
@@ -17,9 +17,7 @@ const ResourcePage = () => {
 
 
           <Link
-            href="course-book/resource/Workspaces"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/course-book/resource/Workspaces"
           >
             <div className="mb-4 border-4 border-blue-500 rounded-lg shadow-sm w-80 h-30 flex-shrink-0 hover:shadow-lg transition-shadow duration-300">
               <div className="flex flex-col justify-center p-6">
@@ -33,9 +31,7 @@ const ResourcePage = () => {
           </Link>
 
           <Link
-            href="course-book/resource/RMEs"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/course-book/resource/RMEs"
           >
             <div className="mb-4 border-4 border-blue-500 rounded-lg shadow-sm w-80 h-30 flex-shrink-0 hover:shadow-lg transition-shadow duration-300">
               <div className="flex flex-col justify-center p-6">

@@ -35,6 +35,10 @@ const Header = () => {
             {" "}
             People{" "}
           </Link>
+          <Link href="/resources" className="hover:text-accent">
+            {" "}
+            Resources{" "}
+          </Link>
           <Link href="/syllabus" className="hover:text-accent">
             {" "}
             Syllabus{" "}
@@ -99,6 +103,14 @@ const Header = () => {
             {" "}
             Quizzes{" "}
           </Link> */}
+                    <Link href="/people" className="hover:text-accent">
+            {" "}
+            People{" "}
+          </Link>
+                    <Link href="/resources" className="hover:text-accent">
+            {" "}
+            Resources{" "}
+          </Link>
           <Link href="/syllabus" className="hover:text-accent">
             {" "}
             Syllabus{" "}
@@ -107,10 +119,6 @@ const Header = () => {
             {" "}
             Course Book{" "}
           </Link> */}
-          <Link href="/people" className="hover:text-accent">
-            {" "}
-            People{" "}
-          </Link>
         </div>
       </div>
     </nav>
