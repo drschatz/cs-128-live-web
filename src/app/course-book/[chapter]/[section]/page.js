@@ -17,15 +17,24 @@ const DocPage = () => {
     return null;
   }
 
+  const bgColorClass =
+    chapterTitle === "MPs"
+      ? "bg-indigo-500"
+      : chapterTitle === "Resource"
+      ? "bg-teal-500"
+      : "bg-blue-500";
+
   return (
     <article>
-      <div className="mb-8 text-center relative w-full h-[30vh] bg-blue-500 ">
+      <div
+        className={`mb-8 text-center relative w-full h-[30vh] ${bgColorClass}`}
+      >
         <div className="w-full z-10 flex flex-col items-center justify-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
           <h1 className="inline-block mt-6 font-semibold capitalize text-light text-2xl md:text-3xl lg:text-5xl !leading-normal relative w-5/6">
             {doc.title}
           </h1>
         </div>
-        <div className="absolute top-0 left-0 right-0 bottom-0 h-full bg-dark/60 dark:bg-dark/40" />
+        <div className="absolute top-0 left-0 right-0 bottom-0 h-full bg-amber/60 dark:bg-amber/40" />
       </div>
 
       {chapterTitle === "MPs" ? (
