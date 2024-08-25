@@ -29,8 +29,10 @@ const SupportPage = () => {
                   </h3>
                   <hr className="border-gray/70 my-2" />
                   <h4 className="text-lg text-center mb-2">
-                    Come by with any questions
+                    Come by with any questions!
                   </h4>
+                  <h5  className="text-center"> See the calendar below for the office hours times and locations.<br></br> <br></br>
+                    Click here to sign up! If you are remote, put your location as a zoom link.</h5>
                 </div>
               </div>
             </Link>
@@ -47,8 +49,10 @@ const SupportPage = () => {
                   </h3>
                   <hr className="border-gray/70 my-2" />
                   <h4 className="text-lg text-center mb-2">
-                    A place to post your questions
+                    Post any questions!
                   </h4>
+                  <h5  className="text-center"> This is a great place to ask policy and content questions. However, do not post solutions publicly.<br></br> <br></br>
+                  See the welcome post for more information by clicking here.</h5>
                 </div>
               </div>
             </Link>
