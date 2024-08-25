@@ -36,13 +36,18 @@ const variantStyles = {
 
 function formatDate(dateString) {
   // Parse the date components manually to avoid automatic timezone adjustments
-  const [year, month, day] = dateString.split('-').map(Number);
+  const [year, month, day] = dateString.split("-").map(Number);
 
   // Create a Date object in UTC time, equivalent to midnight CST
   const utcDate = new Date(Date.UTC(year, month - 1, day, 6, 0, 0)); // UTC midnight + 6 hours = CST midnight
 
   // Convert the UTC date to CST explicitly using the time zone option
-  const options = { year: "2-digit", month: "short", day: "2-digit", timeZone: "America/Chicago" };
+  const options = {
+    year: "2-digit",
+    month: "short",
+    day: "2-digit",
+    timeZone: "America/Chicago",
+  };
   return utcDate.toLocaleDateString("en-US", options).replace(",", "'");
 }
 
@@ -51,7 +56,6 @@ const hw = require("@/public/schedule/hw.json");
 const lab = require("@/public/schedule/lab.json");
 const mp = require("@/public/schedule/mp.json");
 const quiz = require("@/public/schedule/quiz.json");
-
 
 export default function Home() {
   const [squirrelStyle, setSquirrelStyle] = useState({
@@ -67,10 +71,15 @@ export default function Home() {
 
   const currentWeek = calendar.filter((day) => day.week_idx === currentWeekIdx);
 
-  const isOngoing = (startDateString, startTimeString, dueDateString, dueTimeString) => {
-    const startDateTime = new Date(`${startDateString}T${startTimeString}`); 
+  const isOngoing = (
+    startDateString,
+    startTimeString,
+    dueDateString,
+    dueTimeString
+  ) => {
+    const startDateTime = new Date(`${startDateString}T${startTimeString}`);
     const dueDateTime = new Date(`${dueDateString}T${dueTimeString}`);
-    
+
     const now = new Date();
     //const now = new Date("2024-09-10T12:00:00");
 
@@ -78,17 +87,17 @@ export default function Home() {
   };
 
   const filteredHw = hw.filter((item) =>
-  isOngoing(item.date,"09:50:00", item.due_date, "08:59:00")
-);
-const filteredLab = lab.filter((item) =>
-  isOngoing(item.date, "11:50:00", item.due_date, "23:59:00")
-);
-const filteredMp = mp.filter((item) =>
-  isOngoing(item.date,"09:50:00", item.due_date, "23:59:00")
-);
-const filteredQuiz = quiz.filter((item) =>
-  isOngoing(item.date, "00:00:00", item.due_date, "23:59:00")
-);
+    isOngoing(item.date, "09:50:00", item.due_date, "08:59:00")
+  );
+  const filteredLab = lab.filter((item) =>
+    isOngoing(item.date, "11:50:00", item.due_date, "23:59:00")
+  );
+  const filteredMp = mp.filter((item) =>
+    isOngoing(item.date, "09:50:00", item.due_date, "23:59:00")
+  );
+  const filteredQuiz = quiz.filter((item) =>
+    isOngoing(item.date, "00:00:00", item.due_date, "23:59:00")
+  );
   // Update the calendar to only show data before a specific date
   const filteredCalendar = calendar.filter(
     (item) => new Date(item.date) <= new Date("2024-09-28")
@@ -200,9 +209,12 @@ const filteredQuiz = quiz.filter((item) =>
         </div>
         <div className="mb-16 mx-8 flex justify-center items-center">
           <h3 className="text-xl text-center">
-          <a href="https://docs.google.com/document/d/13sOxVvYKhqAmpR2kVeetSFS5PXsogbg_ABcIkDmSfII/edit?usp=sharing"
-                className="underline"
-                >Welcome Email</a>
+            <a
+              href="https://docs.google.com/document/d/13sOxVvYKhqAmpR2kVeetSFS5PXsogbg_ABcIkDmSfII/edit?usp=sharing"
+              className="underline"
+            >
+              Welcome Email
+            </a>
           </h3>
         </div>
         <div className="flex flex-col w-full mb-8">
@@ -254,19 +266,19 @@ const filteredQuiz = quiz.filter((item) =>
               <table className="table-fix w-full border-collapse">
                 <thead className="h-[60px]">
                   <tr>
-                    <th className="w-[200px] border border-b-2 border-x-gray/50 border-t-gray/50">
+                    <th className="w-1/5 border border-b-2 border-x-gray/50 border-t-gray/50">
                       Date
                     </th>
-                    <th className="w-[200px] border border-b-2 border-x-gray/50 border-t-gray/50">
+                    <th className="w-1/5 border border-b-2 border-x-gray/50 border-t-gray/50">
                       Lecture Topic
                     </th>
-                    <th className="w-[200px] border border-b-2 border-x-gray/50 border-t-gray/50">
+                    <th className="w-1/5 border border-b-2 border-x-gray/50 border-t-gray/50">
                       Homework & Lab
                     </th>
-                    <th className="w-[200px] border border-b-2 border-x-gray/50 border-t-gray/50">
+                    <th className="w-1/5 border border-b-2 border-x-gray/50 border-t-gray/50">
                       MP & Exams
                     </th>
-                    <th className="w-[200px] border border-b-2 border-x-gray/50 border-t-gray/50">
+                    <th className="w-1/5 border border-b-2 border-x-gray/50 border-t-gray/50">
                       Deadline
                     </th>
                   </tr>
@@ -338,30 +350,37 @@ const filteredQuiz = quiz.filter((item) =>
                             : {}
                         }
                       >
-                       {day.lecture_topic && (
-                        <div className="flex flex-col justify-center pb-2">
-                
+                        {day.lecture_topic && (
+                          <div className="flex flex-col justify-center pb-2">
                             <p className="p-4 mb-2 ml-3 text-white font-semibold">
                               {day.lecture_topic}
                             </p>
-                          <div className="flex justify-around content-center">
-                            <Link href={"https://drive.google.com/drive/folders/11X2Z4soOMgYt8grNo9Ks121HjSTMoj6Z?usp=sharing"}>
-                              <Image
-                                src={ppt}
-                                alt="ppt"
-                                className="w-6 h-6 ml-3"
-                              />
-                            </Link>
-                            <Link href={"https://mediaspace.illinois.edu/channel/Intro+to+Computer+Science+II+%28CS+128+BL1%29+%28CS+128+BL2%29+Fall+2024/350015692"}>
-                              <Image
-                                src={video}
-                                alt="video"
-                                className="w-6 h-6 ml-3"
-                              />
-                            </Link>
+                            <div className="flex justify-around content-center">
+                              <Link
+                                href={
+                                  "https://drive.google.com/drive/folders/11X2Z4soOMgYt8grNo9Ks121HjSTMoj6Z?usp=sharing"
+                                }
+                              >
+                                <Image
+                                  src={ppt}
+                                  alt="ppt"
+                                  className="w-6 h-6 ml-3"
+                                />
+                              </Link>
+                              <Link
+                                href={
+                                  "https://mediaspace.illinois.edu/channel/Intro+to+Computer+Science+II+%28CS+128+BL1%29+%28CS+128+BL2%29+Fall+2024/350015692"
+                                }
+                              >
+                                <Image
+                                  src={video}
+                                  alt="video"
+                                  className="w-6 h-6 ml-3"
+                                />
+                              </Link>
+                            </div>
                           </div>
-                        </div>
-                      )}
+                        )}
                       </td>
                       <td
                         className={`${
@@ -468,21 +487,24 @@ const filteredQuiz = quiz.filter((item) =>
                         {day.hw_due_topic && (
                           <Link href={day.hw_due_link}>
                             <p className="p-4 mb-2 ml-3 text-white font-semibold">
-                            {day.hw_due_topic} <br></br><br></br> Due - 8:59 AM
+                              {day.hw_due_topic} <br></br>
+                              <br></br> Due - 8:59 AM
                             </p>
                           </Link>
                         )}
                         {day.lab_due_topic && (
                           <Link href={day.lab_due_link}>
                             <p className="p-4 mb-2 ml-3 text-white font-semibold">
-                            {day.lab_due_topic} <br></br><br></br> Due - 11:59 PM
+                              {day.lab_due_topic} <br></br>
+                              <br></br> Due - 11:59 PM
                             </p>
                           </Link>
                         )}
                         {day.mp_due_topic && (
                           <Link href={day.mp_due_link}>
                             <p className="p-4 mb-2 ml-3 text-white font-semibold">
-                              {day.mp_due_topic} <br></br><br></br> Due - 11:59 PM
+                              {day.mp_due_topic} <br></br>
+                              <br></br> Due - 11:59 PM
                             </p>
                           </Link>
                         )}

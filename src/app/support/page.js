@@ -57,7 +57,7 @@ const SupportPage = () => {
           <br />
           <iframe
             src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FChicago&bgcolor=%23ffffff&mode=WEEK&showTabs=0&src=NDQ4MTVkZDA4ZGU2MDkxYTQwZThlMjE4YWNlNWRhMTBiOTkxZDI2ZGVkNjM5NTc0YWVmYzBlZjllYWI0Nzk2NEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%238E24AA&color=%230B8043"
-            className="w-full"
+            className="w-full sm:w-3/5"
             width="800"
             height="600"
             frameborder="0"
