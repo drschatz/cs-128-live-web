@@ -16,13 +16,13 @@ const SupportPage = () => {
 
       <div className="container">
         <div className="flex flex-col justify-center items-center">
-          <div className="mb-10 mx-8 mt-10 flex justify-center items-center">
+          <div className="mb-10 mx-8 mt-10 flex flex-col sm:flex-row justify-center items-center">
             <Link
               href="https://queue.illinois.edu/q/cs128"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <div className="border-4 border-pink-500 rounded-lg shadow-sm w-80 h-30 mr-12 hover:shadow-lg transition-shadow duration-300">
+              <div className="border-4 border-pink-500 rounded-lg shadow-sm w-80 h-30 mb-10 sm:mr-12 hover:shadow-lg transition-shadow duration-300">
                 <div className="flex flex-col col-span-2 justify-center p-4">
                   <h3 className="text-xl font-semibold text-center">
                     Office Hours
@@ -42,7 +42,7 @@ const SupportPage = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <div className="border-4 border-blue-500 rounded-lg shadow-sm w-80 h-30 ml-12 hover:shadow-lg transition-shadow duration-300">
+              <div className="border-4 border-blue-500 rounded-lg shadow-sm w-80 h-30 mb-10 sm:ml-12 hover:shadow-lg transition-shadow duration-300">
                 <div className="flex flex-col col-span-2 justify-center p-4">
                   <h3 className="text-xl font-semibold text-center">
                     Discussion Board
@@ -61,6 +61,7 @@ const SupportPage = () => {
           <br />
           <iframe
             src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FChicago&bgcolor=%23ffffff&mode=WEEK&showTabs=0&src=NDQ4MTVkZDA4ZGU2MDkxYTQwZThlMjE4YWNlNWRhMTBiOTkxZDI2ZGVkNjM5NTc0YWVmYzBlZjllYWI0Nzk2NEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%238E24AA&color=%230B8043"
+            className="w-full"
             width="800"
             height="600"
             frameborder="0"
