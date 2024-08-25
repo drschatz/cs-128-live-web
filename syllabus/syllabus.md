@@ -35,7 +35,7 @@ Lecture will include clicker questions via Disovery Clicker. This is a free web 
 
 Lab is intended to give you an opportunity to work with your peers on a challenging coding assignment. Labs are collaborative but everyone needs to submit their own assignment to get credit. You will have until the following Tuesday at 11:59pm CST to submit the work.
 
-Points will be awarded for attendance and the lab activity. To receive attendance points you must be present at the lab for at least 1 hour 10 minutes of the allotted 1 hour 20 minutes of class or until the TA has given you permission to leave.
+Points will be awarded for attendance and the lab activity. To receive attendance points you must be present at the lab for at least 1 hour 05 minutes of the allotted 1 hour 15 minutes of class or until the TA has given you permission to leave.
 
 ### Homework
 

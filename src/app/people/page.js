@@ -7,6 +7,8 @@ import Vani from "public/profile_img/Vani_Ramesh.jpg";
 import Jule from "public/profile_img/Jule_Schatz.JPG";
 import Elen from "public/profile_img/Elen.jpg";
 import Eero from "public/profile_img/Eero.jpg";
+import Gwen from "public/profile_img/Gwen.png";
+
 
 
 const PeoplePage = () => {
@@ -108,6 +110,18 @@ const PeoplePage = () => {
         { text: "My preferred mode of transportation", symbol: "🚲" },
         { text: "I'm always sketching something", symbol: "🖊" },
         { text: "I almost majored in astronomy", symbol: "🪐" },
+      ],
+    },
+    {
+      imgSrc: Gwen,
+      name: "Gwendolyn Slaughter",
+      pronouns: "She/Her",
+      title: "Course Assistant (CA)",
+      emojis: [
+        { text: "I love tea!", symbol: "🍵" },
+        { text: "I love music I played the flute in high school", symbol: "🎼" },
+        { text: "I love reading", symbol: "📚" },
+        { text: "Anything chocolate is my favorite dessert", symbol: "🍫" },
       ],
     }
   ];
