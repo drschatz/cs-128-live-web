@@ -155,9 +155,9 @@ const LecturesPage = () => {
           </div>
 
           {/* Schedule */}
-          <div className="w-full max-w-[1000px] gap-2 mb-8">
+          <div className="w-full max-w-[1000px] gap-2 mb-8 overflow-x-auto">
             <table className="table-fix w-full border-collapse">
-              <thead className="h-[60px] sticky top-[75px] z-10 bg-white shadow-[0px_2px_0px_0px_rgba(0,0,0,1)]">
+              <thead className="h-[60px] sticky z-10 bg-white shadow-[0px_2px_0px_0px_rgba(0,0,0,1)]">
                 <tr>
                   <th className="w-1/5 border border-b-2 border-x-gray/50 border-t-gray/50">
                     Date
@@ -196,8 +196,8 @@ const LecturesPage = () => {
                               : {}
                           }
                         >
-                          <div className="relative flex flex-col items-start">
-                            <span className="z-20 -translate-x-1/2 -translate-y-5 top-10 border border-blue-500 rounded-xl px-3 py-1 bg-blue-500 font-medium text-white">
+                          <div className="relative flex flex-col items-start overflow-visible">
+                            <span className="z-20 -translate-y-3/4 top-10 border border-blue-500 rounded-xl px-3 py-1 bg-blue-500 font-medium text-white">
                               Week {day.week_idx}
                             </span>
                             <span className="mt-2 translate-x-3 -translate-y-5">
