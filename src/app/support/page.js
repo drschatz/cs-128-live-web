@@ -56,10 +56,11 @@ const SupportPage = () => {
 
           <br />
           <iframe
-            src="https://calendar.google.com/calendar/embed?src=44815dd08de6091a40e8e218ace5da10b991d26ded639574aefc0ef9eab47964%40group.calendar.google.com&ctz=America%2FChicago"
+            src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FChicago&bgcolor=%23ffffff&mode=WEEK&showTabs=0&src=NDQ4MTVkZDA4ZGU2MDkxYTQwZThlMjE4YWNlNWRhMTBiOTkxZDI2ZGVkNjM5NTc0YWVmYzBlZjllYWI0Nzk2NEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%238E24AA&color=%230B8043"
             width="800"
             height="600"
             frameborder="0"
+            scrolling="no"
           ></iframe>
         </div>
       </div>
