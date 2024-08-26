@@ -11,7 +11,7 @@ import ppt from "@/public/icons/ppt.svg";
 // Update the progress bar
 const startDate = new Date("2024-08-26");
 const endDate = new Date("2024-12-16");
-const today = new Date("2024-08-26");
+const today = new Date();
 
 const msInDay = 24 * 60 * 60 * 1000; // Number of milliseconds in a day
 
