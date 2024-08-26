@@ -155,26 +155,23 @@ const LecturesPage = () => {
           </div>
 
           {/* Schedule */}
-          <div
-            className="w-full max-w-[1000px] gap-2 mb-8 overflow-x-auto bg-white overflow-y-auto relative"
-            style={{ maxHeight: "90vh" }}
-          >
+          <div className="w-full max-w-[1000px] gap-2 mb-8 overflow-x-auto bg-white relative">
             <table className="border-collapse table-auto w-full whitespace-no-wrap bg-white table-striped relative">
               <thead className="h-[60px] z-30 sticky">
                 <tr>
-                  <th className="sticky top-0 w-1/5 border border-b-2 border-x-gray border-t-gray/50 bg-slate-300">
+                  <th className="sticky top-0 w-1/5 border border-b-2 border-x-gray border-t-gray/50 ">
                     Date
                   </th>
-                  <th className="sticky top-0 w-1/5 border border-b-2 border-x-gray border-t-gray/50 bg-slate-300">
+                  <th className="sticky top-0 w-1/5 border border-b-2 border-x-gray border-t-gray/50 ">
                     Lecture Topic
                   </th>
-                  <th className="sticky top-0 w-1/5 border border-b-2 border-x-gray border-t-gray/50 bg-slate-300">
+                  <th className="sticky top-0 w-1/5 border border-b-2 border-x-gray border-t-gray/50 ">
                     Homework & Lab
                   </th>
-                  <th className="sticky top-0 w-1/5 border border-b-2 border-x-gray border-t-gray/50 bg-slate-300">
+                  <th className="sticky top-0 w-1/5 border border-b-2 border-x-gray border-t-gray/50 ">
                     MP & Exams
                   </th>
-                  <th className="sticky top-0 w-1/5 border border-b-2 border-x-gray border-t-gray/50 bg-slate-300">
+                  <th className="sticky top-0 w-1/5 border border-b-2 border-x-gray border-t-gray/50 ">
                     Deadline
                   </th>
                 </tr>
