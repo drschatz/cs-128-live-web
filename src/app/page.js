@@ -15,6 +15,8 @@ const today = new Date("2024-08-26");
 
 const msInDay = 24 * 60 * 60 * 1000; // Number of milliseconds in a day
 
+const isPastDate = (date) => new Date(date) <= new Date();
+
 const totalDays = Math.ceil((endDate - startDate) / msInDay);
 const daysFromStart = Math.ceil((today - startDate) / msInDay);
 
@@ -63,11 +65,11 @@ export default function Home() {
   });
   const [squirrelImage, setSquirrelImage] = useState("empty.png"); // Default image
 
-  // const currentWeekIdx = Math.max(
-  //   ...calendar.filter((day) => isPastDate(day.date)).map((day) => day.week_idx)
-  // );
+  const currentWeekIdx = Math.max(
+    ...calendar.filter((day) => isPastDate(day.date)).map((day) => day.week_idx)
+  );
   // currentWeekIdx is not related to isPastDate or isFutureDate but a specific week index
-  const currentWeekIdx = 1;
+  // const currentWeekIdx = 1;
 
   const currentWeek = calendar.filter((day) => day.week_idx === currentWeekIdx);
 
