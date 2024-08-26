@@ -155,23 +155,26 @@ const LecturesPage = () => {
           </div>
 
           {/* Schedule */}
-          <div className="w-full max-w-[1000px] gap-2 mb-8 overflow-x-auto">
-            <table className="table-fix w-full border-collapse">
-              <thead className="h-[60px] sticky z-10 bg-white shadow-[0px_2px_0px_0px_rgba(0,0,0,1)]">
+          <div
+            className="w-full max-w-[1000px] gap-2 mb-8 overflow-x-auto bg-white overflow-y-auto relative"
+            style={{ maxHeight: "90vh" }}
+          >
+            <table className="border-collapse table-auto w-full whitespace-no-wrap bg-white table-striped relative">
+              <thead className="h-[60px] z-30 sticky">
                 <tr>
-                  <th className="w-1/5 border border-b-2 border-x-gray/50 border-t-gray/50">
+                  <th className="sticky top-0 w-1/5 border border-b-2 border-x-gray border-t-gray/50 bg-slate-300">
                     Date
                   </th>
-                  <th className="w-1/5 border border-b-2 border-x-gray/50 border-t-gray/50">
+                  <th className="sticky top-0 w-1/5 border border-b-2 border-x-gray border-t-gray/50 bg-slate-300">
                     Lecture Topic
                   </th>
-                  <th className="w-1/5 border border-b-2 border-x-gray/50 border-t-gray/50">
+                  <th className="sticky top-0 w-1/5 border border-b-2 border-x-gray border-t-gray/50 bg-slate-300">
                     Homework & Lab
                   </th>
-                  <th className="w-1/5 border border-b-2 border-x-gray/50 border-t-gray/50">
+                  <th className="sticky top-0 w-1/5 border border-b-2 border-x-gray border-t-gray/50 bg-slate-300">
                     MP & Exams
                   </th>
-                  <th className="w-1/5 border border-b-2 border-x-gray/50 border-t-gray/50">
+                  <th className="sticky top-0 w-1/5 border border-b-2 border-x-gray border-t-gray/50 bg-slate-300">
                     Deadline
                   </th>
                 </tr>
@@ -197,7 +200,7 @@ const LecturesPage = () => {
                           }
                         >
                           <div className="relative flex flex-col items-start overflow-visible">
-                            <span className="z-20 -translate-y-3/4 top-10 border border-blue-500 rounded-xl px-3 py-1 bg-blue-500 font-medium text-white">
+                            <span className="z-20 -translate-y-5 sm:-translate-y-3/4 top-10 border border-blue-500 rounded-xl px-3 py-1 bg-blue-500 font-medium text-white">
                               Week {day.week_idx}
                             </span>
                             <span className="mt-2 translate-x-3 -translate-y-5">

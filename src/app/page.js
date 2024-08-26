@@ -256,7 +256,7 @@ export default function Home() {
 
         <div className="w-full flex justify-around">
           {/* Current Week Calendar */}
-          <div className="w-full gap-2 mb-8">
+          <div className="w-full gap-2 mb-8 overflow-x-auto">
             <p className="font-semibold mb-5 text-lg">
               This Week&apos;s Agenda:
             </p>
@@ -303,7 +303,7 @@ export default function Home() {
                             }
                           >
                             <div className="relative flex flex-col items-start">
-                              <span className="z-20 -translate-x-1/2 -translate-y-10 top-10 border border-blue-500 rounded-xl px-3 py-1 bg-blue-500 font-medium text-white">
+                              <span className="z-20 -translate-y-9 sm:-translate-y-12 top-10 border border-blue-500 rounded-xl px-3 py-1 bg-blue-500 font-medium text-white">
                                 Week {day.week_idx}
                               </span>
                               <span className="mt-2 translate-x-3 -translate-y-5">
