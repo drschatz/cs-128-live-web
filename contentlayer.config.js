@@ -4,6 +4,8 @@ import GithubSlugger from "github-slugger";
 import readingTime from "reading-time";
 
 import rehypePrettyCode from "rehype-pretty-code";
+import rehypeAutolinkHeadings from "rehype-autolink-headings";
+import rehypeSlug from "rehype-slug";
 
 const Doc = defineDocumentType(() => ({
   name: "Doc",
@@ -95,6 +97,8 @@ export default makeSource({
   documentTypes: [Doc],
   mdx: {
     rehypePlugins: [
+      rehypeSlug,
+      [rehypeAutolinkHeadings],
       [
         rehypePrettyCode,
         {

@@ -77,8 +77,10 @@ For this part, you are given all of the functions declarations you will need. Th
 
 Each function has a corresponding test case in tests.cc. To run the test for a function simply run the following in your command line interface.
 
-`make tests
-./bin/tests [function_name]`
+```c
+make tests
+./bin/tests [function_name]
+```
 
 **replacing function_name with the name of the function you want to test.**
 
@@ -94,9 +96,11 @@ After completing the functions, implement the driver AKA the main function. Plea
 
 In order to grade your work, each string you print must match the solution exactly. To help with this, we have provided some example output files. To fully run and check the output of the driver do the following,
 
-`make driver
+```c
+make driver
 ./bin/driver < tests/input/input_part1_ex1.txt > tests/output/output_part1_ex1.txt
-diff tests/output/output_part1_ex1.txt tests/output/output_part1_ex1_sol.txt`
+diff tests/output/output_part1_ex1.txt tests/output/output_part1_ex1_sol.txt
+```
 
 The first line compiles your driver and function code into a single executable, called driver.
 

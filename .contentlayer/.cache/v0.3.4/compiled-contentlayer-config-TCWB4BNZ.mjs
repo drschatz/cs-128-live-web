@@ -3,6 +3,8 @@ import { makeSource, defineDocumentType } from "@contentlayer/source-files";
 import GithubSlugger from "github-slugger";
 import readingTime from "reading-time";
 import rehypePrettyCode from "rehype-pretty-code";
+import rehypeAutolinkHeadings from "rehype-autolink-headings";
+import rehypeSlug from "rehype-slug";
 var Doc = defineDocumentType(() => ({
   name: "Doc",
   filePathPattern: "**/**/*.mdx",
@@ -89,6 +91,8 @@ var contentlayer_config_default = makeSource({
   documentTypes: [Doc],
   mdx: {
     rehypePlugins: [
+      rehypeSlug,
+      [rehypeAutolinkHeadings],
       [
         rehypePrettyCode,
         {
@@ -101,4 +105,4 @@ var contentlayer_config_default = makeSource({
 export {
   contentlayer_config_default as default
 };
-//# sourceMappingURL=compiled-contentlayer-config-DR6ZBRJ7.mjs.map
+//# sourceMappingURL=compiled-contentlayer-config-TCWB4BNZ.mjs.map
