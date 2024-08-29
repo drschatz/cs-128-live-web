@@ -14,7 +14,14 @@ sectionIdx: 2
 ---
 ## Learning goals
 
-What material this project will cover.
+- From simple specifications create a complete, functioning, project.
+- Become comfortable working with classes and 2D data structures.
+- Design a readable and reusable solution through functions and testing.
+- Develop code on a personal computer and work with an autograder.
+
+## New Topics Covered
+
+2D vectors, classes, and testing.
 
 ## Introduction
 
@@ -42,26 +49,19 @@ A pixel is a small colored square. Many pixels together create an image. A color
 
 For this MP we will use the PPM P3 file format for all the images. The PPM P3 format is easy to work with and lets us easily manipulate the images. The files end with a `.ppm` extension and always begin with the following header:
 
-P3
-
-width height
-
+P3\
+width height\
 255
 
 Replacing width and height with the actual values for that image.
 
 After the header are all the pixels in the image. Each pixel is just its three RGB values. Here is a small example PPM P3 file:
 
-P3 
-
-2 3 
-
-255 
-
-30 30 39 0 0 0 
-
-255 255 255 30 60 60 
-
+P3\
+2 3\
+255\
+30 30 39 0 0 0 \
+255 255 255 30 60 60 \
 0 1 0 200 200 24
 
 
