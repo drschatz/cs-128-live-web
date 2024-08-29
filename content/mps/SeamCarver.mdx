@@ -12,17 +12,6 @@ chapterTitle: "MPs"
 chapterIdx: 3
 sectionIdx: 2
 ---
-## Learning goals
-
-- From simple specifications create a complete, functioning, project.
-- Become comfortable working with classes and 2D data structures.
-- Design a readable and reusable solution through functions and testing.
-- Develop code on a personal computer and work with an autograder.
-
-## New Topics Covered
-
-2D vectors, classes, and testing.
-
 ## Introduction
 
 In this MP you will create a program that can resize an image using the seam carving technique. Let me explain using a picture of my dog, Maymay.
@@ -36,6 +25,17 @@ I want to zoom in on my dog! However, just cropping the image removes other impo
 So instead I can use the seam carving algorithm to remove the less interesting parts of the image. This way I shrink the image while keeping more important parts, like Maymay \<3.
 
 ![enter image description here](https://www.cs128live.org/carved_dog_beach.jpg)
+
+## Learning goals
+
+- From simple specifications create a complete, functioning, project.
+- Become comfortable working with classes and 2D data structures.
+- Design a readable and reusable solution through functions and testing.
+- Develop code on a personal computer and work with an autograder.
+
+## New Topics Covered
+
+2D vectors, classes, and testing.
 
 ## Background Information
 
@@ -160,7 +160,7 @@ In this part, you will complete the `Image` class. Below are the required functi
 - `Image::SetPixel`
 - `Image::RemovePixel`
 
-### Part 2
+## Part 2
 
 In this part, you will complete the `ImageProcessing` class. Below are the required functions for this part:
 
@@ -173,6 +173,9 @@ In this part, you will complete the `ImageProcessing` class. Below are the requi
 - `ImageProcessing::FindVerticalSeam`
 - `ImageProcessing::RemoveVerticalSeam`
 
-### Part 3
+## Part 3
 
 In this part, you will complete the driver portion of the project. This is the code that will call the functions you wrote in the previous parts in order to process an image. You will write this code in the `driver.cc` file.
+
+Written by Jule Schatz 2024 based on project by Josh Hug and code by Kevin Wayne and Maia Ginsburg (Princeton)
+
