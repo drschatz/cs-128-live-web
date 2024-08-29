@@ -43,12 +43,19 @@ A pixel is a small colored square. Many pixels together create an image. A color
 For this MP we will use the PPM P3 file format for all the images. The PPM P3 format is easy to work with and lets us easily manipulate the images. The files end with a `.ppm` extension and always begin with the following header:
 
 P3
-\<width> \<height>
+width height
 255
+
+Replacing width and height with the actual values for that image.
 
 After the header are all the pixels in the image. Each pixel is just its three RGB values. Here is a small example PPM P3 file:
 
-P3 2 3 255 30 30 39 0 0 0 255 255 255 30 60 60 0 1 0 200 200 24
+P3 
+2 3 
+255 
+30 30 39 0 0 0 
+255 255 255 30 60 60 
+0 1 0 200 200 24
 
 
 I have included many PPM P3 files for you to use with the starter files. However, feel free to also create your own! I have had success using the `magick` program on my Mac to convert jpg files to the PPM P3 format. I also recommend highly reducing the size of the jpg before converting to PPM and using it with your program to speed up processing time.
@@ -82,7 +89,7 @@ You will write a function in the `ImageProcessing` class called `CalculateEnergy
 
 Below is the formula for calculating the energy of a pixel:
 
-energy(inner pixel) = SquaredPixelEnergy(N, S) + SquaredPixelEnergy(E, W) energy(border pixel) = kHighEnergy
+energy\(inner pixel\) = SquaredPixelEnergy\(N, S\) + SquaredPixelEnergy\(E, W\) energy\(border pixel\) = kHighEnergy
 
 
 The function `SquaredPixelEnergy` is given and implemented already for you in `pixel.hpp` and `pixel.cc`. To avoid carving the edges of the image, we will use the constant `kHighEnergy` for all border spaces.
