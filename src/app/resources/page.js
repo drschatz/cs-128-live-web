@@ -15,6 +15,19 @@ const ResourcePage = () => {
       <div className="container mx-auto px-4">
       <div className="flex flex-col justify-center items-center">
 
+      <Link
+            href="/course-book/resource/Setup"
+          >
+            <div className="mb-4 border-4 border-blue-500 rounded-lg shadow-sm w-80 h-30 flex-shrink-0 hover:shadow-lg transition-shadow duration-300">
+              <div className="flex flex-col justify-center p-6">
+                <h3 className="text-xl font-semibold text-center">
+                  Setting Up Your Local Enviornment
+                </h3>
+                <hr className="border-gray/70 my-2" />
+
+              </div>
+            </div>
+          </Link>
 
           <Link
             href="/course-book/resource/Workspaces"
