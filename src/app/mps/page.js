@@ -10,7 +10,7 @@ const ResourcePage = () => {
 
   useEffect(() => {
     const currentDateTime = new Date();
-    const targetDateTimeMP1 = new Date("2024-08-29T09:00:00-06:00");
+    const targetDateTimeMP1 = new Date("2024-08-30T09:00:00-06:00");
     const targetDateTimeMP2 = new Date("2024-09-18T09:00:00-06:00"); // fake date
     const targetDateTimeMP3 = new Date("2024-10-16T09:00:00-06:00"); // fake date
 
