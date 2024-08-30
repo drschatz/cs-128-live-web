@@ -1,6 +1,6 @@
 ﻿---
 title: "WordGuess"
-description: "This article displays the requirements for the WordGuess MP."
+description: "This article displays the requirements for the Word Guess MP."
 author:
   - "Prof. Schatz"
 publishedAt: "2024-05-28"
@@ -15,30 +15,36 @@ sectionIdx: 1
 
 ## Introduction
 
-In this MP you will create a program that plays a word guessing game with a user. The MP is split into two parts, the first part will be a normal version of the game, the second will be an evil version 😈!
+In this MP you will create a program that plays a word guessing game with a user. The MP is split into two parts, the first part will be a neutral version of the game, the second will be an evil version 😈!
 
 ## Learning goals
 
 - From simple specifications create a complete, functioning, project.
 - Master C++ basics like iteration, selections, and functions.
 - Design a readable and reusable solution through functions.
-- Verify correctness through writing and using tests.
 - Develop code on a personal computer and work with an autograder.
 
 ## Topics Covered
 
-Primitive data types, iteration, selection, functions, vectors, maps, and testing.
+Primitive data types, iteration, selection, functions, vectors, and maps.
 
 ## Background Information
 
-Word guess is a two player game. Player-1 picks a secret word of a given length. Player-2 must try and guess the word 1 letter at a time. Each time player-2 guesses a letter, player-1 must tell report where in the word that letter appears or if it does not appear at all. Player-2 has a limited number of times they can be wrong on a guess before losing the game to player-1. If player-2 guesses the word before they run out of attempts, they win. In this MP, the user will be player-2 and the code you write will be player-1.
+Word guess is a two player game. Player-1 picks a secret word of a given length. Player-2 must try and guess the word one letter at a time. Each time player-2 guesses a letter, player-1 must tell report where in the word that letter appears or if it does not appear at all. Player-2 has a limited number of times they can be wrong on a guess before losing the game to player-1. If player-2 guesses the word before they run out of attempts, they win. In this MP, the user will be player-2 and the code you write will be player-1.
 
-## Getting Started
+## Getting Started/Logistics
 
 Download the starter files onto your computer by visiting this link,
-https://github.com/CS-128-Live/student-word-guess/archive/refs/heads/main.zip
+
+[Starter Code](https://github.com/CS-128-Live/student-word-guess/archive/refs/heads/main.zip)
 
 Unzip the folder and open up a new window of VS Code. Click "Open..." and navigate to the folder called "student-word-guess-main". Click "open".
+Make sure to open the project in the docker container, see [setup instructions](https://www.cs128live.org/course-book/resource/Setup)
+
+
+When you are done with each part, submit on Prairie Learn via the autograder,
+
+[Autograder](https://us.prairielearn.com/pl/course_instance/153040/assessment/2436440)
 
 ## Overview
 
@@ -48,13 +54,13 @@ The 1st part of the MP is to create a playable version of the word guess game wh
 
 The 2nd part of this MP is to create a version of the game where player-2 does not pick a word until they absolutely have to. Instead, player-2 chooses families or groups of words that would be the hardest for player-1 to guess. This is the evil version. Please reuse or change parts of part 1 as appropriate
 
-The final version of this project is a combined part 1 and part 2 where the user can select which mode they want to play, aka normal mode or evil mode.
+The final version of this MP is a combined part 1 and part 2 where the user can select which mode they want to play, aka neutral mode or evil mode.
 
 ### Recommended Steps
 
 1.  Read through all of the specifications.
 2.  Download the stater code and read through each file.
-3.  Work on Part 1 (Due Thursday the XX at 11:59pm)
+3.  Work on Part 1 - 30pts (Due Thursday Sep 12th at 11:59pm) (10 point reduction if submitted within 24 hours late)
 
     1. Implement a function declared in word_guess_functions.hpp in the file word_guess_functions.cc.
     2. Run the tests for that function locally. Debug your code until the tests pass.
@@ -62,16 +68,16 @@ The final version of this project is a combined part 1 and part 2 where the user
     4. Submit on the autograder to verify functionality.
     5. Complete driver.cc as specified. Test locally and then submit on the autograder.
 
-4.  Work on Part 2 (Due Thursday the XX at 11:59pm)
+4.  Work on Part 2 - 50pts (Due Thursday Sep 19th at 11:59pm) (10 point reduction if submitted within 24 hours late)
 
-    1. Plan out driver_full.cc to work with two modes, normal and evil. As you go, note functions you will need to write.
+    1. Plan out driver_full.cc to work with two modes, neutral and evil. As you go, note functions you will need to write.
     2. Implement the functions you noted above in main.cc above the main function.
-    3. Write tests for the new functions to verify correctness.
+    3. Test your code locally by running it with various input.
     4. Submit on the autograder.
 
 ## Part 1
 
-In Part 1, you will be implementing the fair or normal version of the word guess game.
+In Part 1, you will be implementing the fair or neutral version of the word guess game.
 
 For this part, you are given all of the functions declarations you will need. These can be found in word_guess_functions.hpp. The exact instructions for each of the functions is found in the RME's above each declaration. Follow these instructions exactly to receive full credit.
 
@@ -114,9 +120,9 @@ You are provided with three examples to check against. Once they all match your 
 
 This part is meant to challenge you! There is less structure given than in the previous part and the algorithm you need to implement is more complicated. If you get stuck please come to office hours!
 
-Your task is to update the code you wrote in part 1 to include an option of multiple modes, normal (part 1), and now evil.
+Your task is to update the code you wrote in part 1 to include an option of multiple modes, neutral (part 1), and now evil.
 
-The evil mode varies from the normal mode in that the program does not pick a word at the start of the game. Instead, based on the guess the user makes, the program will choose a subset of possible words. It tries to keep that subset as big as possible to trick the user into losing.
+The evil mode varies from the neutral mode in that the program does not pick a word at the start of the game. Instead, based on the guess the user makes, the program will choose a subset of possible words. It tries to keep that subset as big as possible to trick the user into losing.
 
 ### The Evil Algorithm
 
@@ -135,30 +141,33 @@ penny, smile, cat, climb, lemon, dog, algorithm, piano, stone, drive, defer
 The user picks the length of 5. Now the subset of possible words are:
 penny, smile, climb, lemon, piano, stone, drive, defer
 
-Then the user guesses the letter 'e',
+Then the user guesses the letter 'e'. The algorithm creates the following 4 groups:
 
-The algorithm creates the following groups:
-"_ e _ \_ \_ _" : penny, lemon
-"_ \_ \_ \_ _ e" : smile, drive, stone
-" _ e _ e _" : defer
-" \_ \_ \_ \_ \_" : climb, piano
+'e' in spot 2 : penny, lemon
 
-It then picks the "\_ \_ \_ \_ \_ e" group because it has the most potential words, aka 3. The algorithm tells the user their guess was correct and updates the state to show the 'e' in the last position.
+'e' in spot 5 : smile, drive, stone
+
+'e' in spot 2 and 4 : defer
+
+No 'e' : climb, piano
+
+The algorithm then picks the "'e' in spot 5" group because it has the most potential words, aka 3. The algorithm tells the user their guess was correct and updates the state to show the 'e' in spot 5.
 
 The subset of possible words are now:
 smile, drive, stone
 
-The next round, the user guesses the letter "n"
-The algorithm creates the following groups:
-"\_ \_ \_ \_ \_ _" : smile, drive
-"_ \_ \_ _ n _" : stone
+The next round, the user guesses the letter "n". The algorithm creates the following 2 groups:
 
-It then picks the "\_ \_ \_ \_ \_ _" group because it has the most potential words. The algorithm tells the user their guess was incorrect and still shows the user "_ \_ \_ \_ \_ e" as the state.
+No 'n' : smile, drive
+
+'n' in spot 4 : stone
+
+It then picks the "No 'n'" group because it has the most potential words, aka 2. The algorithm tells the user their guess was incorrect and still shows the user "_ \_ \_ \_ \_ e" as the state.
 
 This continues until the user is out of attempts and loses or if the user finds a way to reduce the group size to 1 and then guesses all the relevant letters. The evil algorithm is hard to beat!
 
 #### Algorithm Tips
-
+- Part of the challenge of this MP is figuring out what data structures to use to represent groups and potential words. Take a minute to think through potential solutions!
 - Do not generate all possible groups. For example, if no word in the subset has the pattern, "e_eee_e" there is no need to create a group to represent this. Think about how you can figure out when a word needs to be in a new group you haven't seen yet or when it can fit into an exisiting group.
 
 #### Recommended Approach
@@ -179,5 +188,9 @@ make driver-full
 ./bin/driver-full < tests/input/input_part2_ex1.txt > tests/output/output_part2_ex1.txt
 diff tests/output/output_part2_ex1.txt tests/output/output_part2_ex1_sol.txt
 ```
-
 **see above for a description of what each of these lines do.**
+
+
+Written by Jule Schatz 2024 based on project by Keith Schwarz 
+
+
