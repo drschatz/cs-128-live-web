@@ -10,7 +10,7 @@ const Header = () => {
 
   useEffect(() => {
     const currentDateTime = new Date();
-    const targetDateTime = new Date("2024-08-10T09:00:00-06:00"); // CST is UTC-6
+    const targetDateTime = new Date("2024-08-30 09:00:00 CST"); // CST is UTC-6
 
     if (currentDateTime >= targetDateTime) {
       setShowMPLink(true);
