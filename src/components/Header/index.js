@@ -1,11 +1,21 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Logo from "./Logo";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [showMPLink, setShowMPLink] = useState(false);
+
+  useEffect(() => {
+    const currentDateTime = new Date();
+    const targetDateTime = new Date("2024-08-10T09:00:00-06:00"); // CST is UTC-6
+
+    if (currentDateTime >= targetDateTime) {
+      setShowMPLink(true);
+    }
+  }, []);
 
   return (
     <nav
@@ -31,6 +41,12 @@ const Header = () => {
             {" "}
             Support{" "}
           </Link>
+          {showMPLink && (
+            <Link href="/mps" className="hover:text-accent">
+              {" "}
+              MPs{" "}
+            </Link>
+          )}
           <Link href="/people" className="hover:text-accent">
             {" "}
             People{" "}
@@ -103,11 +119,11 @@ const Header = () => {
             {" "}
             Quizzes{" "}
           </Link> */}
-                    <Link href="/people" className="hover:text-accent">
+          <Link href="/people" className="hover:text-accent">
             {" "}
             People{" "}
           </Link>
-                    <Link href="/resources" className="hover:text-accent">
+          <Link href="/resources" className="hover:text-accent">
             {" "}
             Resources{" "}
           </Link>
