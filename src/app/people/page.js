@@ -132,7 +132,7 @@ const PeoplePage = () => {
     {
       imgSrc: Anush,
       name: "Anush Mishra",
-      pronouns: "She/Her",
+      pronouns: "He/Him",
       title: "Course Assistant (CA)",
       emojis: [
         {
