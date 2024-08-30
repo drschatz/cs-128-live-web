@@ -25,7 +25,7 @@ const DocPage = () => {
       : "bg-blue-500";
 
   return (
-    <article>
+    <article className="pb-10">
       <div
         className={`mb-8 text-center relative w-full h-[30vh] ${bgColorClass}`}
       >
