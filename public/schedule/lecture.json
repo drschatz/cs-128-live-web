@@ -1,0 +1,260 @@
+[
+  {
+    "idx": 1,
+    "topic": "Lec 1.1: Welcome and first c++ program.",
+    "date": "2024-08-26",
+    "link": "/NA"
+  },
+  {
+    "idx": 2,
+    "topic": "Lec 1.2: Constants, Casting, and Selection",
+    "date": "2024-08-28",
+    "link": "/NA"
+  },
+  {
+    "idx": 3,
+    "topic": "Lec 1.3: Iteration and 1D Vectors",
+    "date": "2024-08-30",
+    "link": "/NA"
+  },
+  {
+    "idx": 4,
+    "topic": "Lec 2.1: Pass-by-reference/Pass-by-value and Strings",
+    "date": "2024-09-04",
+    "link": "/NA"
+  },
+  {
+    "idx": 5,
+    "topic": "Lec 2.2: 2D Vectors and Maps",
+    "date": "2024-09-06",
+    "link": "/NA"
+  },
+  {
+    "idx": 6,
+    "topic": "Lec 3.1: Compilation and the Command Line",
+    "date": "2024-09-09",
+    "link": "/NA"
+  },
+  {
+    "idx": 7,
+    "topic": "Lec 3.2: I/O with Files",
+    "date": "2024-09-11",
+    "link": "/NA"
+  },
+  {
+    "idx": 8,
+    "topic": "Lec 3.3: Testing and Errors",
+    "date": "2024-09-13",
+    "link": "/NA"
+  },
+  {
+    "idx": 9,
+    "topic": "Lec 4.1: Exceptions",
+    "date": "2024-09-16",
+    "link": "/NA"
+  },
+  {
+    "idx": 10,
+    "topic": "Lec 4.2: Structs and Classes",
+    "date": "2024-09-18",
+    "link": "/NA"
+  },
+  {
+    "idx": 11,
+    "topic": "Lec 4.3: Classes and Function Overloading",
+    "date": "2024-09-20",
+    "link": "/NA"
+  },
+  {
+    "idx": 12,
+    "topic": "TBD",
+    "date": "2024-09-23",
+    "link": "/NA"
+  },
+  {
+    "idx": 13,
+    "topic": "TBD",
+    "date": "2024-09-25",
+    "link": "/NA"
+  },
+  {
+    "idx": 14,
+    "topic": "TBD",
+    "date": "2024-09-27",
+    "link": "/NA"
+  },
+  {
+    "idx": 15,
+    "topic": "Pointers",
+    "date": "2024-09-30",
+    "link": "/NA"
+  },
+  {
+    "idx": 16,
+    "topic": "Array and Command Line",
+    "date": "2024-10-02",
+    "link": "/NA"
+  },
+  {
+    "idx": 17,
+    "topic": "Dynamic Memory and the stack",
+    "date": "2024-10-04",
+    "link": "/NA"
+  },
+  {
+    "idx": 18,
+    "topic": "Errors w/Dynamic",
+    "date": "2024-10-07",
+    "link": "/NA"
+  },
+  {
+    "idx": 19,
+    "topic": "RAII destructors",
+    "date": "2024-10-09",
+    "link": "/NA"
+  },
+  {
+    "idx": 20,
+    "topic": "Big Three",
+    "date": "2024-10-11",
+    "link": "/NA"
+  },
+  {
+    "idx": 21,
+    "topic": "Big Three",
+    "date": "2024-10-14",
+    "link": "/NA"
+  },
+  {
+    "idx": 22,
+    "topic": "Templates",
+    "date": "2024-10-16",
+    "link": "/NA"
+  },
+  {
+    "idx": 23,
+    "topic": "Templates",
+    "date": "2024-10-18",
+    "link": "/NA"
+  },
+  {
+    "idx": 24,
+    "topic": "Linked Lists",
+    "date": "2024-10-21",
+    "link": "/NA"
+  },
+  {
+    "idx": 25,
+    "topic": "Linked Lists",
+    "date": "2024-10-23",
+    "link": "/NA"
+  },
+  {
+    "idx": 26,
+    "topic": "Recursion",
+    "date": "2024-10-25",
+    "link": "/NA"
+  },
+  {
+    "idx": 27,
+    "topic": "Review",
+    "date": "2024-10-28",
+    "link": "/NA"
+  },
+  {
+    "idx": 28,
+    "topic": "Exam 2",
+    "date": "2024-10-30",
+    "link": "/NA"
+  },
+  {
+    "idx": 29,
+    "topic": "Debrief",
+    "date": "2024-11-01",
+    "link": "/NA"
+  },
+  {
+    "idx": 30,
+    "topic": "Recursion/Trees",
+    "date": "2024-11-04",
+    "link": "/NA"
+  },
+  {
+    "idx": 31,
+    "topic": "BST",
+    "date": "2024-11-06",
+    "link": "/NA"
+  },
+  {
+    "idx": 32,
+    "topic": "BST",
+    "date": "2024-11-08",
+    "link": "/NA"
+  },
+  {
+    "idx": 33,
+    "topic": "Iterators",
+    "date": "2024-11-11",
+    "link": "/NA"
+  },
+  {
+    "idx": 34,
+    "topic": "Iterators",
+    "date": "2024-11-13",
+    "link": "/NA"
+  },
+  {
+    "idx": 35,
+    "topic": "Iterators",
+    "date": "2024-11-15",
+    "link": "/NA"
+  },
+  {
+    "idx": 36,
+    "topic": "Inheritance polymorphism",
+    "date": "2024-11-18",
+    "link": "/NA"
+  },
+  {
+    "idx": 37,
+    "topic": "Inheritance",
+    "date": "2024-11-20",
+    "link": "/NA"
+  },
+  {
+    "idx": 38,
+    "topic": "Inheritance",
+    "date": "2024-11-22",
+    "link": "/NA"
+  },
+  {
+    "idx": 39,
+    "topic": "Review",
+    "date": "2024-12-02",
+    "link": "/NA"
+  },
+  {
+    "idx": 40,
+    "topic": "Exams 3 Functons",
+    "date": "2024-12-04",
+    "link": "/NA"
+  },
+  {
+    "idx": 41,
+    "topic": "Debrief",
+    "date": "2024-12-06",
+    "link": "/NA"
+  },
+  {
+    "idx": 42,
+    "topic": "Graphs",
+    "date": "2024-12-09",
+    "link": "/NA"
+  },
+  {
+    "idx": 43,
+    "topic": "BFS Graphs",
+    "date": "2024-12-11",
+    "link": "/NA"
+  }
+]

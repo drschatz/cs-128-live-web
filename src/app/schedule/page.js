@@ -44,7 +44,7 @@ const ProgressBar = ({ progress }) => {
   );
 };
 
-const calendar = require("@/public/schedule/calendar24.json");
+const calendar = require("@/public/schedule/schedule.json");
 const hw = require("@/public/schedule/hw.json");
 const lab = require("@/public/schedule/lab.json");
 const mp = require("@/public/schedule/mp.json");

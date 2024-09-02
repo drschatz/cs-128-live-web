@@ -1,30 +1,51 @@
 [
   {
     "idx": 1,
-    "topic": "Homework 1.1",
+    "topic": "HW 1.1 : Getting Started with C++",
     "date": "2024-08-26",
-    "weekday": "Mon",
     "due_date": "2024-09-09",
-    "due_weekday": "Mon",
     "link": "https://us.prairielearn.com/pl/course_instance/153040/assessment/2414891"
   },
   {
     "idx": 2,
-    "topic": "Homework 1.2",
+    "topic": "HW 1.2 : Selection",
     "date": "2024-08-28",
-    "weekday": "Wed",
     "due_date": "2024-09-09",
-    "due_weekday": "Mon",
     "link": "https://us.prairielearn.com/pl/course_instance/153040/assessment/2431094"
   },
   {
     "idx": 3,
-    "topic": "Homework 2.1",
+    "topic": "HW 2.1 : Functions",
     "date": "2024-09-04",
-    "weekday": "Mon",
     "due_date": "2024-09-6",
-    "due_weekday": "Wed",
+    "link": "https://us.prairielearn.com/pl/course_instance/153040/assessment/2433669"
+  },
+  {
+    "idx": 4,
+    "topic": "HW 3.1 : Compile Commands",
+    "date": "2024-09-09",
+    "due_date": "2024-09-11",
+    "link": "https://us.prairielearn.com/pl/course_instance/153040/assessment/2436770"
+  },
+  {
+    "idx": 5,
+    "topic": "HW 3.2 : Read and Write",
+    "date": "2024-09-11",
+    "due_date": "2024-09-13",
+    "link": "/NA"
+  },
+  {
+    "idx": 6,
+    "topic": "HW 4.1 : Exceptions",
+    "date": "2024-09-16",
+    "due_date": "2024-09-18",
+    "link": "/NA"
+  },
+  {
+    "idx": 7,
+    "topic": "HW 4.2 : Classes",
+    "date": "2024-09-18",
+    "due_date": "2024-09-20",
     "link": "/NA"
   }
 ]
-  

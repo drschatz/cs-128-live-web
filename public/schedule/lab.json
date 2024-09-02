@@ -3,27 +3,21 @@
     "idx": 1,
     "topic": "Lab 1: Bottle Toss",
     "date": "2024-08-30",
-    "weekday": "Fri",
     "due_date": "2024-09-04",
-    "due_weekday": "Wed",
     "link": "https://us.prairielearn.com/pl/course_instance/153040/assessment/2432942"
   },
   {
     "idx": 2,
     "topic": "Lab 2: Connect-4",
     "date": "2024-09-06",
-    "weekday": "Fri",
     "due_date": "2024-09-10",
-    "due_weekday": "Tue",
     "link": "/NA"
   },
   {
     "idx": 3,
     "topic": "Lab 3: Testing and Bugs",
     "date": "2024-09-13",
-    "weekday": "Fri",
     "due_date": "2024-09-17",
-    "due_weekday": "Tue",
     "link": "/NA"
   }
 ]
