@@ -103,5 +103,4 @@ def update_calendar(hw_file, lab_file, mp_file, quiz_file, lecture_file, calenda
     with open(output_schedule_file, 'w') as out_file:
         json.dump(schedule, out_file, indent=4)
 
-# Example usage:
 update_calendar('public/schedule/hw.json', 'public/schedule/lab.json', 'public/schedule/mp.json', 'public/schedule/quiz.json', 'public/schedule/lecture.json', 'public/schedule/calendar.json', 'public/schedule/schedule.json')
