@@ -215,7 +215,13 @@ export default function Home() {
               href="https://docs.google.com/document/d/13sOxVvYKhqAmpR2kVeetSFS5PXsogbg_ABcIkDmSfII/edit?usp=sharing"
               className="underline"
             >
-              Welcome Email
+              Welcome Email <br></br><br></br>
+            </a>
+            <a
+              href="https://docs.google.com/document/d/1JGwEAqvd5dxJzJQ7sg6E7USYHCmjTyTglTuYPPEa2YM/edit"
+              className="underline"
+            >
+              Week 2 Update Email
             </a>
           </h3>
         </div>
