@@ -223,6 +223,12 @@ export default function Home() {
             >
               Week 2 Update Email
             </a>
+            <a
+              href="https://docs.google.com/document/d/1K8BdC_cyoVXLQyr_lNuQC9PRlabRO0tOZ4SE9egDmVI/edit?usp=sharing"
+              className="underline"
+            >
+              Extra Practice Problems
+            </a>
           </h3>
         </div>
         <div className="flex flex-col w-full mb-8">
