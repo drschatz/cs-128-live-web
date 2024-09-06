@@ -70,7 +70,7 @@ const LecturesPage = () => {
     isOngoing(item.date, "09:50:00", item.due_date, "08:59:00")
   );
   const filteredLab = lab.filter((item) =>
-    isOngoing(item.date, "11:50:00", item.due_date, "23:59:00")
+    isOngoing(item.date, "10:00:00", item.due_date, "23:59:00")
   );
   const filteredMp = mp.filter((item) =>
     isOngoing(item.date, "09:50:00", item.due_date, "23:59:00")
