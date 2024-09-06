@@ -14,7 +14,7 @@ const ResourcePage = () => {
     const targetDateTimeMP2 = new Date("2024-09-18T09:00:00-06:00"); // fake date
     const targetDateTimeMP3 = new Date("2024-10-16T09:00:00-06:00"); // fake date
 
-    if (currentDateTime >= targetDateTimeMP1) {
+    if (true) {
       setShowMP1(true);
     }
     if (currentDateTime >= targetDateTimeMP2) {

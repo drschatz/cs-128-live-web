@@ -12,7 +12,7 @@ const Header = () => {
     const currentDateTime = new Date();
     const targetDateTime = new Date("2024-09-06T09:00:00-06:00"); // CST is UTC-6
 
-    if (currentDateTime >= targetDateTime) {
+    if (true) {
       setShowMPLink(true);
     }
   }, []);
