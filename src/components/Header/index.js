@@ -33,10 +33,6 @@ const Header = () => {
             {" "}
             Schedule{" "}
           </Link>
-          {/* <Link href="/assignments" className="hover:text-accent">
-            {" "}
-            Assignments{" "}
-          </Link> */}
           <Link href="/support" className="hover:text-accent">
             {" "}
             Support{" "}
@@ -111,6 +107,12 @@ const Header = () => {
             {" "}
             Support{" "}
           </Link>
+          {showMPLink && (
+            <Link href="/mps" className="hover:text-accent">
+              {" "}
+              MPs{" "}
+            </Link>
+          )}
           {/* <Link href="/assignments" className="hover:text-accent">
             {" "}
             Assignments{" "}
