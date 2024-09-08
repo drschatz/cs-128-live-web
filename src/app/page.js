@@ -212,12 +212,6 @@ export default function Home() {
         <div className="mb-16 mx-8 flex justify-center items-center">
           <h3 className="text-xl text-center">
             <a
-              href="https://docs.google.com/document/d/13sOxVvYKhqAmpR2kVeetSFS5PXsogbg_ABcIkDmSfII/edit?usp=sharing"
-              className="underline"
-            >
-              Welcome Email <br></br><br></br>
-            </a>
-            <a
               href="https://docs.google.com/document/d/1JGwEAqvd5dxJzJQ7sg6E7USYHCmjTyTglTuYPPEa2YM/edit"
               className="underline"
             >
