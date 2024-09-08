@@ -211,18 +211,8 @@ export default function Home() {
         </div>
         <div className="mb-16 mx-8 flex justify-center items-center">
           <h3 className="text-xl text-center">
-            <a
-              href="https://docs.google.com/document/d/1JGwEAqvd5dxJzJQ7sg6E7USYHCmjTyTglTuYPPEa2YM/edit"
-              className="underline"
-            >
-              Week 2 Update Email <br></br><br></br>
-            </a>
-            <a
-              href="https://docs.google.com/document/d/1K8BdC_cyoVXLQyr_lNuQC9PRlabRO0tOZ4SE9egDmVI/edit?usp=sharing"
-              className="underline"
-            >
-              Extra Practice Problems
-            </a>
+            Please see <a               className="underline"
+ href="https://us.prairielearn.com/pl/course_instance/153040/assessments">Praire Learn</a> for the most up-to-date deadlines and assignments.
           </h3>
         </div>
         <div className="flex flex-col w-full mb-8">

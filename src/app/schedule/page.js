@@ -127,6 +127,12 @@ const LecturesPage = () => {
         </div>
         <div className="absolute top-0 left-0 right-0 bottom-0 h-full " />
       </div>
+      <div className="mb-16 mx-8 flex justify-center items-center">
+          <h3 className="text-xl text-center">
+            Please see <a               className="underline"
+ href="https://us.prairielearn.com/pl/course_instance/153040/assessments">Praire Learn</a> for the most up-to-date deadlines and assignments.
+            </h3>
+        </div>
 
       <div className="container flex sm:flex-row flex-col">
         <div className="w-full sm:w-10/12">

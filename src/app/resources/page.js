@@ -16,6 +16,20 @@ const ResourcePage = () => {
       <div className="flex flex-col justify-center items-center">
 
       <Link
+            href="https://docs.google.com/document/d/1K8BdC_cyoVXLQyr_lNuQC9PRlabRO0tOZ4SE9egDmVI/edit?usp=sharing"
+          >
+            <div className="mb-4 border-4 border-yellow-500 rounded-lg shadow-sm w-80 h-30 flex-shrink-0 hover:shadow-lg transition-shadow duration-300">
+              <div className="flex flex-col justify-center p-6">
+                <h3 className="text-xl font-semibold text-center">
+                  Extra Practice Problems
+                </h3>
+                <hr className="border-gray/70 my-2" />
+
+              </div>
+            </div>
+          </Link>
+
+      <Link
             href="/course-book/resource/Setup"
           >
             <div className="mb-4 border-4 border-blue-500 rounded-lg shadow-sm w-80 h-30 flex-shrink-0 hover:shadow-lg transition-shadow duration-300">
