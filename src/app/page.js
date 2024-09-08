@@ -53,7 +53,7 @@ function formatDate(dateString) {
   return utcDate.toLocaleDateString("en-US", options).replace(",", "'");
 }
 
-const calendar = require("@/public/schedule/calendar24.json");
+const calendar = require("@/public/schedule/schedule.json");
 const hw = require("@/public/schedule/hw.json");
 const lab = require("@/public/schedule/lab.json");
 const mp = require("@/public/schedule/mp.json");
@@ -211,8 +211,14 @@ export default function Home() {
         </div>
         <div className="mb-16 mx-8 flex justify-center items-center">
           <h3 className="text-xl text-center">
-            Please see <a               className="underline"
- href="https://us.prairielearn.com/pl/course_instance/153040/assessments">Praire Learn</a> for the most up-to-date deadlines and assignments.
+            Please see{" "}
+            <a
+              className="underline"
+              href="https://us.prairielearn.com/pl/course_instance/153040/assessments"
+            >
+              Praire Learn
+            </a>{" "}
+            for the most up-to-date deadlines and assignments.
           </h3>
         </div>
         <div className="flex flex-col w-full mb-8">
