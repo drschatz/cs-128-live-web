@@ -126,9 +126,9 @@ The evil mode varies from the neutral mode in that the program does not pick a w
 1. Get the length of the word from the user. This needs to be a number between 2 and 10 (including 2 and 10).
 2. While the game has not ended,
    1. Print the state
-   2. Get a new guess from the user
-   3. Select the largest group of words possible given the guess and use that to determine the feedback to the user
-   4. Check if the game has ended
+   2. Check if the game has ended
+   3. Get a new guess from the user
+   4. Select the largest group of words possible given the guess and use that to determine the feedback to the user
 
 Let us walkthrough step 2.3 in more detail. To start, the subset of possible words is all words in the dictionary of the length the user specified. When the user guesses a new letter that subset can be divided into potential groups. For example a group where the guessed letter doesn't exist in the word, one where it only exists as the 1st character, one where it exists as the 2nd and 4th, and so on. The algorithm will figure out what subset of the current possible words fit into each of these groups and then choose the group with the most words. Based on the group it chose it will provide feedback to user if the guessed letter is in the word or not. Let us walk through an example,
 
