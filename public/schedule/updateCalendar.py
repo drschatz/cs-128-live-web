@@ -26,15 +26,39 @@ def update_calendar(hw_file, lab_file, mp_file, quiz_file, lecture_file, calenda
                 f'{event_type}_due_link': ''
             }
             if event_type != 'lecture':
-                event_dict[event['due_date']] = {
-                    f'{event_type}_due_topic': event['topic'],
-                    f'{event_type}_due_link': event['link'],
-                    f'{event_type}_topic': '',
-                    f'{event_type}_link': ''
-                }
+                if 'due_date' in event:
+                    event_dict[event['due_date']] = {
+                        f'{event_type}_due_topic': event['topic'],
+                        f'{event_type}_due_link': event['link'],
+                        f'{event_type}_topic': '',
+                        f'{event_type}_link': ''
+                    }
         return event_dict
-    
-    
+
+    # Special handling for mp events with multiple due dates
+    def get_mp_events_by_date(mp_events):
+        event_dict = {}
+        for mp in mp_events:
+            event_dict[mp['date']] = {
+                'mp_topic': mp['topic'],
+                'mp_link': mp['link'],
+                'mp_due_topic': '',
+                'mp_due_link': ''
+            }
+            event_dict[mp['part1_due_date']] = {
+                'mp_due_topic': f"{mp['topic']} Part 1",
+                'mp_due_link': mp['link'],
+                'mp_topic': '',
+                'mp_link': ''
+            }
+            event_dict[mp['part2_due_date']] = {
+                'mp_due_topic': f"{mp['topic']} Part 2",
+                'mp_due_link': mp['link'],
+                'mp_topic': '',
+                'mp_link': ''
+            }
+        return event_dict
+
     # Special handling for quiz to populate for all days between release and due dates
     def get_quiz_events_by_date(quiz_events):
         event_dict = {}
@@ -58,7 +82,7 @@ def update_calendar(hw_file, lab_file, mp_file, quiz_file, lecture_file, calenda
     # Get event details for each type
     hw_events = get_event_by_date(hw_data, 'hw')
     lab_events = get_event_by_date(lab_data, 'lab')
-    mp_events = get_event_by_date(mp_data, 'mp')
+    mp_events = get_mp_events_by_date(mp_data)
     quiz_events = get_quiz_events_by_date(quiz_data)
     lecture_events = get_event_by_date(lecture_data, 'lecture')
 
