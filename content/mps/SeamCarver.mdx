@@ -37,6 +37,18 @@ So instead I can use the seam carving algorithm to remove the less interesting p
 
 2D vectors, classes, and testing.
 
+## Getting Started/Logistics
+
+Start up the docker container from the docker app. 
+
+We recommend creating a CS128 folder to keep all assignments for this semester. Download the starter files onto your computer by visiting this link, [Starter Code]().
+Unzip the folder with the starter files in the CS128 folder you created. Open up a new window of VS Code. Click "Open..." and navigate to the folder called "student-seam-carver-main". Click "open".
+
+See [setup instructions](https://www.cs128live.org/course-book/resource/Setup)
+
+When you are done with each part, submit on Prairie Learn via the autograder, [Autograder]().
+
+
 ## Background Information
 
 Before we get started, let us make sure we are all starting on the same page!
@@ -81,7 +93,15 @@ This MP uses two classes (`Image` and `ImageProcessing`), a struct (`Pixel`), an
 3. The driver will call various member functions on the `ImageProcessing` object it created in step 1. These functions will remove seams (a contiguous series of pixels) based on the seam carving algorithm.
 4. The driver will then get the edited `Image` object from the `ImageProcessing` object and save the processed image to a new file.
 
-This project is split into three parts across three weeks. Part 1 walks you through how to write the base code. Part 2 expands on this and has you implement the more complex parts of the algorithm. Part 3 has you implement the driver for the program. Note that part 1 is substantially easier than part 2 and part 3. Feel free to work ahead on parts.
+This project is split into three parts across three weeks.
+
+<b>Part 1</b> has you implement and test the `Image` class. 30pts (Due Thursday TBD at 11:59pm) (10% point reduction if submitted within 24 hours late)
+
+<b>Part 2</b> implement and test the `ImageProcessing` class. 30pts (Due Thursday TBD at 11:59pm) (10% point reduction if submitted within 24 hours late) 
+
+<b>Part 3</b> has you implement the driver for the program. 50pts (Due Thursday TBD at 11:59pm) (10% point reduction if submitted within 24 hours late)
+
+Note that part 1 is substantially easier than part 2 and part 3. Feel free to work ahead on parts.
 
 ## The Seam Carving Algorithm
 
