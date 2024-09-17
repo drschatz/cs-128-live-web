@@ -9,6 +9,7 @@ import ppt from "@/public/icons/ppt.svg";
 
 const variantStyles = {
   Quiz: "border-transparent bg-red-500 text-slate-50 hover:bg-red-500/80 dark:bg-red-900 dark:text-slate-50 dark:hover:bg-red-900/80 rounded-full px-2.5 py-0.5 text-xs font-semibold inline-flex items-center focus:outline-none focus:ring-2 focus:ring-slate-950 focus:ring-offset-2 dark:border-slate-800 dark:focus:ring-slate-300 cursor-pointer",
+  EC: "border-transparent bg-pink-400 text-slate-50 hover:bg-pink-200/80 focus:outline-none focus:ring-0 focus:ring-pink-400 dark:bg-pink-900 dark:text-slate-50 dark:hover:bg-pink-900/80 rounded-full px-2.5 py-0.5 text-xs font-semibold inline-flex items-center focus:outline-none focus:ring-2 focus:ring-slate-950 focus:ring-offset-2 dark:border-slate-800 dark:focus:ring-slate-300 cursor-pointer",
   HW: "border-transparent bg-blue-500 text-slate-50 hover:bg-blue-500/80 focus:outline-none focus:ring-0 focus:ring-blue-500 dark:bg-blue-900 dark:text-slate-50 dark:hover:bg-blue-900/80 rounded-full px-2.5 py-0.5 text-xs font-semibold inline-flex items-center focus:outline-none focus:ring-2 focus:ring-slate-950 focus:ring-offset-2 dark:border-slate-800 dark:focus:ring-slate-300 cursor-pointer",
   MP: "border-transparent bg-green-500 text-slate-50 hover:bg-green-500/80 focus:outline-none focus:ring-0 focus:ring-green-500 dark:bg-green-900 dark:text-slate-50 dark:hover:bg-green-900/80 rounded-full px-2.5 py-0.5 text-xs font-semibold inline-flex items-center focus:outline-none focus:ring-2 focus:ring-slate-950 focus:ring-offset-2 dark:border-slate-800 dark:focus:ring-slate-300 cursor-pointer",
   Lab: "border-transparent bg-yellow-500 text-slate-50 hover:bg-yellow-500/80 focus:outline-none focus:ring-0 focus:ring-yellow-500 dark:bg-yellow-900 dark:text-slate-50 dark:hover:bg-yellow-900/80 rounded-full px-2.5 py-0.5 text-xs font-semibold inline-flex items-center focus:outline-none focus:ring-2 focus:ring-slate-950 focus:ring-offset-2 dark:border-slate-800 dark:focus:ring-slate-300 cursor-pointer",
@@ -49,6 +50,7 @@ const hw = require("@/public/schedule/hw.json");
 const lab = require("@/public/schedule/lab.json");
 const mp = require("@/public/schedule/mp.json");
 const quiz = require("@/public/schedule/quiz.json");
+const ec =  require("@/public/schedule/ec.json");
 
 const LecturesPage = () => {
   const isOngoing = (
@@ -69,6 +71,9 @@ const LecturesPage = () => {
   const filteredHw = hw.filter((item) =>
     isOngoing(item.date, "09:50:00", item.due_date, "08:59:00")
   );
+  const filteredEc = ec.filter((item) =>
+  isOngoing(item.date, "09:50:00", item.due_date, "23:59:00")
+);
   const filteredLab = lab.filter((item) =>
     isOngoing(item.date, "10:00:00", item.due_date, "23:59:00")
   );
@@ -80,7 +85,7 @@ const LecturesPage = () => {
   );
   // Update the calendar to only show data before a specific date
   const filteredCalendar = calendar.filter(
-    (item) => new Date(item.date) <= new Date("2024-09-28")
+    (item) => new Date(item.date) <= new Date("2024-11-02")
   );
 
   const ongoings = [
@@ -91,6 +96,14 @@ const LecturesPage = () => {
       time: "08:59 AM",
       link: item.link,
       type: "HW",
+    })),
+    ...filteredEc.map((item) => ({
+      key: `EC-${item.id}`,
+      topic: item.topic,
+      due: item.due_date,
+      time: "11:59 PM",
+      link: item.link,
+      type: "EC",
     })),
     ...filteredLab.map((item) => ({
       key: `Lab-${item.id}`,
@@ -372,6 +385,10 @@ const LecturesPage = () => {
                           ? {
                               backgroundColor: "rgb(59 130 246)",
                             }
+                          : day.ec_due_topic
+                            ? {
+                                backgroundColor: "rgb(240 139 213)",
+                              }
                           : day.lab_due_topic
                           ? {
                               backgroundColor: "rgb(234 179 8)",
@@ -386,6 +403,14 @@ const LecturesPage = () => {
                           <p className="p-4 mb-2 ml-3 text-white font-semibold">
                             {day.hw_due_topic} <br></br>
                             <br></br> Due - 8:59 AM
+                          </p>
+                        </Link>
+                      )}
+                       {day.ec_due_topic && (
+                        <Link href={day.ec_due_link}>
+                          <p className="p-4 mb-2 ml-3 text-white font-semibold">
+                            {day.ec_due_topic} <br></br>
+                            <br></br> Due - 11:59 pm
                           </p>
                         </Link>
                       )}

@@ -46,6 +46,62 @@
     "topic": "HW 4.2 : Classes",
     "date": "2024-09-18",
     "due_date": "2024-09-20",
+    "link": "https://us.prairielearn.com/pl/course_instance/153040/assessment/2437826"
+  },
+  {
+    "idx": 8,
+    "topic": "HW 6.1 : Pointers",
+    "date": "2024-09-30",
+    "due_date": "2024-10-02",
+    "link": "https://us.prairielearn.com/pl/course_instance/153040/assessment/2443771"
+  },
+  {
+    "idx": 9,
+    "topic": "HW 6.2 : Arrays",
+    "date": "2024-10-02",
+    "due_date": "2024-10-04",
+    "link": "https://us.prairielearn.com/pl/course_instance/153040/assessment/2447264"
+  },
+  {
+    "idx": 10,
+    "topic": "HW 7.1 : Memory Errors",
+    "date": "2024-10-07",
+    "due_date": "2024-10-09",
+    "link": "https://us.prairielearn.com/pl/course_instance/153040/assessment/2454260"
+  },
+  {
+    "idx": 11,
+    "topic": "HW 7.2 : RAII Dynamic Memory",
+    "date": "2024-10-09",
+    "due_date": "2024-10-11",
+    "link": "https://us.prairielearn.com/pl/course_instance/153040/assessment/2450504"
+  },
+  {
+    "idx": 12,
+    "topic": "HW 8.1 : Big Three",
+    "date": "2024-10-14",
+    "due_date": "2024-10-16",
+    "link": "/NA"
+  },
+  {
+    "idx": 13,
+    "topic": "HW 8.2 : Templates",
+    "date": "2024-10-16",
+    "due_date": "2024-10-18",
+    "link": "/NA"
+  },
+  {
+    "idx": 14,
+    "topic": "HW 9.1 : Linked Lists",
+    "date": "2024-10-21",
+    "due_date": "2024-10-23",
+    "link": "/NA"
+  },
+  {
+    "idx": 15,
+    "topic": "HW 9.2 : Linked Lists",
+    "date": "2024-10-23",
+    "due_date": "2024-10-25",
     "link": "/NA"
   }
 ]

@@ -91,25 +91,25 @@
   },
   {
     "idx": 16,
-    "topic": "Array and Command Line",
+    "topic": "Arrays and the Command Line",
     "date": "2024-10-02",
     "link": "/NA"
   },
   {
     "idx": 17,
-    "topic": "Dynamic Memory and the stack",
+    "topic": "Dynamic Memory and the Stack",
     "date": "2024-10-04",
     "link": "/NA"
   },
   {
     "idx": 18,
-    "topic": "Errors w/Dynamic",
+    "topic": "RAII and Destructors",
     "date": "2024-10-07",
     "link": "/NA"
   },
   {
     "idx": 19,
-    "topic": "RAII destructors",
+    "topic": "Growing an Array",
     "date": "2024-10-09",
     "link": "/NA"
   },
@@ -157,19 +157,19 @@
   },
   {
     "idx": 27,
-    "topic": "Review",
+    "topic": "TBD",
     "date": "2024-10-28",
     "link": "/NA"
   },
   {
     "idx": 28,
-    "topic": "Exam 2",
+    "topic": "TBD",
     "date": "2024-10-30",
     "link": "/NA"
   },
   {
     "idx": 29,
-    "topic": "Debrief",
+    "topic": "TBD",
     "date": "2024-11-01",
     "link": "/NA"
   },

@@ -7,5 +7,15 @@
     "part2_due_date": "2024-09-19",
     "due_date": "2024-09-19",
     "link": "https://www.cs128live.org/course-book/mps/WordGuess"
+  },
+  {
+    "idx": 2,
+    "topic": "MP 2: Seam Carver",
+    "date": "2024-10-04",
+    "part1_due_date": "2024-10-10",
+    "part2_due_date": "2024-10-17",
+    "due_date": "2024-10-24",
+    "link": "https://www.cs128live.org/course-book/mps/SeamCarver"
   }
+
 ]

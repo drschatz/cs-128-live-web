@@ -26,5 +26,33 @@
     "date": "2024-09-20",
     "due_date": "2024-09-24",
     "link": "https://us.prairielearn.com/pl/course_instance/153040/assessment/2439476"
+  },
+  {
+    "idx": 5,
+    "topic": "Lab 5: Arrays",
+    "date": "2024-10-04",
+    "due_date": "2024-10-08",
+    "link": "https://us.prairielearn.com/pl/course_instance/153040/assessment/2449739"
+  },
+  {
+    "idx": 6,
+    "topic": "Lab 6",
+    "date": "2024-10-11",
+    "due_date": "2024-10-15",
+    "link": "/NA"
+  },
+  {
+    "idx": 7,
+    "topic": "Lab 7",
+    "date": "2024-10-18",
+    "due_date": "2024-10-22",
+    "link": "/NA"
+  },
+  {
+    "idx": 8,
+    "topic": "Lab 8",
+    "date": "2024-10-25",
+    "due_date": "2024-10-29",
+    "link": "/NA"
   }
 ]
