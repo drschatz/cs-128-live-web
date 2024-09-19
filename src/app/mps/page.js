@@ -11,8 +11,8 @@ const ResourcePage = () => {
   useEffect(() => {
     const currentDateTime = new Date();
     const targetDateTimeMP1 = new Date("2024-09-06T09:00:00-06:00");
-    const targetDateTimeMP2 = new Date("2024-09-18T09:00:00-06:00"); // fake date
-    const targetDateTimeMP3 = new Date("2024-10-16T09:00:00-06:00"); // fake date
+    const targetDateTimeMP2 = new Date("2024-10-04T09:00:00-06:00"); 
+    const targetDateTimeMP3 = new Date("2024-12-16T09:00:00-06:00"); // fake date
 
     if (true) {
       setShowMP1(true);
@@ -52,11 +52,11 @@ const ResourcePage = () => {
           )}
 
           {showMP2 && (
-            <Link href="/course-book/mps/MP2">
+            <Link href="/course-book/mps/SeamCarver">
               <div className="mb-4 border-4 border-blue-500 rounded-lg shadow-sm w-80 h-30 flex-shrink-0 hover:shadow-lg transition-shadow duration-300">
                 <div className="flex flex-col justify-center p-6">
                   <h3 className="text-xl font-semibold text-center">
-                    MP 2 - [MP2 Name]
+                    MP 2 - SeamCarver
                   </h3>
                   <hr className="border-gray/70 my-2" />
                 </div>
