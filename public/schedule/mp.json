@@ -5,6 +5,7 @@
     "date": "2024-09-06",
     "part1_due_date": "2024-09-12",
     "part2_due_date": "2024-09-19",
+    "part3_due_date": "NA",
     "due_date": "2024-09-19",
     "link": "https://www.cs128live.org/course-book/mps/WordGuess"
   },
@@ -14,8 +15,8 @@
     "date": "2024-10-04",
     "part1_due_date": "2024-10-10",
     "part2_due_date": "2024-10-17",
+    "part3_due_date": "2024-10-24",
     "due_date": "2024-10-24",
     "link": "https://www.cs128live.org/course-book/mps/SeamCarver"
   }
-
 ]

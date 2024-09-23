@@ -15,24 +15,31 @@ def update_calendar(hw_file, lab_file, mp_file, quiz_file, lecture_file, calenda
     lecture_data = load_json(lecture_file)
     calendar_data = load_json(calendar_file)
 
-    # Helper function to get event details by date
     def get_event_by_date(events, event_type):
         event_dict = {}
         for event in events:
-            event_dict[event['date']] = {
-                f'{event_type}_topic': event['topic'],
-                f'{event_type}_link': event['link'],
-                f'{event_type}_due_topic': '',
-                f'{event_type}_due_link': ''
-            }
-            if event_type != 'lecture':
-                if 'due_date' in event:
+            if event['date'] not in event_dict:
+                event_dict[event['date']] = {
+                    f'{event_type}_topic': event['topic'],
+                    f'{event_type}_link': event['link'],
+                    f'{event_type}_due_topic': '',
+                    f'{event_type}_due_link': ''
+                }
+            else:
+                event_dict[event['date']][f'{event_type}_topic'] += f", {event['topic']}"
+                event_dict[event['date']][f'{event_type}_link'] += f", {event['link']}"
+
+            if 'due_date' in event:
+                if event['due_date'] not in event_dict:
                     event_dict[event['due_date']] = {
                         f'{event_type}_due_topic': event['topic'],
                         f'{event_type}_due_link': event['link'],
                         f'{event_type}_topic': '',
                         f'{event_type}_link': ''
                     }
+                else:
+                    event_dict[event['due_date']][f'{event_type}_due_topic'] += f", {event['topic']}"
+                    event_dict[event['due_date']][f'{event_type}_due_link'] += f", {event['link']}"
         return event_dict
 
     # Special handling for mp events with multiple due dates
@@ -53,6 +60,12 @@ def update_calendar(hw_file, lab_file, mp_file, quiz_file, lecture_file, calenda
             }
             event_dict[mp['part2_due_date']] = {
                 'mp_due_topic': f"{mp['topic']} Part 2",
+                'mp_due_link': mp['link'],
+                'mp_topic': '',
+                'mp_link': ''
+            }
+            event_dict[mp['part3_due_date']] = {
+                'mp_due_topic': f"{mp['topic']} Part 3",
                 'mp_due_link': mp['link'],
                 'mp_topic': '',
                 'mp_link': ''
@@ -102,10 +115,12 @@ def update_calendar(hw_file, lab_file, mp_file, quiz_file, lecture_file, calenda
             "dayoff": day['dayoff'],
             "lecture_topic": lecture_events.get(date, {}).get('lecture_topic', ''),
             "lecture_link": lecture_events.get(date, {}).get('lecture_link', ''),
+            
             "hw_topic": hw_events.get(date, {}).get('hw_topic', ''),
             "hw_link": hw_events.get(date, {}).get('hw_link', ''),
             "hw_due_topic": hw_events.get(date, {}).get('hw_due_topic', ''),
             "hw_due_link": hw_events.get(date, {}).get('hw_due_link', ''),
+            
             "lab_topic": lab_events.get(date, {}).get('lab_topic', ''),
             "lab_link": lab_events.get(date, {}).get('lab_link', ''),
             "lab_due_topic": lab_events.get(date, {}).get('lab_due_topic', ''),
