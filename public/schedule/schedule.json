@@ -550,8 +550,10 @@
     "quiz_link": [
       "https://us.prairielearn.com/pl/course_instance/153040/assessment/2456339"
     ],
-    "quiz_due_topic": [],
-    "quiz_due_link": []
+    "quiz_due_topic": ["Exam 1"],
+    "quiz_due_link": [
+      "https://us.prairielearn.com/pl/course_instance/153040/assessment/2456339"
+    ]
   },
   {
     "day_idx": 23,
@@ -577,8 +579,10 @@
     "quiz_link": [
       "https://us.prairielearn.com/pl/course_instance/153040/assessment/2456339"
     ],
-    "quiz_due_topic": [],
-    "quiz_due_link": []
+    "quiz_due_topic": ["Exam 1"],
+    "quiz_due_link": [
+      "https://us.prairielearn.com/pl/course_instance/153040/assessment/2456339"
+    ]
   },
   {
     "day_idx": 24,
@@ -681,8 +685,8 @@
     "mp_due_link": "",
     "quiz_topic": ["Exam 1: Second Chance"],
     "quiz_link": ["/NA"],
-    "quiz_due_topic": [],
-    "quiz_due_link": []
+    "quiz_due_topic": ["Exam 1: Second Chance"],
+    "quiz_due_link": ["/NA"]
   },
   {
     "day_idx": 28,
@@ -706,8 +710,8 @@
     "mp_due_link": "",
     "quiz_topic": ["Exam 1: Second Chance"],
     "quiz_link": ["/NA"],
-    "quiz_due_topic": [],
-    "quiz_due_link": []
+    "quiz_due_topic": ["Exam 1: Second Chance"],
+    "quiz_due_link": ["/NA"]
   },
   {
     "day_idx": 29,
@@ -1181,8 +1185,8 @@
     "mp_due_link": "",
     "quiz_topic": ["Exam 2"],
     "quiz_link": ["/NA"],
-    "quiz_due_topic": [],
-    "quiz_due_link": []
+    "quiz_due_topic": ["Exam 2"],
+    "quiz_due_link": ["/NA"]
   },
   {
     "day_idx": 48,
@@ -1206,8 +1210,8 @@
     "mp_due_link": "",
     "quiz_topic": ["Exam 2"],
     "quiz_link": ["/NA"],
-    "quiz_due_topic": [],
-    "quiz_due_link": []
+    "quiz_due_topic": ["Exam 2"],
+    "quiz_due_link": ["/NA"]
   },
   {
     "day_idx": 49,

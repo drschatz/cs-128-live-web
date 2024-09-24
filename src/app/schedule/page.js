@@ -50,7 +50,7 @@ const hw = require("@/public/schedule/hw.json");
 const lab = require("@/public/schedule/lab.json");
 const mp = require("@/public/schedule/mp.json");
 const quiz = require("@/public/schedule/quiz.json");
-const ec =  require("@/public/schedule/ec.json");
+const ec = require("@/public/schedule/ec.json");
 
 const LecturesPage = () => {
   const isOngoing = (
@@ -72,8 +72,8 @@ const LecturesPage = () => {
     isOngoing(item.date, "09:50:00", item.due_date, "08:59:00")
   );
   const filteredEc = ec.filter((item) =>
-  isOngoing(item.date, "09:50:00", item.due_date, "23:59:00")
-);
+    isOngoing(item.date, "09:50:00", item.due_date, "23:59:00")
+  );
   const filteredLab = lab.filter((item) =>
     isOngoing(item.date, "10:00:00", item.due_date, "23:59:00")
   );
@@ -141,11 +141,17 @@ const LecturesPage = () => {
         <div className="absolute top-0 left-0 right-0 bottom-0 h-full " />
       </div>
       <div className="mb-16 mx-8 flex justify-center items-center">
-          <h3 className="text-xl text-center">
-            Please see <a               className="underline"
- href="https://us.prairielearn.com/pl/course_instance/153040/assessments">Praire Learn</a> for the most up-to-date deadlines and assignments.
-            </h3>
-        </div>
+        <h3 className="text-xl text-center">
+          Please see{" "}
+          <a
+            className="underline"
+            href="https://us.prairielearn.com/pl/course_instance/153040/assessments"
+          >
+            Praire Learn
+          </a>{" "}
+          for the most up-to-date deadlines and assignments.
+        </h3>
+      </div>
 
       <div className="container flex sm:flex-row flex-col">
         <div className="w-full sm:w-10/12">
@@ -386,15 +392,19 @@ const LecturesPage = () => {
                               backgroundColor: "rgb(59 130 246)",
                             }
                           : day.ec_due_topic
-                            ? {
-                                backgroundColor: "rgb(240 139 213)",
-                              }
+                          ? {
+                              backgroundColor: "rgb(240 139 213)",
+                            }
                           : day.lab_due_topic
                           ? {
                               backgroundColor: "rgb(234 179 8)",
                             }
                           : day.mp_due_topic
                           ? { backgroundColor: "rgb(34 197 94)" }
+                          : day.quiz_due_topic
+                          ? {
+                              backgroundColor: "rgb(239 68 68)",
+                            }
                           : {}
                       }
                     >
@@ -406,7 +416,7 @@ const LecturesPage = () => {
                           </p>
                         </Link>
                       )}
-                       {day.ec_due_topic && (
+                      {day.ec_due_topic && (
                         <Link href={day.ec_due_link}>
                           <p className="p-4 mb-2 ml-3 text-white font-semibold">
                             {day.ec_due_topic} <br></br>

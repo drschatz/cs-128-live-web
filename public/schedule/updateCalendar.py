@@ -86,9 +86,8 @@ def update_calendar(hw_file, lab_file, mp_file, quiz_file, lecture_file, calenda
                     event_dict[current_date] = {f'quiz_topic': [], f'quiz_link': [], f'quiz_due_topic': [], f'quiz_due_link': []}
                 event_dict[current_date][f'quiz_topic'].append(quiz['topic'])
                 event_dict[current_date][f'quiz_link'].append(quiz['link'])
-                if current_date == quiz['due_date']:
-                    event_dict[current_date][f'quiz_due_topic'].append(quiz['topic'])
-                    event_dict[current_date][f'quiz_due_link'].append(quiz['link'])
+                event_dict[current_date][f'quiz_due_topic'].append(quiz['topic'])
+                event_dict[current_date][f'quiz_due_link'].append(quiz['link'])
 
         return event_dict
 
