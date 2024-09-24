@@ -59,7 +59,7 @@ const hw = require("@/public/schedule/hw.json");
 const lab = require("@/public/schedule/lab.json");
 const mp = require("@/public/schedule/mp.json");
 const quiz = require("@/public/schedule/quiz.json");
-const ec =  require("@/public/schedule/ec.json");
+const ec = require("@/public/schedule/ec.json");
 
 export default function Home() {
   const [squirrelStyle, setSquirrelStyle] = useState({
@@ -94,8 +94,8 @@ export default function Home() {
     isOngoing(item.date, "09:50:00", item.due_date, "08:59:00")
   );
   const filteredEc = ec.filter((item) =>
-  isOngoing(item.date, "09:50:00", item.due_date, "23:59:00")
-);
+    isOngoing(item.date, "09:50:00", item.due_date, "23:59:00")
+  );
   const filteredLab = lab.filter((item) =>
     isOngoing(item.date, "10:00:00", item.due_date, "23:59:00")
   );
@@ -451,6 +451,10 @@ export default function Home() {
                             ? {
                                 backgroundColor: "rgb(34 197 94)",
                               }
+                            : day.ec_topic
+                            ? {
+                                backgroundColor: "rgb(240 139 213)",
+                              }
                             : day.quiz_topic
                             ? {
                                 backgroundColor: "rgb(239 68 68)",
@@ -466,9 +470,16 @@ export default function Home() {
                           </Link>
                         )}
                         {day.quiz_topic && (
-                          <Link href={day.quiz_link}>
+                          <Link href={day.quiz_link[0]}>
                             <p className="p-4 mb-2 ml-3 text-white font-semibold">
                               {day.quiz_topic}
+                            </p>
+                          </Link>
+                        )}
+                        {day.ec_topic && (
+                          <Link href={day.ec_link[0]}>
+                            <p className="p-4 mb-2 ml-3 text-white font-semibold">
+                              {day.ec_topic}
                             </p>
                           </Link>
                         )}
@@ -488,20 +499,12 @@ export default function Home() {
                             ? {
                                 backgroundColor: "rgb(59 130 246)",
                               }
-                              : day.ec_due_topic
-                              ? {
-                                  backgroundColor: "rgb(240 139 213)",
-                                }
                             : day.lab_due_topic
                             ? {
                                 backgroundColor: "rgb(234 179 8)",
                               }
                             : day.mp_due_topic
                             ? { backgroundColor: "rgb(34 197 94)" }
-                            : day.quiz_due_topic
-                            ? {
-                                backgroundColor: "rgb(239 68 68)",
-                              }
                             : {}
                         }
                       >
@@ -513,14 +516,6 @@ export default function Home() {
                             </p>
                           </Link>
                         )}
-                        {day.ec_due_topic && (
-                        <Link href={day.ec_due_link}>
-                          <p className="p-4 mb-2 ml-3 text-white font-semibold">
-                            {day.ec_due_topic} <br></br>
-                            <br></br> Due - 11:59 pm
-                          </p>
-                        </Link>
-                      )}
                         {day.lab_due_topic && (
                           <Link href={day.lab_due_link}>
                             <p className="p-4 mb-2 ml-3 text-white font-semibold">
