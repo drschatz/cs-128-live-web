@@ -95,7 +95,7 @@ def update_calendar(hw_file, lab_file, mp_file, quiz_file, ec_file, lecture_file
     lab_events = get_event_by_date(lab_data, 'lab')
     mp_events = get_mp_events_by_date(mp_data)
     quiz_events = get_quiz_events_by_date(quiz_data, 'quiz')
-    ec_events = get_quiz_events_by_date(ec_data, 'ec')
+    ec_events = get_event_by_date(ec_data, 'ec')
     lecture_events = get_event_by_date(lecture_data, 'lecture')
 
     # Initialize the schedule list

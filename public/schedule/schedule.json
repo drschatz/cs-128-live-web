@@ -512,14 +512,10 @@
         "mp_link": "",
         "mp_due_topic": "",
         "mp_due_link": "",
-        "ec_topic": [
-            "Practice Exam - Extra Credit"
-        ],
-        "ec_link": [
-            "https://us.prairielearn.com/pl/course_instance/153040/assessment/2456339"
-        ],
-        "ec_due_topic": [],
-        "ec_due_link": [],
+        "ec_topic": "Practice Exam - Extra Credit",
+        "ec_link": "https://us.prairielearn.com/pl/course_instance/153040/assessment/2456339",
+        "ec_due_topic": "",
+        "ec_due_link": "",
         "quiz_topic": "",
         "quiz_link": "",
         "quiz_due_topic": "",
@@ -545,14 +541,10 @@
         "mp_link": "",
         "mp_due_topic": "MP 1: Word Guess Part 2",
         "mp_due_link": "https://www.cs128live.org/course-book/mps/WordGuess",
-        "ec_topic": [
-            "Practice Exam - Extra Credit"
-        ],
-        "ec_link": [
-            "https://us.prairielearn.com/pl/course_instance/153040/assessment/2456339"
-        ],
-        "ec_due_topic": [],
-        "ec_due_link": [],
+        "ec_topic": "",
+        "ec_link": "",
+        "ec_due_topic": "",
+        "ec_due_link": "",
         "quiz_topic": "",
         "quiz_link": "",
         "quiz_due_topic": "",
@@ -578,14 +570,10 @@
         "mp_link": "",
         "mp_due_topic": "",
         "mp_due_link": "",
-        "ec_topic": [
-            "Practice Exam - Extra Credit"
-        ],
-        "ec_link": [
-            "https://us.prairielearn.com/pl/course_instance/153040/assessment/2456339"
-        ],
-        "ec_due_topic": [],
-        "ec_due_link": [],
+        "ec_topic": "",
+        "ec_link": "",
+        "ec_due_topic": "",
+        "ec_due_link": "",
         "quiz_topic": "",
         "quiz_link": "",
         "quiz_due_topic": "",
@@ -611,14 +599,10 @@
         "mp_link": "",
         "mp_due_topic": "",
         "mp_due_link": "",
-        "ec_topic": [
-            "Practice Exam - Extra Credit"
-        ],
-        "ec_link": [
-            "https://us.prairielearn.com/pl/course_instance/153040/assessment/2456339"
-        ],
-        "ec_due_topic": [],
-        "ec_due_link": [],
+        "ec_topic": "",
+        "ec_link": "",
+        "ec_due_topic": "Practice Exam - Extra Credit",
+        "ec_due_link": "https://us.prairielearn.com/pl/course_instance/153040/assessment/2456339",
         "quiz_topic": "",
         "quiz_link": "",
         "quiz_due_topic": "",

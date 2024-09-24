@@ -380,7 +380,7 @@ const LecturesPage = () => {
                         </Link>
                       )}
                       {day.ec_topic && (
-                        <Link href={day.ec_link[0]}>
+                        <Link href={day.ec_link}>
                           <p className="p-4 mb-2 ml-3 text-white font-semibold">
                             {day.ec_topic}
                           </p>
@@ -408,6 +408,10 @@ const LecturesPage = () => {
                             }
                           : day.mp_due_topic
                           ? { backgroundColor: "rgb(34 197 94)" }
+                          : day.ec_due_topic
+                          ? {
+                              backgroundColor: "rgb(240 139 213)",
+                            }
                           : {}
                       }
                     >
@@ -432,6 +436,14 @@ const LecturesPage = () => {
                           <p className="p-4 mb-2 ml-3 text-white font-semibold">
                             {day.mp_due_topic} <br></br>
                             <br></br> Due - 11:59 pm
+                          </p>
+                        </Link>
+                      )}
+                      {day.ec_due_topic && (
+                        <Link href={day.ec_due_link}>
+                          <p className="p-4 mb-2 ml-3 text-white font-semibold">
+                            {day.ec_due_topic}
+                            <br></br> Due - 11:59 PM
                           </p>
                         </Link>
                       )}
