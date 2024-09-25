@@ -36,7 +36,7 @@ So instead I can use the seam carving algorithm to remove the less interesting p
 
 ## Learning goals
 
-- From simple specifications create a complete, functioning, project.
+- From simple specifications create a complete, functioning project.
 - Become comfortable working with classes and 2D data structures.
 - Design a readable and reusable solution through functions and testing.
 - Develop code on a personal computer and work with an autograder.
@@ -88,42 +88,45 @@ P3
 ```
 
 
-I have included many PPM P3 files for you to use with the starter files. However, feel free to also create your own! I have had success using the `magick` program on my Mac to convert jpg files to the PPM P3 format. I also recommend highly reducing the size of the jpg before converting to PPM and using it with your program to speed up processing time.
+I have included many PPM P3 files for you to use with the starter files. However, feel free to also create your own!
+ I have had success using the `magick` program on my Mac to convert jpg files to the PPM P3 format. I also recommend
+  reducing the size of the jpg before converting to PPM and using it with your program to speed up processing time.
 
 ## MP Overview
 
-In this MP you will create code that will first read in an image file specified by the user. It will then remove seams (a contiguous series of pixels) from the image. Finally, it will save the edited image to a new image file.
+In this MP you will create code that will read in an image file and a smaller desired width and height. It will then remove seams 
+(a contiguous series of pixels) from the image until it is the desired width and height. Finally, it will save the edited 
+image to a new image file.
 
-This MP uses two classes (`Image` and `ImageProcessing`), a struct (`Pixel`), and a driver (`driver.cc`) to create the complete image processing program. Below are more detailed steps on what the code will accomplish:
-
-1. The driver code will create an `ImageProcessing` object based on the file name the user specifies.
-2. The `ImageProcessing` object will create an `Image` object. This `Image` object will store and manage the pixels of the picture. A pixel is represented using the `Pixel` struct which has three int values, one for the red, green, and blue value.
-3. The driver will call various member functions on the `ImageProcessing` object it created in step 1. These functions will remove seams (a contiguous series of pixels) based on the seam carving algorithm.
-4. The driver will then get the edited `Image` object from the `ImageProcessing` object and save the processed image to a new file.
+This MP uses the `Image` class along with the `Pixel` struct to represent and store images. In `driver.cc` you will create an instance
+of the `Image` class and call various function you defined in `image_processing.cc` to reduce the size of the image.
 
 This project is split into three parts across three weeks.
 
-<b>Part 1</b> has you implement and test the `Image` class. 30pts (Due Thursday 10/10 at 11:59pm) (10% point reduction if submitted within 24 hours late)
+<b>Part 1</b> has you implement and test the `Image` class as well as the RotateLeft and RotateRight functions in `image_processing.cc`. 30pts (Due Thursday 10/10 at 11:59pm) (10% point reduction if submitted within 24 hours late)
 
-<b>Part 2</b> implement and test the `ImageProcessing` class. 30pts (Due Thursday 10/17 at 11:59pm) (10% point reduction if submitted within 24 hours late) 
+<b>Part 2</b> has you implement and test the rest of the functions in `image_processing.cc`. 30pts (Due Thursday 10/17 at 11:59pm) (10% point reduction if submitted within 24 hours late) 
 
 <b>Part 3</b> has you implement the driver for the program. 50pts (Due Thursday 10/24 at 11:59pm) (10% point reduction if submitted within 24 hours late)
 
-Note that part 1 is substantially easier than part 2 and part 3. Feel free to work ahead on parts.
+Feel free to work ahead on parts.
 
 ## The Seam Carving Algorithm
 
-Below is a simplified explanation of the seam carving algorithm with all the information you need to complete the MP. If you would like to get a more in-depth understanding, please see the research paper by Avidan and Shamir from 2012 that first introduced this idea, [Seam Carving for Content-Aware Image Resizing](https://perso.crans.org/frenoy/matlab2012/seamcarving.pdf).
+Below is a simplified explanation of the seam carving algorithm with all the information you need to complete the MP. If you would like to get a more in-depth understanding, 
+please see the research paper by Avidan and Shamir from 2012 that first introduced this idea, [Seam Carving for Content-Aware Image Resizing](https://perso.crans.org/frenoy/matlab2012/seamcarving.pdf).
 
-Seam carving works by identifying unimportant paths of pixels across an image, aka seams. For this MP, we will focus on vertical seams. Below is a visual representation of what vertical seams look like (the vertical red lines).
+Seam carving works by identifying unimportant paths of pixels across an image, aka seams. For this MP, we will focus on vertical seams. 
+Below is a visual representation of what vertical seams look like (the vertical red lines).
 
 ![enter image description here](https://www.cs128live.org/dog_seams.png)
 
 ### Calculate Energy
 
-To find unimportant seams we need to find unimportant pixels. A pixel is unimportant if it does not contribute to the main subject of the image. This is hard to define! To approximate this, we use the energy of the pixel. The energy of a pixel within an image is the sum of the squared energy between its north and south neighbor and its east and west neighbor. A high energy means a pixel's neighbors have a high contrast with each other and so it is probably important to the subject of the image.
+To find unimportant seams we need to find unimportant pixels. A pixel is unimportant if it does not contribute to the main subject of the image. This is hard to define!
+ To approximate this, we use the energy of the pixel. The energy of a pixel within an image is the sum of the squared energy between its north and south neighbor and its east and west neighbor. A high energy means a pixel's neighbors have a high contrast with each other and so it is probably important to the subject of the image.
 
-You will write a function in the `ImageProcessing` class called `CalculateEnergy()`. This function will calculate the energy of each pixel in the image and return it as a 2D vector.
+You will write a function in the `image_processing.cc` called `CalculateEnergy()`. This function will calculate the energy of each pixel in the image and return it as a 2D vector.
 
 Below is the formula for calculating the energy of a pixel:
 
@@ -138,11 +141,21 @@ The function `SquaredPixelEnergy` is given and implemented already for you in `p
 
 ### Calculate Cost
 
-We now want to find a seam that goes through the least amount of energy. To find this, we first calculate the minimum energy cost of reaching a particular pixel. In other words, what is the least amount of energy that the seam needed to pass through to get to this specific pixel (from the top down). Once we have calculated this for every pixel in the image, we can start at the bottom row and work our way up following the path of least cost.
+We now want to find a seam or path that goes through the least amount of energy. To find this, we first calculate the minimum energy cost of reaching a particular pixel. In other words, 
+what is the least amount of energy that the seam needed to pass through to get to this specific pixel (from the bottom up). Once we have calculated this for every pixel in the image, we 
+can start at the top row and work our way down following the path of least cost.
 
-To calculate the minimum cost of a pixel, we add its energy to the minimum cost of getting to that pixel. There are either 2 (for border pixels) or 3 (for inner pixels). If the pixel is not on a border and at `(row, col)`, the 3 pixels to consider are `(row - 1, col -1)`, `(row-1, col)`, and `(row-1, col + 1)`. The top row cost is just the energy values of those pixels.
+To calculate the minimum cost of a pixel, we add its energy to the minimum cost of getting to that pixel. There are either 2 (for border pixels) or 3 (for inner pixels) pixels the
+ path could be coming from. In order to start this alogrithm we set the bottom row cost is just the energy values of those pixels.
 
-The recommended approach for calculating the minimum cost of each pixel is to start at the bottom row. Initialize all the values in that bottom row with their energies and then work your way up using the formula above. Fill in a 2D vector with the values at each step in the `CalculateCost` `ImageProcessing` function and return said vector at the end.
+cost\(image height - 1, col\) =  energy(row, col)
+
+cost\(row, col\) =  energy(row, col) + min(energy(row-1, col-1), energy(row-1, col), energy(row-1, col+1)) 
+
+*If it's a border pixel do not consider pixels off the end of the image
+
+The recommended approach for calculating the minimum cost of each pixel is to start at the bottom row. Initialize all the values in that bottom row with their energies and then
+ work your way up using the formula above. Fill in a 2D vector with the values at each step in the `CalculateCost` function and return that vector at the end.
 
 ![enter image description here](https://www.cs128live.org/cost_energy.png)
 
@@ -150,9 +163,13 @@ The recommended approach for calculating the minimum cost of each pixel is to st
 
 After calculating the energy followed by the cost, it is time to find the least important seam. In this MP, we will only be finding vertical seams. A seam is represented by a vector.
 
-To find the seam, start at the top of the cost 2D vector and find the smallest cost value. That will be the starting point of the seam. From there, trace your way back down the image along the path of the smallest neighboring cost values. At the end, you will have a vector the size of the height of the image. Each element indicating which column the pixel of the seam is in for that row. For example, if the 1st element in the seam vector, spot 0, has the value 2, that means the seam starts at row 0 at column 2. If the 4th element in the seam vector, spot 3, has the value 3, that means the seam passes through row 3 at column 3.
+To find the seam, start at the top of the cost 2D vector and find the smallest cost value. That will be the starting point of the seam. From there, trace your way back down the image 
+along the path of the smallest cost values. Only consider elements below and 1 to the left, below and 1 to the right, and straight below (if they don't go off the end of the image). 
+At the end, you will have a vector the size of the height of the image. Each element indicating which column the pixel of the seam is in for that row. For example, if the 1st element
+ in the seam vector, spot 0, has the value 2, that means the seam starts at row 0 at column 2. If the 4th element in the seam 
+vector, spot 3, has the value 3, that means the seam passes through row 3 at column 3.
 
-When implementing `FindVerticalSeam` in the `ImageProcessing` class be careful to handle the case where the seam is at a border value. If there is a tie, use the leftmost pixel.
+When implementing `FindVerticalSeam` be careful to handle the case where the seam is at a border value. If there is a tie, use the leftmost pixel.
 
 ![enter image description here](https://www.cs128live.org/seam.png)
 
@@ -164,9 +181,9 @@ Once you have found the minimum seam all that is left is removing it from the im
 
 ### Resizing an Image
 
-Let's put it all together to change the size of an image. You will combine function calls from `Image` and `ImageProcessing` in `driver.cc` to achieve the following behavior:
+Let's put it all together to change the size of an image. You will use the `Image` class and functions from `image_processing.cc` in `driver.cc` to achieve the following behavior:
 
-#### Reducing the Width
+#### 1. Reducing the Width
 
 1. Find vertical seam
     1. Calculate cost
@@ -175,15 +192,17 @@ Let's put it all together to change the size of an image. You will combine funct
 2. Remove pixels from image that are in the seam
 3. Repeat until desired width
 
-#### Reducing the Height
+#### 2. Reducing the Height
 
 1. Flip the image to the left by 90 degrees
 2. Apply the "Reducing the Width" algorithm
 3. Flip the image to the right by 90 degrees
 
+Always reduce the width fully before reducing the height. 
+
 ## Part 1
 
-In this part, you will complete the `Image` class. Below are the required functions for this part:
+In this part, you will complete the `Image` class and the RotateLeft and RotateRight functions. Below are the required functions for this part:
 
 - 2 Image constructors
 - `Image::SaveToFile`
@@ -192,38 +211,51 @@ In this part, you will complete the `Image` class. Below are the required functi
 - `Image::GetPixel`
 - `Image::SetPixel`
 - `Image::RemovePixel`
+- `RotateLeft`
+- `RotateRight`
 
 There are only a few tests given. It is up to you to expand the tests-image.cc file by adding your own tests to verify your code is working.
 
 To compile and run your tests-image.cc tests put the following into the terminal:
 ```
-make tests-i
-./bin/test-i
+make tests_i
+./bin/test_i
 ```
 
 ## Part 2
 
-In this part, you will complete the `ImageProcessing` class. Below are the required functions for this part:
+In this part, you will complete the image processing functions. Below are the required functions for this part:
 
-- Image Processing constructor
-- `ImageProcessing::GetImage`
-- `ImageProcessing::FlipLeft`
-- `ImageProcessing::FlipRight`
-- `ImageProcessing::CalculateEnergy`
-- `ImageProcessing::CalculateCostVertical`
-- `ImageProcessing::FindVerticalSeam`
-- `ImageProcessing::RemoveVerticalSeam`
+- `CalculateEnergy`
+- `CalculateCostVertical`
+- `FindVerticalSeam`
+- `RemoveVerticalSeam`
 
 There are only a few tests given. It is up to you to expand the tests-image-processing.cc file by adding your own tests to verify your code is working.
 ```
-make tests-ip
-./bin/test-ip
+make tests_ip
+./bin/test_ip
 ```
 ## Part 3
 
-In this part, you will complete the driver portion of the project. This is the code that will call the functions you wrote in the previous parts in order to process an image. You will write this code in the `driver.cc` file.
+In this part, you will complete the driver portion of the project. This is the code that will call the functions you wrote in the previous parts in order 
+to seam carve an image (See the Resizing an Image section above). You will write this code in the `driver.cc` file.
 
-A few sample images and their expected seam carved versions are given:
+You will have to read in the command line arguments to read in the <image_name> <new_width> and <new_height>
+
+The new file the code produces should be called the <base_input_file_name><new_width>x<new_height>_actual.ppm
+
+<base_input_file_name> means no folders or '/' characters.
+
+For example, if I ran the followng: 
+```
+make exec
+./bin/exec sample_images/cs128_staff.ppm 350 400
+```
+
+This would take about 1-2 mintues to run and produce the following image named, "cs128_staff350x400_actual.ppm"
+
+![super seam carved staff pic](https://www.cs128live.org/staff_seam.jpg)
 
 
 ## Credits
