@@ -43,7 +43,7 @@ So instead I can use the seam carving algorithm to remove the less interesting p
 
 ## Topics Covered
 
-2D vectors, classes, and testing.
+2D vectors, classes, command line arguments, strings, and testing.
 
 ## Getting Started/Logistics
 
@@ -87,6 +87,8 @@ P3
 0 1 0 200 200 24
 ```
 
+PPM files can be viewed like normal images uses various online and built in software. For example, on a mac, they can be viewed in the preview app. 
+When looking at a PPM file in a text editor I see the format noted above. 
 
 I have included many PPM P3 files for you to use with the starter files. However, feel free to also create your own!
  I have had success using the `magick` program on my Mac to convert jpg files to the PPM P3 format. I also recommend
@@ -267,8 +269,9 @@ This would take about 1-2 mintues to run and produce the following image named, 
 To test your code for this part we have given you multiple expected image files in the `tests/expected` directory. 
 Each is named based on the new dimensions after being carved. For example, mini_squir10x16.ppm is mini_squir.ppm carved to 10x16. 
 To check your carved image matches the expected use the diff command in the terminal. 
-
+```
 diff \<file1.ppm\> \<file2.ppm\>
+```
 
 If nothing prints that means the files are identical.
 
