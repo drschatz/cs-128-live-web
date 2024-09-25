@@ -142,20 +142,20 @@ The function `SquaredPixelEnergy` is given and implemented already for you in `p
 ### Calculate Cost
 
 We now want to find a seam or path that goes through the least amount of energy. To find this, we first calculate the minimum energy cost of reaching a particular pixel. In other words, 
-what is the least amount of energy that the seam needed to pass through to get to this specific pixel (from the bottom up). Once we have calculated this for every pixel in the image, we 
-can start at the top row and work our way down following the path of least cost.
+what is the least amount of energy that the seam needed to pass through to get to this specific pixel (from the top down). Once we have calculated this for every pixel in the image, we 
+can start on the bottom row and work our way up following the path of least cost.
 
 To calculate the minimum cost of a pixel, we add its energy to the minimum cost of getting to that pixel. There are either 2 (for border pixels) or 3 (for inner pixels) pixels the
- path could be coming from. In order to start this alogrithm we set the bottom row cost is just the energy values of those pixels.
+ path could be coming from. In order to start this alogrithm we set the top row cost to the energy values of those pixels.
 
-cost\(image height - 1, col\) =  energy(row, col)
+cost\(0, col\) =  energy(0, col)
 
-cost\(row, col\) =  energy(row, col) + min(energy(row-1, col-1), energy(row-1, col), energy(row-1, col+1)) 
+cost\(row, col\) =  energy(row, col) + min(energy(row+1, col-1), energy(row+1, col), energy(row+1, col+1)) 
 
 *If it's a border pixel do not consider pixels off the end of the image
 
-The recommended approach for calculating the minimum cost of each pixel is to start at the bottom row. Initialize all the values in that bottom row with their energies and then
- work your way up using the formula above. Fill in a 2D vector with the values at each step in the `CalculateCost` function and return that vector at the end.
+The recommended approach for calculating the minimum cost of each pixel is to start at the top row. Initialize all the values in that top row with their energies and then
+ work your way down using the formula above. Fill in a 2D vector with the values at each step in the `CalculateCost` function and return that vector at the end.
 
 ![enter image description here](https://www.cs128live.org/cost_energy.png)
 
@@ -163,8 +163,8 @@ The recommended approach for calculating the minimum cost of each pixel is to st
 
 After calculating the energy followed by the cost, it is time to find the least important seam. In this MP, we will only be finding vertical seams. A seam is represented by a vector.
 
-To find the seam, start at the top of the cost 2D vector and find the smallest cost value. That will be the starting point of the seam. From there, trace your way back down the image 
-along the path of the smallest cost values. Only consider elements below and 1 to the left, below and 1 to the right, and straight below (if they don't go off the end of the image). 
+To find the seam, start at the bottom of the cost 2D vector and find the smallest cost value. That will be the starting point of the seam. From there, trace your way back up the image 
+along the path of the smallest cost values. Only consider elements above and 1 to the left, above and 1 to the right, and straight above (if they don't go off the end of the image). 
 At the end, you will have a vector the size of the height of the image. Each element indicating which column the pixel of the seam is in for that row. For example, if the 1st element
  in the seam vector, spot 0, has the value 2, that means the seam starts at row 0 at column 2. If the 4th element in the seam 
 vector, spot 3, has the value 3, that means the seam passes through row 3 at column 3.
