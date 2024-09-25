@@ -117,7 +117,7 @@ Below is a simplified explanation of the seam carving algorithm with all the inf
 please see the research paper by Avidan and Shamir from 2012 that first introduced this idea, [Seam Carving for Content-Aware Image Resizing](https://perso.crans.org/frenoy/matlab2012/seamcarving.pdf).
 
 Seam carving works by identifying unimportant paths of pixels across an image, aka seams. For this MP, we will focus on vertical seams. 
-Below is a visual representation of what vertical seams look like (the vertical red lines).
+Below is a visual representation of what 3 random vertical seams look like (the vertical red lines). 
 
 ![enter image description here](https://www.cs128live.org/dog_seams.png)
 
@@ -181,13 +181,13 @@ Once you have found the minimum seam all that is left is removing it from the im
 
 ### Resizing an Image
 
-Let's put it all together to change the size of an image. You will use the `Image` class and functions from `image_processing.cc` in `driver.cc` to achieve the following behavior:
+Let's put it all together to change the size of an image. In Part 3 you will use the `Image` class and functions from `image_processing.cc` to achieve the following behavior in `driver.cc`:
 
 #### 1. Reducing the Width
 
 1. Find vertical seam
-    1. Calculate cost
-    2. Calculate energy
+    1. Calculate energy
+    2. Calculate cost
     3. Find least important seam
 2. Remove pixels from image that are in the seam
 3. Repeat until desired width
@@ -195,14 +195,14 @@ Let's put it all together to change the size of an image. You will use the `Imag
 #### 2. Reducing the Height
 
 1. Flip the image to the left by 90 degrees
-2. Apply the "Reducing the Width" algorithm
+2. Apply the "Reducing the Width" algorithm as many times as necessary
 3. Flip the image to the right by 90 degrees
 
-Always reduce the width fully before reducing the height. 
+Note: Always reduce the width fully before reducing the height. 
 
 ## Part 1
 
-In this part, you will complete the `Image` class and the RotateLeft and RotateRight functions. Below are the required functions for this part:
+In this part, you will complete the `Image` class and the `RotateLeft` and `RotateRight` functions. Below are the required functions for this part:
 
 - 2 Image constructors
 - `Image::SaveToFile`
@@ -214,12 +214,13 @@ In this part, you will complete the `Image` class and the RotateLeft and RotateR
 - `RotateLeft`
 - `RotateRight`
 
-There are only a few tests given. It is up to you to expand the tests-image.cc file by adding your own tests to verify your code is working.
+There are only a few tests given. It is up to you to expand the `tests/tests_image.cc` file by adding your own tests to verify your code is working.
+You may find it helpful to use functions from `includes/tests_helpers.hpp` and defined in `src/tests_helpers.cc` when writing your tests. 
 
-To compile and run your tests-image.cc tests put the following into the terminal:
+To compile and run your `tests_image.cc` code put the following into the terminal:
 ```
 make tests_i
-./bin/test_i
+./bin/tests_i
 ```
 
 ## Part 2
@@ -231,17 +232,22 @@ In this part, you will complete the image processing functions. Below are the re
 - `FindVerticalSeam`
 - `RemoveVerticalSeam`
 
-There are only a few tests given. It is up to you to expand the tests-image-processing.cc file by adding your own tests to verify your code is working.
+There are only a few tests given. It is up to you to expand the `tests/tests_image_processing.cc` file by adding your own tests to verify your code is working.
+You may find it helpful to use functions from `includes/tests_helpers.hpp` and defined in `src/tests_helpers.cc` when writing your tests. 
+
+To compile and run your `tests_image_processing.cc` code put the following into the terminal:
 ```
 make tests_ip
-./bin/test_ip
+./bin/tests_ip
 ```
 ## Part 3
 
-In this part, you will complete the driver portion of the project. This is the code that will call the functions you wrote in the previous parts in order 
-to seam carve an image (See the Resizing an Image section above). You will write this code in the `driver.cc` file.
+In this part, you will complete the driver portion of the MP. This is the code that will call the functions you wrote in the previous parts in order 
+to seam carve an image (see the Resizing an Image section above). You will write this code in the `src/driver.cc` file.
 
-You will have to read in the command line arguments to read in the \<image_name\> \<new_width\> and \<new_height\>
+To compile the driver, use `make exec`
+
+In the driver, you will have to read in the command line arguments to read in the \<image_name\> \<new_width\> and \<new_height\> in that order.
 
 The new file the code produces should be called the \<base_input_file_name\>\<new_width\>x\<new_height\>_actual.ppm
 
@@ -257,6 +263,14 @@ This would take about 1-2 mintues to run and produce the following image named, 
 
 ![super seam carved staff pic](https://www.cs128live.org/staff_seam.jpg)
 
+
+To test your code for this part we have given you multiple expected image files in the `tests/expected` directory. 
+Each is named based on the new dimensions after being carved. For example, mini_squir10x16.ppm is mini_squir.ppm carved to 10x16. 
+To check your carved image matches the expected use the diff command in the terminal. 
+
+diff <file1.ppm> <file2.ppm>
+
+If nothing prints that means the files are identical.
 
 ## Credits
 
