@@ -13,11 +13,11 @@ chapterIdx: 3
 sectionIdx: 2
 ---
 ## Important Dates
-Part 1 Due Date: Thursday 10/10 at 11:59pm (30 points)
+Part 1 Due Date: Thursday 10/10 at 11:59pm (10 points)
 
-Part 2 Due Date: Thursday 10/17 at 11:59pm (30 points)
+Part 2 Due Date: Thursday 10/17 at 11:59pm (10 points)
 
-Part 3 Due Date: Thursday 10/24 at 11:59pm (50 points)
+Part 3 Due Date: Thursday 10/24 at 11:59pm (90 points)
 
 
 ## Introduction
@@ -39,7 +39,6 @@ So instead I can use the seam carving algorithm to remove the less interesting p
 - From simple specifications create a complete, functioning project.
 - Become comfortable working with classes and 2D data structures.
 - Design a readable and reusable solution through functions and testing.
-- Develop code on a personal computer and work with an autograder.
 
 ## Topics Covered
 
@@ -59,7 +58,7 @@ When you are done with each part, submit on Prairie Learn via the autograder, [A
 
 ## Background Information
 
-Before we get started, let us make sure we are all starting on the same page!
+Before we get started, let's make sure we are all starting on the same page!
 
 ### Pixel
 
@@ -67,7 +66,7 @@ A pixel is a small colored square. Many pixels together create an image. A color
 
 ### PPM P3 File Format
 
-For this MP we will use the PPM P3 file format for all the images. The PPM P3 format is easy to work with and lets us easily manipulate the images. The files end with a `.ppm` extension and always begin with the following header:
+For this MP we will use the PPM P3 file format for all the images. The PPM P3 format is easy to work with and lets us easily manipulate an image. The files end with a `.ppm` extension and always begin with the following header:
 
 ```
 P3
@@ -87,31 +86,32 @@ P3
 0 1 0 200 200 24
 ```
 
-PPM files can be viewed like normal images uses various online and built in software. For example, on a mac, they can be viewed in the preview app. 
-When looking at a PPM file in a text editor I see the format noted above. 
+PPM files can be viewed like normal images using various online and built in software. For example, on a Mac, they can be viewed in the preview app. 
+When looking at a PPM file in a text editor you can see the format noted above. 
 
-I have included many PPM P3 files for you to use with the starter files. However, feel free to also create your own!
- I have had success using the `magick` program on my Mac to convert jpg files to the PPM P3 format. I also recommend
-  reducing the size of the jpg before converting to PPM and using it with your program to speed up processing time.
+I have included many PPM P3 files for you to use with the starter files in the sample_images directory. However, feel free to also create your own!
+ I have had success using the `magick` program on my Mac to convert jpg files to the PPM P3 format. I recommend
+  reducing the size of the jpg before converting to PPM to speed up processing time.
 
 ## MP Overview
 
-In this MP you will create code that will read in an image file and a smaller desired width and height. It will then remove seams 
+In this MP you will create code that reads in an image file and a desired width and height. Note the new desired witdth and height needs to be the same
+or smaller than the original width and height. The program will then remove seams 
 (a contiguous series of pixels) from the image until it is the desired width and height. Finally, it will save the edited 
 image to a new image file.
 
 This MP uses the `Image` class along with the `Pixel` struct to represent and store images. In `driver.cc` you will create an instance
-of the `Image` class and call various function you defined in `image_processing.cc` to reduce the size of the image.
+of the `Image` class and call various function you defined in `image_processing.cc` to seam carve the image.
 
 This project is split into three parts across three weeks.
 
-<b>Part 1</b> has you implement and test the `Image` class as well as the `RotateLeft` and `RotateRight` functions in `image_processing.cc`. 30pts (Due Thursday 10/10 at 11:59pm) (10% point reduction if submitted within 24 hours late)
+<b>Part 1</b> has you implement and test the `Image` class as well as the `RotateLeft` and `RotateRight` functions in `image_processing.cc`. 10pts (Due Thursday 10/10 at 11:59pm) (10% point reduction if submitted within 24 hours late)
 
-<b>Part 2</b> has you implement and test the rest of the functions in `image_processing.cc`. 30pts (Due Thursday 10/17 at 11:59pm) (10% point reduction if submitted within 24 hours late) 
+<b>Part 2</b> has you implement and test the rest of the functions in `image_processing.cc`. 10pts (Due Thursday 10/17 at 11:59pm) (10% point reduction if submitted within 24 hours late) 
 
-<b>Part 3</b> has you implement the driver for the program. 50pts (Due Thursday 10/24 at 11:59pm) (10% point reduction if submitted within 24 hours late)
+<b>Part 3</b> has you implement the driver for the program. 90pts (Due Thursday 10/24 at 11:59pm) (10% point reduction if submitted within 24 hours late)
 
-Feel free to work ahead on parts.
+Each part builds on the previous part(s). Feel free to work ahead!
 
 ## The Seam Carving Algorithm
 
@@ -177,7 +177,7 @@ When implementing `FindVerticalSeam` be careful to handle the case where the sea
 
 ### Remove the Seam
 
-Once you have found the minimum seam all that is left is removing it from the image. I recommend using the `RemovePixel` function you wrote from the `Image` class.
+Once you have found the minimum seam all that is left is removing it from the image. I recommend using the `RemovePixel` function from the `Image` class.
 
 ![enter image description here](https://www.cs128live.org/removed.png)
 
@@ -245,7 +245,8 @@ make tests_ip
 ## Part 3
 
 In this part, you will complete the driver portion of the MP. This is the code that will call the functions you wrote in the previous parts in order 
-to seam carve an image (see the Resizing an Image section above). You will write this code in the `src/driver.cc` file.
+to seam carve an image (see the Resizing an Image section above). You will write this code in the `src/driver.cc` file. Please create helper functions
+to avoid having a main function over about 40 lines. I recommend writing those helper functions directly in the driver.cc file.
 
 To compile the driver, use `make exec`
 
@@ -270,10 +271,10 @@ To test your code for this part we have given you multiple expected image files 
 Each is named based on the new dimensions after being carved. For example, mini_squir10x16.ppm is mini_squir.ppm carved to 10x16. 
 To check your carved image matches the expected use the diff command in the terminal. 
 ```
-diff \<file1.ppm\> \<file2.ppm\>
+diff <file1.ppm> <file2.ppm>
 ```
 
-If nothing prints that means the files are identical.
+Replacing \<file1.ppm\> and \<file2.ppm\> with the actual file locations and names. If nothing prints that means the files are identical.
 
 ## Credits
 
