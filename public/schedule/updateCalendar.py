@@ -27,8 +27,8 @@ def update_calendar(hw_file, lab_file, mp_file, quiz_file, ec_file, lecture_file
                     f'{event_type}_due_link': ''
                 }
             else:
-                event_dict[event['date']][f'{event_type}_topic'] += f", {event['topic']}"
-                event_dict[event['date']][f'{event_type}_link'] += f", {event['link']}"
+                event_dict[event['date']][f'{event_type}_topic'] += f"{event['topic']}"
+                event_dict[event['date']][f'{event_type}_link'] += f"{event['link']}"
 
             if 'due_date' in event:
                 if event['due_date'] not in event_dict:
@@ -39,8 +39,8 @@ def update_calendar(hw_file, lab_file, mp_file, quiz_file, ec_file, lecture_file
                         f'{event_type}_link': ''
                     }
                 else:
-                    event_dict[event['due_date']][f'{event_type}_due_topic'] += f", {event['topic']}"
-                    event_dict[event['due_date']][f'{event_type}_due_link'] += f", {event['link']}"
+                    event_dict[event['due_date']][f'{event_type}_due_topic'] += f"{event['topic']}"
+                    event_dict[event['due_date']][f'{event_type}_due_link'] += f"{event['link']}"
         return event_dict
 
     # Special handling for mp events with multiple due dates
@@ -148,5 +148,5 @@ def update_calendar(hw_file, lab_file, mp_file, quiz_file, ec_file, lecture_file
     with open(output_schedule_file, 'w') as out_file:
         json.dump(schedule, out_file, indent=4)
 
-#update_calendar('public/schedule/hw.json', 'public/schedule/lab.json', 'public/schedule/mp.json', 'public/schedule/quiz.json', "public/schedule/ec.json" , 'public/schedule/lecture.json', 'public/schedule/calendar.json', 'public/schedule/schedule.json')
-update_calendar('hw.json', 'lab.json', 'mp.json', 'quiz.json', 'ec.json' , 'lecture.json', 'calendar.json', 'schedule.json')
+update_calendar('public/schedule/hw.json', 'public/schedule/lab.json', 'public/schedule/mp.json', 'public/schedule/quiz.json', "public/schedule/ec.json" , 'public/schedule/lecture.json', 'public/schedule/calendar.json', 'public/schedule/schedule.json')
+# update_calendar('hw.json', 'lab.json', 'mp.json', 'quiz.json', 'ec.json' , 'lecture.json', 'calendar.json', 'schedule.json')
