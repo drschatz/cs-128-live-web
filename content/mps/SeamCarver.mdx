@@ -13,11 +13,11 @@ chapterIdx: 3
 sectionIdx: 2
 ---
 ## Important Dates
-Part 1 Due Date: Thursday 10/10 at 11:59pm (10 points)
+Part 1 Due Date: Thursday 10/10 at 11:59pm (10 points) (10% point reduction if submitted within 24 hours late) 
 
-Part 2 Due Date: Thursday 10/17 at 11:59pm (10 points)
+Part 2 Due Date: Thursday 10/17 at 11:59pm (10 points) (10% point reduction if submitted within 24 hours late) 
 
-Part 3 Due Date: Thursday 10/24 at 11:59pm (90 points)
+Part 3 Due Date: Thursday 10/24 at 11:59pm (90 points) (10% point reduction if submitted within 24 hours late) 
 
 
 ## Introduction
@@ -83,7 +83,7 @@ P3
 255
 30 30 39 0 0 0 
 255 255 255 30 60 60 
-0 1 0 200 200 24
+0 1 0 200 200 24 
 ```
 
 PPM files can be viewed like normal images using various online and built in software. For example, on a Mac, they can be viewed in the preview app. 
@@ -95,21 +95,21 @@ I have included many PPM P3 files for you to use with the starter files in the s
 
 ## MP Overview
 
-In this MP you will create code that reads in an image file and a desired width and height. Note the new desired witdth and height needs to be the same
+In this MP you will create code that reads in an image file and a desired width and height. Note the new desired width and height needs to be the same
 or smaller than the original width and height. The program will then remove seams 
 (a contiguous series of pixels) from the image until it is the desired width and height. Finally, it will save the edited 
 image to a new image file.
 
 This MP uses the `Image` class along with the `Pixel` struct to represent and store images. In `driver.cc` you will create an instance
-of the `Image` class and call various function you defined in `image_processing.cc` to seam carve the image.
+of the `Image` class and call various functions you defined in `image_processing.cc` to seam carve the image.
 
 This project is split into three parts across three weeks.
 
-<b>Part 1</b> has you implement and test the `Image` class as well as the `RotateLeft` and `RotateRight` functions in `image_processing.cc`. 10pts (Due Thursday 10/10 at 11:59pm) (10% point reduction if submitted within 24 hours late)
+<b>Part 1</b> has you implement and test the `Image` class as well as the `RotateLeft` and `RotateRight` functions in `image_processing.cc`. 10 pts (Due Thursday 10/10 at 11:59pm) (10% point reduction if submitted within 24 hours late)
 
-<b>Part 2</b> has you implement and test the rest of the functions in `image_processing.cc`. 10pts (Due Thursday 10/17 at 11:59pm) (10% point reduction if submitted within 24 hours late) 
+<b>Part 2</b> has you implement and test the rest of the functions in `image_processing.cc`. 10 pts (Due Thursday 10/17 at 11:59pm) (10% point reduction if submitted within 24 hours late) 
 
-<b>Part 3</b> has you implement the driver for the program. 90pts (Due Thursday 10/24 at 11:59pm) (10% point reduction if submitted within 24 hours late)
+<b>Part 3</b> has you implement the driver for the program. 90 pts (Due Thursday 10/24 at 11:59pm) (10% point reduction if submitted within 24 hours late)
 
 Each part builds on the previous part(s). Feel free to work ahead!
 
@@ -148,7 +148,7 @@ what is the least amount of energy that the seam needed to pass through to get t
 can start on the bottom row and work our way up following the path of least cost.
 
 To calculate the minimum cost of a pixel, we add its energy to the minimum cost of getting to that pixel. There are either 2 (for border pixels) or 3 (for inner pixels) pixels the
- path could be coming from. In order to start this alogrithm we set the top row cost to the energy values of those pixels.
+ path could be coming from. In order to start this algorithm we set the top row cost to the energy values of those pixels.
 
 cost\(0, col\) =  energy(0, col)
 
@@ -167,7 +167,7 @@ After calculating the energy followed by the cost, it is time to find the least 
 
 To find the seam, start at the bottom of the cost 2D vector and find the smallest cost value. That will be the starting point of the seam. From there, trace your way back up the image 
 along the path of the smallest cost values. Only consider elements above and 1 to the left, above and 1 to the right, and straight above (if they don't go off the end of the image). 
-At the end, you will have a vector the size of the height of the image. Each element indicating which column the pixel of the seam is in for that row. For example, if the 1st element
+At the end, you will have a vector the size of the height of the image. Each element indicates which column the pixel of the seam is in for that row. For example, if the 1st element
  in the seam vector, spot 0, has the value 2, that means the seam starts at row 0 at column 2. If the 4th element in the seam 
 vector, spot 3, has the value 3, that means the seam passes through row 3 at column 3.
 
@@ -256,13 +256,13 @@ The new file the code produces should be called the \<base_input_file_name\>\<ne
 
 \<base_input_file_name\> means no folders or '/' characters.
 
-For example, if I ran the followng: 
+For example, if I ran the following: 
 ```
 make exec
 ./bin/exec sample_images/cs128_staff.ppm 350 400
 ```
 
-This would take about 1-2 mintues to run and produce the following image named, "cs128_staff350x400_actual.ppm"
+This would take about 1-2 minutes to run and produce the following image named, "cs128_staff350x400_actual.ppm"
 
 ![super seam carved staff pic](https://www.cs128live.org/staff_seam.jpg)
 
@@ -274,9 +274,9 @@ To check your carved image matches the expected use the diff command in the term
 diff <file1.ppm> <file2.ppm>
 ```
 
-Replacing \<file1.ppm\> and \<file2.ppm\> with the actual file locations and names. If nothing prints that means the files are identical.
+Replacing \<file1.ppm\> and \<file2.ppm\> with the actual file locations and names. If nothing prints, that means the files are identical.
 
 ## Credits
 
-Written by Jule Schatz 2024 with help from Georges Durand, based on project by Josh Hug and code by Kevin Wayne and Maia Ginsburg (Princeton).
+Written by Jule Schatz 2024 with help from Georges Durand, based on a project by Josh Hug and code by Kevin Wayne and Maia Ginsburg (Princeton).
 
