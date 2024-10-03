@@ -248,13 +248,19 @@ In this part, you will complete the driver portion of the MP. This is the code t
 to seam carve an image (see the Resizing an Image section above). You will write this code in the `src/driver.cc` file. Please create helper functions
 to avoid having a main function over about 40 lines. I recommend writing those helper functions directly in the driver.cc file.
 
-To compile the driver, use `make exec`
+Your driver code should use exceptions to handle the following errors in this order:
+1. If the file cannot be opened, print "File could not be opened." with a newline and end the program.
+2. If the width is bigger than the original image, print "Width is too big. We cannot currently grow the image." with a newline and end the program.
+3. If the height is bigger than the original image, print "Height is too big. We cannot currently grow the image." with a newline and end the program.
 
 In the driver, you will have to read in the command line arguments to read in the \<image_name\> \<new_width\> and \<new_height\> in that order.
+If there are the wrong number of command line arguments, you should print "The format is, <image_name> <new_width> <new_height>"  with a newline and end the program.
 
 The new file the code produces should be called the \<base_input_file_name\>\<new_width\>x\<new_height\>_actual.ppm
 
 \<base_input_file_name\> means no folders or '/' characters.
+
+To compile the driver, use `make exec`
 
 For example, if I ran the following: 
 ```
