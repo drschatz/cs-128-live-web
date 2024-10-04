@@ -174,8 +174,9 @@ The recommended approach for calculating the minimum cost of each pixel is to st
 After calculating the energy followed by the cost, it is time to find the least important seam. In this MP, we will only be finding vertical seams. A seam is represented by a vector.
 
 To find the seam, start at the bottom of the cost 2D vector and find the smallest cost value. That will be the starting point of the seam. From there, trace your way back up the image 
-along the path of the smallest cost values. Only consider elements above and 1 to the left, above and 1 to the right, and straight above (if they don't go off the end of the image). 
-At the end, you will have a vector the size of the height of the image. Each element indicates which column the pixel of the seam is in for that row. For example, if the 1st element
+along the path of the smallest cost values. Only consider elements above and 1 to the left, above and 1 to the right, and straight above (if they don't go off the end of the image) above 
+the current cost value. 
+At the end, you will have a vector the size of the height of the image. Each element indicates which column the pixel of the seam is in for that corresponding row. For example, if the 1st element
  in the seam vector, spot 0, has the value 2, that means the seam starts at row 0 at column 2. If the 4th element in the seam 
 vector, spot 3, has the value 3, that means the seam passes through row 3 at column 3.
 
@@ -224,13 +225,20 @@ In this part, you will complete the `Image` class and the `RotateLeft` and `Rota
 - `RotateLeft`
 - `RotateRight`
 
-There are only a few tests given. It is up to you to expand the `tests/tests_image.cc` file by adding your own tests to verify your code is working.
+There are only a few tests given. It is up to you to expand the `tests/tests_image.cc` file by adding your own tests to verify your Image code is working.
+Additonally, it is up to you to expand `tests/tests_image_processing.cc` file by adding tests for the Rotate functions. 
 You may find it helpful to use functions from `includes/tests_helpers.hpp` and defined in `src/tests_helpers.cc` when writing your tests. 
 
 To compile and run your `tests_image.cc` code put the following into the terminal:
 ```
 make tests_i
 ./bin/tests_i
+```
+
+To compile and run your `tests_image_processing.cc` code that tests the rotate functions, put the following into the terminal:
+```
+make tests_ip
+./bin/tests_ip
 ```
 
 ## Part 2
