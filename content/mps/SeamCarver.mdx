@@ -242,6 +242,22 @@ make tests_ip
 ./bin/tests_ip
 ```
 
+Many Image member functions ask you to use assert to check the REQUIRES clause. Assert is a function that ends your program if it evaluates
+to false. This makes your code easier to debug then if your program proceeded with undefined behavior. For example, I could do the following,
+
+```
+#include <cassert>
+
+// REQUIRES: x is not 0
+// MODIFIES:
+// EFFECTS: divides 10 by x
+void Func(int x){
+   assert(x != 0);
+   10/x;
+}
+```
+
+
 ## Part 2
 
 In this part, you will complete the image processing functions. Below are the required functions for this part:
