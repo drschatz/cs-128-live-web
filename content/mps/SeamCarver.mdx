@@ -160,7 +160,7 @@ To calculate the minimum cost of a pixel, we add its energy to the minimum cost 
 
 cost\(0, col\) =  energy(0, col)
 
-cost\(row, col\) =  energy(row, col) + min(energy(row+1, col-1), energy(row+1, col), energy(row+1, col+1)) 
+cost\(row, col\) =  energy(row, col) + min(cost(row-1, col-1), cost(row-1, col), cost(row-1, col+1)) 
 
 *If it's a border pixel do not consider pixels off the end of the image
 
