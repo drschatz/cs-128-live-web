@@ -134,7 +134,7 @@ Below is a visual representation of what 3 random vertical seams could look like
 ### Calculate Energy
 
 To find unimportant seams we need to find unimportant pixels. A pixel is unimportant if it does not contribute to the main subject of the image. This is hard to define!
- To approximate this, we use the energy of the pixel. The energy of a pixel within an image is the sum of the squared energy between its north and south neighbor and its east and west neighbor. A high energy means a pixel's neighbors have a high contrast with each other and so it is probably important to the subject of the image.
+ To approximate this, we use the energy of the pixel. The energy of a pixel within an image is the sum of the squared energy between its north(N) and south(S) neighbor and its east(E) and west(W) neighbor. A high energy means a pixel's neighbors have a high contrast with each other and so it is probably important to the subject of the image.
 
 You will write a function in the `image_processing.cc` called `CalculateEnergy()`. This function will calculate the energy of each pixel in the image and return it as a 2D vector.
 
